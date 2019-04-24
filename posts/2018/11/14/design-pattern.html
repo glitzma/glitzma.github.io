@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>设计模式 | Glitz&#39;s Blog</title>
+    <meta name="description" content="This is my blog">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.0c7f5120.css" as="style"><link rel="preload" href="/assets/js/app.445d3d5d.js" as="script"><link rel="preload" href="/assets/js/3.cafb9f1c.js" as="script"><link rel="preload" href="/assets/js/89.ad63afe1.js" as="script"><link rel="prefetch" href="/assets/js/1.c2f6132b.js"><link rel="prefetch" href="/assets/js/10.faf610d2.js"><link rel="prefetch" href="/assets/js/11.2ccbb77a.js"><link rel="prefetch" href="/assets/js/12.d5a900bc.js"><link rel="prefetch" href="/assets/js/13.b8db4772.js"><link rel="prefetch" href="/assets/js/14.29653c83.js"><link rel="prefetch" href="/assets/js/15.b0079f33.js"><link rel="prefetch" href="/assets/js/16.ca55cf92.js"><link rel="prefetch" href="/assets/js/17.b2ae1578.js"><link rel="prefetch" href="/assets/js/18.f7438387.js"><link rel="prefetch" href="/assets/js/19.6c201aeb.js"><link rel="prefetch" href="/assets/js/20.6e1c069a.js"><link rel="prefetch" href="/assets/js/21.cefff5d8.js"><link rel="prefetch" href="/assets/js/22.ea927fe8.js"><link rel="prefetch" href="/assets/js/23.ff886a7e.js"><link rel="prefetch" href="/assets/js/24.846c97ea.js"><link rel="prefetch" href="/assets/js/25.209a8211.js"><link rel="prefetch" href="/assets/js/26.fff59258.js"><link rel="prefetch" href="/assets/js/27.2b03cdaa.js"><link rel="prefetch" href="/assets/js/28.848f8a6d.js"><link rel="prefetch" href="/assets/js/29.a625405d.js"><link rel="prefetch" href="/assets/js/30.4c4a5825.js"><link rel="prefetch" href="/assets/js/31.e33b332c.js"><link rel="prefetch" href="/assets/js/32.4b957291.js"><link rel="prefetch" href="/assets/js/33.e2075c7b.js"><link rel="prefetch" href="/assets/js/34.eb084cd6.js"><link rel="prefetch" href="/assets/js/35.7dd4a367.js"><link rel="prefetch" href="/assets/js/36.a694956b.js"><link rel="prefetch" href="/assets/js/37.7d609b90.js"><link rel="prefetch" href="/assets/js/38.a8dc914c.js"><link rel="prefetch" href="/assets/js/39.892a6aef.js"><link rel="prefetch" href="/assets/js/4.8deab1cb.js"><link rel="prefetch" href="/assets/js/40.3958bd48.js"><link rel="prefetch" href="/assets/js/41.cbc67523.js"><link rel="prefetch" href="/assets/js/42.2cb243de.js"><link rel="prefetch" href="/assets/js/43.0af3c762.js"><link rel="prefetch" href="/assets/js/44.9585f5a9.js"><link rel="prefetch" href="/assets/js/45.4c55af63.js"><link rel="prefetch" href="/assets/js/46.cb98e606.js"><link rel="prefetch" href="/assets/js/47.c37900d7.js"><link rel="prefetch" href="/assets/js/48.47fedeee.js"><link rel="prefetch" href="/assets/js/49.b6533852.js"><link rel="prefetch" href="/assets/js/5.82526ce9.js"><link rel="prefetch" href="/assets/js/50.9a9cc811.js"><link rel="prefetch" href="/assets/js/51.da6e5019.js"><link rel="prefetch" href="/assets/js/52.aee34b81.js"><link rel="prefetch" href="/assets/js/53.f6e8ace0.js"><link rel="prefetch" href="/assets/js/54.6414ea05.js"><link rel="prefetch" href="/assets/js/55.cd9df247.js"><link rel="prefetch" href="/assets/js/56.e891d9ea.js"><link rel="prefetch" href="/assets/js/57.b3516150.js"><link rel="prefetch" href="/assets/js/58.4d82c3b8.js"><link rel="prefetch" href="/assets/js/59.c53a299e.js"><link rel="prefetch" href="/assets/js/6.2fd7b21f.js"><link rel="prefetch" href="/assets/js/60.fc2bef70.js"><link rel="prefetch" href="/assets/js/61.a305d5fe.js"><link rel="prefetch" href="/assets/js/62.7033d185.js"><link rel="prefetch" href="/assets/js/63.5cc700b8.js"><link rel="prefetch" href="/assets/js/64.e334ee55.js"><link rel="prefetch" href="/assets/js/65.5c6a7d83.js"><link rel="prefetch" href="/assets/js/66.7e70bf9e.js"><link rel="prefetch" href="/assets/js/67.cba7a1dc.js"><link rel="prefetch" href="/assets/js/68.29592890.js"><link rel="prefetch" href="/assets/js/69.bb31acbc.js"><link rel="prefetch" href="/assets/js/7.0747c19c.js"><link rel="prefetch" href="/assets/js/70.28e39959.js"><link rel="prefetch" href="/assets/js/71.f16704f5.js"><link rel="prefetch" href="/assets/js/72.46180d84.js"><link rel="prefetch" href="/assets/js/73.e33a0dc2.js"><link rel="prefetch" href="/assets/js/74.13b2bc7a.js"><link rel="prefetch" href="/assets/js/75.2f7b5c1a.js"><link rel="prefetch" href="/assets/js/76.31e8ba14.js"><link rel="prefetch" href="/assets/js/77.efbee12b.js"><link rel="prefetch" href="/assets/js/78.d6547809.js"><link rel="prefetch" href="/assets/js/79.b13ad4ea.js"><link rel="prefetch" href="/assets/js/8.3a23fc0c.js"><link rel="prefetch" href="/assets/js/80.469b0b0a.js"><link rel="prefetch" href="/assets/js/81.e4cf2663.js"><link rel="prefetch" href="/assets/js/82.df36c3e5.js"><link rel="prefetch" href="/assets/js/83.8acb8191.js"><link rel="prefetch" href="/assets/js/84.5f4a6414.js"><link rel="prefetch" href="/assets/js/85.9837c8a6.js"><link rel="prefetch" href="/assets/js/86.cba3517d.js"><link rel="prefetch" href="/assets/js/87.f70c2fa6.js"><link rel="prefetch" href="/assets/js/88.3e910bb8.js"><link rel="prefetch" href="/assets/js/9.f0fc6f93.js"><link rel="prefetch" href="/assets/js/90.45fd58d3.js"><link rel="prefetch" href="/assets/js/91.9362b6a7.js"><link rel="prefetch" href="/assets/js/92.ab9268fe.js"><link rel="prefetch" href="/assets/js/93.cfe2aecf.js"><link rel="prefetch" href="/assets/js/94.41a96929.js"><link rel="prefetch" href="/assets/js/95.1f334105.js"><link rel="prefetch" href="/assets/js/96.f5fc49d3.js"><link rel="prefetch" href="/assets/js/97.834cfc43.js"><link rel="prefetch" href="/assets/js/98.c95769a1.js"><link rel="prefetch" href="/assets/js/99.01b550db.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.0c7f5120.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-glitzma"><header class="header" style="background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:scroll;background-image:url(/assets/img/header-image-04.jpg);" data-v-e4a0ebe0><div data-v-fa5c5f88 data-v-e4a0ebe0><nav class="navbar" data-v-fa5c5f88><div class="container" data-v-fa5c5f88><a href="/" class="router-link-active" data-v-fa5c5f88><span class="navbar-site-name" data-v-fa5c5f88>
+          Glitz's Blog
+        </span></a> <div class="navbar-toggler" data-v-fa5c5f88><svg class="icon" style="font-size:1.2em;" data-v-fa5c5f88 data-v-fa5c5f88><title data-v-fa5c5f88 data-v-fa5c5f88>menu</title><use xlink:href="#icon-menu" data-v-fa5c5f88 data-v-fa5c5f88></use></svg></div> <div class="navbar-links" data-v-fa5c5f88><a href="/" class="navbar-link" data-v-fa5c5f88>
+            欢迎页
+          </a><a href="/posts/" class="navbar-link router-link-active" data-v-fa5c5f88>
+            帖子
+          </a><a href="/custom-pages/" class="navbar-link" data-v-fa5c5f88>
+            自定义页面
+          </a></div></div></nav> <div class="navbar-holder" style="display:none;" data-v-fa5c5f88></div></div> <div class="banner" data-v-e2d7da12 data-v-e4a0ebe0 data-v-e4a0ebe0><div class="container" data-v-e2d7da12><div class="center" data-v-e2d7da12><h1 class="header-slot-h1" data-v-e2d7da12 data-v-e4a0ebe0>
+          设计模式
+        </h1></div></div></div></header> <div class="container clearfix show-aside" data-v-91b6f1b2 data-v-91b6f1b2><main class="main" data-v-91b6f1b2><div class="post" data-v-91b6f1b2 data-v-91b6f1b2><section class="post-meta main-div" data-v-7f7ca342><section class="post-date clearfix" data-v-7f7ca342><span class="create-date" data-v-7f7ca342>
+      发布时间 : 2018-11-14
+    </span> <span class="update-date" data-v-7f7ca342>
+      最后修改 : 2019-04-24
+    </span></section> <section class="post-links" data-v-7f7ca342><a href="/posts/2018/11/14/observer-design-pattern.html" class="post-link" data-v-7f7ca342>
+      上一篇 : 设计模式--观察者模式
+    </a> <a href="/posts/2018/11/19/flex-able.html" class="post-link" data-v-7f7ca342>
+      下一篇 : 网站的适配
+    </a></section></section> <article class="main-div"><div class="content default"><h2 id="singleton-单例-模式"><a href="#singleton-单例-模式" aria-hidden="true" class="header-anchor">#</a> Singleton(单例)模式</h2> <p>Single(单例)模式被熟知的原因是因为它限制了类的实例化次数只能一次。从经典意义上来说，<code>Singleton模式，在实例不存在的情况下，可以通过一个方法创建一个类来实现创建类的新实例;如果实例已经存在，它会简单返回该对象的引用</code>。Singleton不同于静态类（或对象），因为我们可以推迟他们的初始化，这通常是因为它们需要一些信息，而这些信息在初始化期间可能无法获得。对于没有察觉到之前的引用的代码，它们不会提供方便检索的方法。这是因为它既不是对象，也不是一个Singleton皇家马德里回的“类”;它是一个结构。在javaScript中，Singleton充当共享资源命名空间，从全局命令空间中隔离出代码实现，从而为函数提供单一访问点。我们可以像如下实现一个Singleton:</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> mySingleton <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 实例保持了Singleton的一个引用</span>
+  <span class="token keyword">var</span> instance<span class="token punctuation">;</span>
+  <span class="token keyword">function</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Singleton</span>
+    <span class="token comment">// 私有方法和变量</span>
+    <span class="token keyword">function</span> <span class="token function">privateMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;I am private&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">var</span> privateVariable <span class="token operator">=</span> <span class="token string">&quot;Im also private&quot;</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> privateRandomNumber <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 公有方法和变量</span>
+        <span class="token function-variable function">publicMethod</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;The public can see me!&quot;</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        publicProperty<span class="token punctuation">:</span> <span class="token string">&quot;I am also public&quot;</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">getRandomNumber</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">return</span> privateRandomNumber
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 获取 Singleton的实例，如果存在就返回，不存在就创建新实例</span>
+      <span class="token function-variable function">getInstance</span><span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>instance<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            instance <span class="token operator">=</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+<span class="token keyword">var</span> myBadSingleton <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 实例保持了Singleton的一个引用</span>
+  <span class="token keyword">var</span> instance<span class="token punctuation">;</span>
+  <span class="token keyword">function</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// Singleton</span>
+      <span class="token keyword">var</span> privateRandomNumber <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+          <span class="token function-variable function">getRandomNumber</span><span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+              <span class="token keyword">return</span> privateRandomNumber<span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 每次都创建新实例</span>
+      <span class="token function-variable function">getInstance</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        instance <span class="token operator">=</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// good </span>
+<span class="token keyword">var</span> singleA <span class="token operator">=</span> mySingleton<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> singleB <span class="token operator">=</span> mySingleton<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>singleA<span class="token punctuation">.</span><span class="token function">getRandomNumber</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">===</span> singleB<span class="token punctuation">.</span><span class="token function">getRandomNumber</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// true</span>
+
+<span class="token comment">// bad </span>
+<span class="token keyword">var</span> badSingleA <span class="token operator">=</span> myBadSingleton<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> badSingleB <span class="token operator">=</span> myBadSingleton<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>badSingleA<span class="token punctuation">.</span><span class="token function">getRandomNumber</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!==</span> badSingleB<span class="token punctuation">.</span><span class="token function">getRandomNumber</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><ul><li>当类只能有一个实例而且客户可以从一个众所周知的访问点访问它时</li> <li>该唯一的实例应该是通过子类化可扩展的，并且客户应该无需更改代码就能使用的一个扩展实例时</li></ul> <p>这些观点另外关联到一个场景，这里我们可能需要如下这样的代码：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>mySingleton<span class="token punctuation">.</span><span class="token function-variable function">getInstance</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>_instance <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">isFoo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>_instance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FooSingleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>_instance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BasicSingleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>_instance<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>在这里，getInstance 变得有点像Factory(工厂)方法，当访问它时，我们不需要 更新代码中的每个访问点。FooSingleton(上面)将是一个BasicSingleton的子类，并将实现相同的接口。</p> <p>为何延迟对于Singleton很重要？</p> <blockquote><p>在C++中，Singleton负责隔绝动态初始化顺序的不可预知性，将控制权归还给程序员</p></blockquote> <p>值得注意的是类的静态实例（对象）和Singleton之间的区别：当Singleton可以作为一个静态的实例实现时，它也可以延迟构建，直到需要使用静态实例时，无需使用资源或内存。</p> <p>如果我们有一个可以直接被初始化的静态对象，需要确何执行代码的顺序总是相同的（例如：在初始化期间objCar需要objWheel情况），当我们有大量的源文件时，它并不能伸缩。</p> <p>Singleton和静态对象都是有用的，但是我们不应当以同样的方式过度使用它们，也不应该过度使用其它模式。</p> <p>在实践中，当在系统中确实需要 一个对象来协调其它对象时，Singleton模式是很有用的，在这里，大家可以看到这个上下文中模式的使用：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> SingletonTester <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// options:包含singleton所需配置信息的对象</span>
+    <span class="token comment">// e.g var options = { name: &quot;test&quot;, pointX: 5};</span>
+    <span class="token keyword">function</span> <span class="token function">Singleton</span><span class="token punctuation">(</span><span class="token parameter">options</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">// 如果未提供options,则设置为空对象</span>
+        options <span class="token operator">=</span> options <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token comment">// 为 Singleton设置一些属性</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">&quot;SingletonTester&quot;</span><span class="token punctuation">;</span>
+        
+        <span class="token keyword">this</span><span class="token punctuation">.</span>pointX <span class="token operator">=</span> options<span class="token punctuation">.</span>pointX <span class="token operator">||</span> <span class="token number">6</span> <span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>pointY <span class="token operator">=</span> options<span class="token punctuation">.</span>pointY <span class="token operator">||</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>  
+    
+    <span class="token comment">// 实例持有者</span>
+    <span class="token keyword">var</span> instance<span class="token punctuation">;</span>
+    
+    <span class="token comment">// 静态变量和方法的模拟</span>
+    <span class="token keyword">var</span> _static <span class="token operator">=</span> <span class="token punctuation">{</span>
+        name<span class="token punctuation">:</span> <span class="token string">&quot;SingletonTester&quot;</span><span class="token punctuation">,</span>
+        <span class="token comment">// 获取实例的方法，返回singleton对象的singleton实例</span>
+        <span class="token function-variable function">getInstance</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">options</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>instance <span class="token operator">===</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                instance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Singleton</span><span class="token punctuation">(</span>options<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> _static<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> singletonTest <span class="token operator">=</span> SingletonTester<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    pointX<span class="token punctuation">:</span><span class="token number">5</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 记录pointX 的输出以例验证</span>
+<span class="token comment">// 输出：5</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>singletonTest<span class="token punctuation">.</span>pointX<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>Singleton 很有使用价值，通常当发现JavaScript中需要它的时候，则表示我们可能需要重新评估我们的设计。</p> <p>Singleton的存在往往表明系统中的模块要么是系统紧耦合，要么是其逻辑过于分散在代码库的多个部分。由于一系列的问题：从隐藏的依赖到创建多个实例的难度、底层依赖的难度等等，Singleton的测试会更加困难。</p></div></article> <section class="post-meta main-div" data-v-7f7ca342><section class="post-date clearfix" data-v-7f7ca342><span class="create-date" data-v-7f7ca342>
+      发布时间 : 2018-11-14
+    </span> <span class="update-date" data-v-7f7ca342>
+      最后修改 : 2019-04-24
+    </span></section> <section class="post-links" data-v-7f7ca342><a href="/posts/2018/11/14/observer-design-pattern.html" class="post-link" data-v-7f7ca342>
+      上一篇 : 设计模式--观察者模式
+    </a> <a href="/posts/2018/11/19/flex-able.html" class="post-link" data-v-7f7ca342>
+      下一篇 : 网站的适配
+    </a></section></section> <div id="post-comments" class="main-div"><!----></div></div></main> <aside class="aside" data-v-91b6f1b2><div class="info-card main-div" data-v-2bd66a30 data-v-91b6f1b2><div class="info-card-header" data-v-2bd66a30><img src="https://blog.mamingjuan.cn/assets/images/favicon-16.ico" alt="glitzma" class="info-avatar" data-v-2bd66a30></div> <div class="info-card-body" data-v-2bd66a30><section class="info-nickname" data-v-2bd66a30>
+      glitzma
+    </section> <section class="info-desc" data-v-2bd66a30>Happy Coding<br/>Happy Life</section> <section class="info-contact" data-v-2bd66a30><section data-v-2bd66a30><span title="Beijing City, China" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>Beijing City, China</title><use xlink:href="#icon-location" data-v-2bd66a30 data-v-2bd66a30></use></svg><span class="info-text" data-v-2bd66a30 data-v-2bd66a30>
+          Beijing City, China
+        </span></span></section> <section data-v-2bd66a30><span title="Hao Wei Lai" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>Hao Wei Lai</title><use xlink:href="#icon-organization" data-v-2bd66a30 data-v-2bd66a30></use></svg><span class="info-text" data-v-2bd66a30 data-v-2bd66a30>
+          Hao Wei Lai
+        </span></span></section> <section data-v-2bd66a30><a href="mailto:glitteringma@gmail.com" title="glitteringma@gmail.com" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>glitteringma@gmail.com</title><use xlink:href="#icon-email" data-v-2bd66a30 data-v-2bd66a30></use></svg><span class="info-text" data-v-2bd66a30 data-v-2bd66a30>
+          glitteringma@gmail.com
+        </span></a></section></section></div> <div class="info-card-footer" data-v-2bd66a30><section class="info-sns clearfix" data-v-2bd66a30><a href="https://github.com/glitzma" target="_blank" class="sns-link" data-v-2bd66a30><span title="GitHub: glitzma" class="sns-icon" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1.5em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>GitHub: glitzma</title><use xlink:href="#icon-github" data-v-2bd66a30 data-v-2bd66a30></use></svg></span></a></section></div></div> <div class="post-nav-card main-div" style="position:relative;top:0;width:0px;" data-v-91b6f1b2><div class="post-nav-contents"><svg class="icon"><title>book</title><use xlink:href="#icon-book"></use></svg> <span>文章目录</span> <div class="post-nav-toc"> <ul><li><a href="/posts/2018/11/14/design-pattern.html#singleton-单例-模式">Singleton(单例)模式</a> <!----></li></ul> </div></div> <div class="post-nav-comments"><svg class="icon"><title>comment</title><use xlink:href="#icon-comment"></use></svg> <a href="/posts/2018/11/14/design-pattern.html#post-comments">
+      评论
+    </a></div></div></aside></div> <footer class="footer" data-v-e361d3ee><p class="sns-links" data-v-e361d3ee><a href="https://github.com/glitzma" target="_blank" class="sns-link" data-v-e361d3ee><span title="GitHub: glitzma" class="sns-icon" data-v-e361d3ee data-v-e361d3ee><svg class="icon" style="font-size:25px;" data-v-e361d3ee data-v-e361d3ee><title data-v-e361d3ee data-v-e361d3ee>GitHub: glitzma</title><use xlink:href="#icon-github" data-v-e361d3ee data-v-e361d3ee></use></svg></span></a></p> <p data-v-e361d3ee><span data-v-e361d3ee>Powered by </span> <a href="https://vuepress.vuejs.org" target="_blank" data-v-e361d3ee>
+      Vuepress
+    </a></p></footer></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.445d3d5d.js" defer></script><script src="/assets/js/3.cafb9f1c.js" defer></script><script src="/assets/js/89.ad63afe1.js" defer></script>
+  </body>
+</html>

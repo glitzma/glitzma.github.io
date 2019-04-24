@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vim命令集合 | Glitz&#39;s Blog</title>
+    <meta name="description" content="This is my blog">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.0c7f5120.css" as="style"><link rel="preload" href="/assets/js/app.445d3d5d.js" as="script"><link rel="preload" href="/assets/js/3.cafb9f1c.js" as="script"><link rel="preload" href="/assets/js/73.e33a0dc2.js" as="script"><link rel="prefetch" href="/assets/js/1.c2f6132b.js"><link rel="prefetch" href="/assets/js/10.faf610d2.js"><link rel="prefetch" href="/assets/js/11.2ccbb77a.js"><link rel="prefetch" href="/assets/js/12.d5a900bc.js"><link rel="prefetch" href="/assets/js/13.b8db4772.js"><link rel="prefetch" href="/assets/js/14.29653c83.js"><link rel="prefetch" href="/assets/js/15.b0079f33.js"><link rel="prefetch" href="/assets/js/16.ca55cf92.js"><link rel="prefetch" href="/assets/js/17.b2ae1578.js"><link rel="prefetch" href="/assets/js/18.f7438387.js"><link rel="prefetch" href="/assets/js/19.6c201aeb.js"><link rel="prefetch" href="/assets/js/20.6e1c069a.js"><link rel="prefetch" href="/assets/js/21.cefff5d8.js"><link rel="prefetch" href="/assets/js/22.ea927fe8.js"><link rel="prefetch" href="/assets/js/23.ff886a7e.js"><link rel="prefetch" href="/assets/js/24.846c97ea.js"><link rel="prefetch" href="/assets/js/25.209a8211.js"><link rel="prefetch" href="/assets/js/26.fff59258.js"><link rel="prefetch" href="/assets/js/27.2b03cdaa.js"><link rel="prefetch" href="/assets/js/28.848f8a6d.js"><link rel="prefetch" href="/assets/js/29.a625405d.js"><link rel="prefetch" href="/assets/js/30.4c4a5825.js"><link rel="prefetch" href="/assets/js/31.e33b332c.js"><link rel="prefetch" href="/assets/js/32.4b957291.js"><link rel="prefetch" href="/assets/js/33.e2075c7b.js"><link rel="prefetch" href="/assets/js/34.eb084cd6.js"><link rel="prefetch" href="/assets/js/35.7dd4a367.js"><link rel="prefetch" href="/assets/js/36.a694956b.js"><link rel="prefetch" href="/assets/js/37.7d609b90.js"><link rel="prefetch" href="/assets/js/38.a8dc914c.js"><link rel="prefetch" href="/assets/js/39.892a6aef.js"><link rel="prefetch" href="/assets/js/4.8deab1cb.js"><link rel="prefetch" href="/assets/js/40.3958bd48.js"><link rel="prefetch" href="/assets/js/41.cbc67523.js"><link rel="prefetch" href="/assets/js/42.2cb243de.js"><link rel="prefetch" href="/assets/js/43.0af3c762.js"><link rel="prefetch" href="/assets/js/44.9585f5a9.js"><link rel="prefetch" href="/assets/js/45.4c55af63.js"><link rel="prefetch" href="/assets/js/46.cb98e606.js"><link rel="prefetch" href="/assets/js/47.c37900d7.js"><link rel="prefetch" href="/assets/js/48.47fedeee.js"><link rel="prefetch" href="/assets/js/49.b6533852.js"><link rel="prefetch" href="/assets/js/5.82526ce9.js"><link rel="prefetch" href="/assets/js/50.9a9cc811.js"><link rel="prefetch" href="/assets/js/51.da6e5019.js"><link rel="prefetch" href="/assets/js/52.aee34b81.js"><link rel="prefetch" href="/assets/js/53.f6e8ace0.js"><link rel="prefetch" href="/assets/js/54.6414ea05.js"><link rel="prefetch" href="/assets/js/55.cd9df247.js"><link rel="prefetch" href="/assets/js/56.e891d9ea.js"><link rel="prefetch" href="/assets/js/57.b3516150.js"><link rel="prefetch" href="/assets/js/58.4d82c3b8.js"><link rel="prefetch" href="/assets/js/59.c53a299e.js"><link rel="prefetch" href="/assets/js/6.2fd7b21f.js"><link rel="prefetch" href="/assets/js/60.fc2bef70.js"><link rel="prefetch" href="/assets/js/61.a305d5fe.js"><link rel="prefetch" href="/assets/js/62.7033d185.js"><link rel="prefetch" href="/assets/js/63.5cc700b8.js"><link rel="prefetch" href="/assets/js/64.e334ee55.js"><link rel="prefetch" href="/assets/js/65.5c6a7d83.js"><link rel="prefetch" href="/assets/js/66.7e70bf9e.js"><link rel="prefetch" href="/assets/js/67.cba7a1dc.js"><link rel="prefetch" href="/assets/js/68.29592890.js"><link rel="prefetch" href="/assets/js/69.bb31acbc.js"><link rel="prefetch" href="/assets/js/7.0747c19c.js"><link rel="prefetch" href="/assets/js/70.28e39959.js"><link rel="prefetch" href="/assets/js/71.f16704f5.js"><link rel="prefetch" href="/assets/js/72.46180d84.js"><link rel="prefetch" href="/assets/js/74.13b2bc7a.js"><link rel="prefetch" href="/assets/js/75.2f7b5c1a.js"><link rel="prefetch" href="/assets/js/76.31e8ba14.js"><link rel="prefetch" href="/assets/js/77.efbee12b.js"><link rel="prefetch" href="/assets/js/78.d6547809.js"><link rel="prefetch" href="/assets/js/79.b13ad4ea.js"><link rel="prefetch" href="/assets/js/8.3a23fc0c.js"><link rel="prefetch" href="/assets/js/80.469b0b0a.js"><link rel="prefetch" href="/assets/js/81.e4cf2663.js"><link rel="prefetch" href="/assets/js/82.df36c3e5.js"><link rel="prefetch" href="/assets/js/83.8acb8191.js"><link rel="prefetch" href="/assets/js/84.5f4a6414.js"><link rel="prefetch" href="/assets/js/85.9837c8a6.js"><link rel="prefetch" href="/assets/js/86.cba3517d.js"><link rel="prefetch" href="/assets/js/87.f70c2fa6.js"><link rel="prefetch" href="/assets/js/88.3e910bb8.js"><link rel="prefetch" href="/assets/js/89.ad63afe1.js"><link rel="prefetch" href="/assets/js/9.f0fc6f93.js"><link rel="prefetch" href="/assets/js/90.45fd58d3.js"><link rel="prefetch" href="/assets/js/91.9362b6a7.js"><link rel="prefetch" href="/assets/js/92.ab9268fe.js"><link rel="prefetch" href="/assets/js/93.cfe2aecf.js"><link rel="prefetch" href="/assets/js/94.41a96929.js"><link rel="prefetch" href="/assets/js/95.1f334105.js"><link rel="prefetch" href="/assets/js/96.f5fc49d3.js"><link rel="prefetch" href="/assets/js/97.834cfc43.js"><link rel="prefetch" href="/assets/js/98.c95769a1.js"><link rel="prefetch" href="/assets/js/99.01b550db.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.0c7f5120.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-glitzma"><header class="header" style="background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:scroll;background-image:url(/assets/img/header-image-03.jpg);" data-v-e4a0ebe0><div data-v-fa5c5f88 data-v-e4a0ebe0><nav class="navbar" data-v-fa5c5f88><div class="container" data-v-fa5c5f88><a href="/" class="router-link-active" data-v-fa5c5f88><span class="navbar-site-name" data-v-fa5c5f88>
+          Glitz's Blog
+        </span></a> <div class="navbar-toggler" data-v-fa5c5f88><svg class="icon" style="font-size:1.2em;" data-v-fa5c5f88 data-v-fa5c5f88><title data-v-fa5c5f88 data-v-fa5c5f88>menu</title><use xlink:href="#icon-menu" data-v-fa5c5f88 data-v-fa5c5f88></use></svg></div> <div class="navbar-links" data-v-fa5c5f88><a href="/" class="navbar-link" data-v-fa5c5f88>
+            欢迎页
+          </a><a href="/posts/" class="navbar-link router-link-active" data-v-fa5c5f88>
+            帖子
+          </a><a href="/custom-pages/" class="navbar-link" data-v-fa5c5f88>
+            自定义页面
+          </a></div></div></nav> <div class="navbar-holder" style="display:none;" data-v-fa5c5f88></div></div> <div class="banner" data-v-e2d7da12 data-v-e4a0ebe0 data-v-e4a0ebe0><div class="container" data-v-e2d7da12><div class="center" data-v-e2d7da12><h1 class="header-slot-h1" data-v-e2d7da12 data-v-e4a0ebe0>
+          vim命令集合
+        </h1></div></div></div></header> <div class="container clearfix show-aside" data-v-91b6f1b2 data-v-91b6f1b2><main class="main" data-v-91b6f1b2><div class="post" data-v-91b6f1b2 data-v-91b6f1b2><section class="post-meta main-div" data-v-7f7ca342><section class="post-date clearfix" data-v-7f7ca342><span class="create-date" data-v-7f7ca342>
+      发布时间 : 2018-04-03
+    </span> <span class="update-date" data-v-7f7ca342>
+      最后修改 : 2019-04-24
+    </span></section> <section class="post-links" data-v-7f7ca342><a href="/posts/2018/04/02/learn-es6.html" class="post-link" data-v-7f7ca342>
+      上一篇 : learn es6
+    </a> <a href="/posts/2018/04/03/tcp-ip.html" class="post-link" data-v-7f7ca342>
+      下一篇 : TCP/IP协议 三次握手与四次挥手
+    </a></section></section> <article class="main-div"><div class="content default"><h2 id="命令历史"><a href="#命令历史" aria-hidden="true" class="header-anchor">#</a> 命令历史</h2> <p>以:和/开头的命令都有历史纪录，可以首先键入:或/然后按上下箭头来选择某个历史命令。</p> <h2 id="启动vim"><a href="#启动vim" aria-hidden="true" class="header-anchor">#</a> 启动vim</h2> <p>在命令行窗口中输入以下命令即可</p> <p>vim 直接启动vim</p> <p>vim filename 打开vim并创建名为filename的文件</p> <h2 id="文件命令"><a href="#文件命令" aria-hidden="true" class="header-anchor">#</a> 文件命令</h2> <div class="language- extra-class"><pre class="language-text"><code>打开单个文件
+vim file
+同时打开多个文件
+vim file1 file2 file3
+在vim窗口中打开一个新文件
+:open file
+在新窗口中打开文件
+:split file
+切换到下一个文件
+:bn
+切换到上一个文件
+:bp
+查看当前找开的文件列表，当前正在编辑的文件会用[]括起来。
+:args
+打开远程文件，比如ftp或者share folder
+:e ftp://192.168.10.76/abc.txt
+:e \\qadrive\test\1.txt
+</code></pre></div><h2 id="vim的模式"><a href="#vim的模式" aria-hidden="true" class="header-anchor">#</a> vim的模式</h2> <p>正常模式(按Esc或Ctrl+[进入)左下角显示文件名或为空
+插入模式(按i键进入)左下角显示 --INSERT--
+可视模式(不知道如何进入)左下角显示 --VISUAL--</p> <h2 id="导航命令"><a href="#导航命令" aria-hidden="true" class="header-anchor">#</a> 导航命令</h2> <p>% 括号匹配 	跳转至匹配对，可以是()、｛｝或者[]</p> <h2 id="插入命令"><a href="#插入命令" aria-hidden="true" class="header-anchor">#</a> 插入命令</h2> <div class="language- extra-class"><pre class="language-text"><code>i 在当前位置前插入
+I 在当前行首插入
+a 在当前位置后插入
+A 在当前行尾插入
+o 在当前行之后插入一行
+O 在当前行之前插入一行
+</code></pre></div><h2 id="查找命令"><a href="#查找命令" aria-hidden="true" class="header-anchor">#</a> 查找命令</h2> <div class="language- extra-class"><pre class="language-text"><code>/text 查找text,按n键查找下一个
+?text 查找text,反向查找，按n键查找下一个，按N键查找前一个
+vim中有一些特殊字符在查找时需要转义 .*[]^%/?~$
+:set ignorecase 忽略大小写的查找 （直接设置）
+:set noignorecase 不忽略大小写的查找（直接设置）
+查找很长的词，如果一个词很长，键入麻烦，可以将光标移动到该词上，按*或者按#键即可以对该单词进行搜索，相当于/搜索。而#命令相当于？搜索。
+:set hlsearch 高亮搜索结果，所有结果都高亮显示，而不是只显示一个匹配。
+:set nohlsearch 关闭高亮搜索显示
+:nohlsearch 关闭当前的高亮显示，如果再次搜索或者按下n或者N键，则会再次高亮。
+:set incsearch 逐步搜索模式，对当前键入的字符进行搜索而不必等待键入完成。
+:set wrapscan 重新所杀变，在搜索到文件头或者尾时，返回继续搜索，默认开启
+</code></pre></div><h2 id="替换命令"><a href="#替换命令" aria-hidden="true" class="header-anchor">#</a> 替换命令</h2> <div class="language- extra-class"><pre class="language-text"><code>ra 将当前字符规制为a，当前字符即光标所在字符
+s 将当前位置字符删除，并可以像i一样进行插入
+:s/old/new/ 用old替换new,替换当前行的第一个匹配
+:s/old/new/g 用old替换new,替换当前行的所有匹配
+:%s/old/new/ 用old替换new，替换所有行的第一个匹配
+:%s/old/new/g 用old替换new,替换整个文件的所有匹配
+:10,20 s/^/    /g 在第10到20行每行前加四个空格用于缩进
+ddp 交换光标所在行和其下紧邻的一行
+</code></pre></div><h2 id="移动命令"><a href="#移动命令" aria-hidden="true" class="header-anchor">#</a> 移动命令</h2> <div class="language- extra-class"><pre class="language-text"><code>h 左移一个字符
+l 右移一个字符，这个命令很少用，一般用w代替
+k 上移一个字符
+j 下移一个字符
+以上四个命令可以配合数字使用，比如20j就是向下移动20行，5h就是向左移动5个字符，在vim中，很多命令都可以配合数字使用，比如删除10个字符10x，在当前位置后插入3个！，3a! &lt;Esc&gt;,这里的ESC是必须的，否则命令不生效。
+w 向前移动一个单词（光标停在单词首部），如果已到行尾，则转到下一行行首。此命令快，可以代替l命令。
+b 向后移动一个单词 2b 向后移动2个单词
+e 同w,只不过是光标停在单词尾部
+ge 同b,光标停在单词尾部
+^ 移动到本行第一个非空白字符上
+0 （数字0）移动到本行第一个字符上
+&lt;HOME&gt; 移动到本行第一个字符。同0键
+$ 移动到行尾 3$ 移动到下面3号的行尾
+gg 移动到文件头  = [[
+G (shift + g)移动到文件尾 = ]]
+f (find)命令也可以用于移动，fx将找到的光标后第一个为x的字符，3fd将找到第三个为d的字符
+F 同f，返向查找。
+跳到指定行，冒号+行号，回车，比如跳到240行就是 :240回车。另一个方法就是行号+G，比如230G跳到230行。
+Ctrl + e 向下滚动一行
+Ctrl + y 向上滚动一行
+Ctrl + d 向下滚动半屏
+Ctrl + u 向上滚动半屏
+Ctrl + f 向下滚动一屏
+Ctrl + b 向上滚动一屏
+</code></pre></div><h2 id="撤销和重做"><a href="#撤销和重做" aria-hidden="true" class="header-anchor">#</a> 撤销和重做</h2> <div class="language- extra-class"><pre class="language-text"><code>u 撤销（Undo）
+U 撤销对整行的操作
+Ctrl + r 重做(Redo),即撤销的撤销
+</code></pre></div><h2 id="删除命令"><a href="#删除命令" aria-hidden="true" class="header-anchor">#</a> 删除命令</h2> <div class="language- extra-class"><pre class="language-text"><code>x 删除当前字符
+3x 删除当前光标开始向后三个字符
+X 删除当前字符的前一个字符。 X=dh
+dl 删除当前字符， dl=x
+dh 删除前一个字符
+dd删除当前行
+dj删除上一行
+dk删除下一行
+:10d 删除第10行 （文章中写删除当前行开始的10行。但试着是删除第10行）
+D 删除当前字符到行尾。 D=d$  (本行)
+d$ 删除当前字符之后的所有字符（本行）
+kdgg 删除当前行之前所有行（不包括当前行）
+jdG (jd shift + g) 删除当前行之后所有行（不包括当前行）
+:1,10d 删除1-10行
+:11,$d 删除11号及以后所有的行
+：1,$d 删除所有行
+J(shift + j) 删除两行之间的空行，实际上是合并两行
+</code></pre></div><h2 id="拷贝和粘贴"><a href="#拷贝和粘贴" aria-hidden="true" class="header-anchor">#</a> 拷贝和粘贴</h2> <div class="language- extra-class"><pre class="language-text"><code>yy 拷贝当前行
+nyy 拷贝当前行开始的n行，比如 2yy 拷贝当前行及其下一行
+p 在当前光标后粘贴，如果之前使用了yy命令来复制一行，那么就在当前行的下一行粘贴。
+shipt + p 在当前行前粘贴
+:1,10 co 20 将1-10行插入到第20行之后。
+:1,$ co $ 将整个文件复制一份并添加到文件尾部
+正常模式下按v（逐字）或V（逐行）进入可视模式，然后用jklh命令移动即可选择某些行或字符，再按y即可复制
+ddp 交换当前行和其下一行
+xp 交换当前字符和其后一个字符
+</code></pre></div><h2 id="剪切命令"><a href="#剪切命令" aria-hidden="true" class="header-anchor">#</a> 剪切命令</h2> <div class="language- extra-class"><pre class="language-text"><code>正常模式下按v（逐字）或V（逐行）进入可视档，然后用jklh命令移动即可选择某些行或字符，再按d即可剪切
+ndd 剪切当前行之后的n行，利用p命令可以剪切的内容进行粘贴
+:1,10d 将1-10行剪切。利用p命令可将剪切后的内容进行粘贴。
+:1,10 m 20 将1-10移动到第20行之后。
+</code></pre></div><h2 id="退出命令"><a href="#退出命令" aria-hidden="true" class="header-anchor">#</a> 退出命令</h2> <div class="language- extra-class"><pre class="language-text"><code>:wq 保存并退出
+ZZ 保存并退出
+:q! 强制退出并忽略所有更改
+:e! 放弃所有修改，并打开原来文件
+</code></pre></div><h2 id="窗口命令"><a href="#窗口命令" aria-hidden="true" class="header-anchor">#</a> 窗口命令</h2> <div class="language- extra-class"><pre class="language-text"><code>:split 或 new 打开一个新窗口，光标停在顶层的窗口上
+:split file 或:new file 用新窗口打开文件
+split 找开的窗口都是横向的，使用vsplit 可以纵向打开窗口。
+Ctrl+www 移动到下一个窗口
+Ctrl+wj 移动到下方的窗口
+Ctrl+wk 移动到上方的窗口
+关闭窗口
+:close 最后一个窗口不能使用此命令，可以防止意外退出vim.
+:q 如果最后一个被关闭的窗口，那么将退出vim.
+ZZ 保存并退出
+关闭所有窗口，只保留当前窗口
+:only
+录制宏
+按q键加任意字母开始录制，再按q键结束录制（这意味着vim中的宏不可潜逃），使用的时候@加宏名，比如qa。。。q录制名为a的宏，@a使用这个宏。
+
+</code></pre></div><h2 id="执行shell命令"><a href="#执行shell命令" aria-hidden="true" class="header-anchor">#</a> 执行shell命令</h2> <div class="language- extra-class"><pre class="language-text"><code>:!command
+:!ls 更出当前目录下文件
+:!perl -c script.pl 检查perl脚本语法，可以不用退出vim,非常方便。
+:!perl script.pl 执行perl脚本，可以不用退出vim,非常方便
+:suspend或Ctrl - Z 挂起vim ,回到shell,按fg可以返回vim
+</code></pre></div><h2 id="注释命令"><a href="#注释命令" aria-hidden="true" class="header-anchor">#</a> 注释命令</h2> <div class="language- extra-class"><pre class="language-text"><code>perl程序中#开始的行为注释，所以要注释某些行，只需在行首加入#
+3,5 s/^/#/g 注释第3-5行
+3,5 s/^#//g 接触3-5行的注释
+1,$ s/^/#/g 注释整个文档
+:%s/^/#/g 注释整个文档，此法更快
+</code></pre></div><h2 id="帮助命令"><a href="#帮助命令" aria-hidden="true" class="header-anchor">#</a> 帮助命令</h2> <div class="language- extra-class"><pre class="language-text"><code>:help or F1 显示整个帮助
+:help xxx 显示xxx的帮助,比如:help i, :help CTRL-[ (即Ctrl+[的帮助)
+:help 'number' Vim 选项的帮助用单引号括起
+:help &lt;Esc&gt; 特殊键的帮助用&lt;&gt;扩起
+:help -t Vim 启动参数的帮助用-
+:help i_&lt;Esc&gt;插入模式下Esc的帮助，某个模式下的帮助用模式_主题的模式
+帮助文件中位于||之间的内容是超链接，可以用Ctrl+]进入链接，
+Ctrl+o (Ctrl + t)返回
+</code></pre></div><h2 id="其它非编辑命令"><a href="#其它非编辑命令" aria-hidden="true" class="header-anchor">#</a> 其它非编辑命令</h2> <div class="language- extra-class"><pre class="language-text"><code>.重复前一次命令
+:set ruler? 查看是否设置了ruler,在 .vimrc中使用set命令设置的选项都可以通过这个命令查看
+:scriptname 查看vim脚本文件的位置，比如.vimrc文件，语法文件及plugin等
+:set list 显示非打印字符，如tab,空格，行尾等。如果tab无法显示，请确定set lcs=tab:&gt;-命令设置了.vimrc文件，并确保你的文件中的确有tab,如果开启了expendtab,那么tab将被扩展为空格。
+
+VIM 教程
+在Unix系统上
+$ vimtutor
+在Windows系统上
+:help tutor
+
+:syntax列出已经定义的语法项
+:syntax clear 清除已定义的语法规则
+:syntax case match 大小写敏感，int 和Int将视为不同的语法元素
+:syntax case ignore 大小写无关，int 和 Int将视为相同的语法元素，并使用同样的配色方案
+
+</code></pre></div><p><a href="http://www.cnblogs.com/softwaretesting/archive/2011/07/12/2104435.html" target="_blank" rel="noopener noreferrer">文章借鉴<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> http://www.cnblogs.com/softwaretesting/archive/2011/07/12/2104435.html</p></div></article> <section class="post-meta main-div" data-v-7f7ca342><section class="post-date clearfix" data-v-7f7ca342><span class="create-date" data-v-7f7ca342>
+      发布时间 : 2018-04-03
+    </span> <span class="update-date" data-v-7f7ca342>
+      最后修改 : 2019-04-24
+    </span></section> <section class="post-links" data-v-7f7ca342><a href="/posts/2018/04/02/learn-es6.html" class="post-link" data-v-7f7ca342>
+      上一篇 : learn es6
+    </a> <a href="/posts/2018/04/03/tcp-ip.html" class="post-link" data-v-7f7ca342>
+      下一篇 : TCP/IP协议 三次握手与四次挥手
+    </a></section></section> <div id="post-comments" class="main-div"><!----></div></div></main> <aside class="aside" data-v-91b6f1b2><div class="info-card main-div" data-v-2bd66a30 data-v-91b6f1b2><div class="info-card-header" data-v-2bd66a30><img src="https://blog.mamingjuan.cn/assets/images/favicon-16.ico" alt="glitzma" class="info-avatar" data-v-2bd66a30></div> <div class="info-card-body" data-v-2bd66a30><section class="info-nickname" data-v-2bd66a30>
+      glitzma
+    </section> <section class="info-desc" data-v-2bd66a30>Happy Coding<br/>Happy Life</section> <section class="info-contact" data-v-2bd66a30><section data-v-2bd66a30><span title="Beijing City, China" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>Beijing City, China</title><use xlink:href="#icon-location" data-v-2bd66a30 data-v-2bd66a30></use></svg><span class="info-text" data-v-2bd66a30 data-v-2bd66a30>
+          Beijing City, China
+        </span></span></section> <section data-v-2bd66a30><span title="Hao Wei Lai" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>Hao Wei Lai</title><use xlink:href="#icon-organization" data-v-2bd66a30 data-v-2bd66a30></use></svg><span class="info-text" data-v-2bd66a30 data-v-2bd66a30>
+          Hao Wei Lai
+        </span></span></section> <section data-v-2bd66a30><a href="mailto:glitteringma@gmail.com" title="glitteringma@gmail.com" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>glitteringma@gmail.com</title><use xlink:href="#icon-email" data-v-2bd66a30 data-v-2bd66a30></use></svg><span class="info-text" data-v-2bd66a30 data-v-2bd66a30>
+          glitteringma@gmail.com
+        </span></a></section></section></div> <div class="info-card-footer" data-v-2bd66a30><section class="info-sns clearfix" data-v-2bd66a30><a href="https://github.com/glitzma" target="_blank" class="sns-link" data-v-2bd66a30><span title="GitHub: glitzma" class="sns-icon" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1.5em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>GitHub: glitzma</title><use xlink:href="#icon-github" data-v-2bd66a30 data-v-2bd66a30></use></svg></span></a></section></div></div> <div class="post-nav-card main-div" style="position:relative;top:0;width:0px;" data-v-91b6f1b2><div class="post-nav-contents"><svg class="icon"><title>book</title><use xlink:href="#icon-book"></use></svg> <span>文章目录</span> <div class="post-nav-toc"> <ul><li><a href="/posts/2018/04/03/vim-command.html#命令历史">命令历史</a> <!----></li><li><a href="/posts/2018/04/03/vim-command.html#启动vim">启动vim</a> <!----></li><li><a href="/posts/2018/04/03/vim-command.html#文件命令">文件命令</a> <!----></li><li><a href="/posts/2018/04/03/vim-command.html#vim的模式">vim的模式</a> <!----></li><li><a href="/posts/2018/04/03/vim-command.html#导航命令">导航命令</a> <!----></li><li><a href="/posts/2018/04/03/vim-command.html#插入命令">插入命令</a> <!----></li><li><a href="/posts/2018/04/03/vim-command.html#查找命令">查找命令</a> <!----></li><li><a href="/posts/2018/04/03/vim-command.html#替换命令">替换命令</a> <!----></li><li><a href="/posts/2018/04/03/vim-command.html#移动命令">移动命令</a> <!----></li><li><a href="/posts/2018/04/03/vim-command.html#撤销和重做">撤销和重做</a> <!----></li><li><a href="/posts/2018/04/03/vim-command.html#删除命令">删除命令</a> <!----></li><li><a href="/posts/2018/04/03/vim-command.html#拷贝和粘贴">拷贝和粘贴</a> <!----></li><li><a href="/posts/2018/04/03/vim-command.html#剪切命令">剪切命令</a> <!----></li><li><a href="/posts/2018/04/03/vim-command.html#退出命令">退出命令</a> <!----></li><li><a href="/posts/2018/04/03/vim-command.html#窗口命令">窗口命令</a> <!----></li><li><a href="/posts/2018/04/03/vim-command.html#执行shell命令">执行shell命令</a> <!----></li><li><a href="/posts/2018/04/03/vim-command.html#注释命令">注释命令</a> <!----></li><li><a href="/posts/2018/04/03/vim-command.html#帮助命令">帮助命令</a> <!----></li><li><a href="/posts/2018/04/03/vim-command.html#其它非编辑命令">其它非编辑命令</a> <!----></li></ul> </div></div> <div class="post-nav-comments"><svg class="icon"><title>comment</title><use xlink:href="#icon-comment"></use></svg> <a href="/posts/2018/04/03/vim-command.html#post-comments">
+      评论
+    </a></div></div></aside></div> <footer class="footer" data-v-e361d3ee><p class="sns-links" data-v-e361d3ee><a href="https://github.com/glitzma" target="_blank" class="sns-link" data-v-e361d3ee><span title="GitHub: glitzma" class="sns-icon" data-v-e361d3ee data-v-e361d3ee><svg class="icon" style="font-size:25px;" data-v-e361d3ee data-v-e361d3ee><title data-v-e361d3ee data-v-e361d3ee>GitHub: glitzma</title><use xlink:href="#icon-github" data-v-e361d3ee data-v-e361d3ee></use></svg></span></a></p> <p data-v-e361d3ee><span data-v-e361d3ee>Powered by </span> <a href="https://vuepress.vuejs.org" target="_blank" data-v-e361d3ee>
+      Vuepress
+    </a></p></footer></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.445d3d5d.js" defer></script><script src="/assets/js/3.cafb9f1c.js" defer></script><script src="/assets/js/73.e33a0dc2.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vue开发中遇到的问题 | Glitz&#39;s Blog</title>
+    <meta name="description" content="This is my blog">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.0c7f5120.css" as="style"><link rel="preload" href="/assets/js/app.445d3d5d.js" as="script"><link rel="preload" href="/assets/js/3.cafb9f1c.js" as="script"><link rel="preload" href="/assets/js/68.29592890.js" as="script"><link rel="prefetch" href="/assets/js/1.c2f6132b.js"><link rel="prefetch" href="/assets/js/10.faf610d2.js"><link rel="prefetch" href="/assets/js/11.2ccbb77a.js"><link rel="prefetch" href="/assets/js/12.d5a900bc.js"><link rel="prefetch" href="/assets/js/13.b8db4772.js"><link rel="prefetch" href="/assets/js/14.29653c83.js"><link rel="prefetch" href="/assets/js/15.b0079f33.js"><link rel="prefetch" href="/assets/js/16.ca55cf92.js"><link rel="prefetch" href="/assets/js/17.b2ae1578.js"><link rel="prefetch" href="/assets/js/18.f7438387.js"><link rel="prefetch" href="/assets/js/19.6c201aeb.js"><link rel="prefetch" href="/assets/js/20.6e1c069a.js"><link rel="prefetch" href="/assets/js/21.cefff5d8.js"><link rel="prefetch" href="/assets/js/22.ea927fe8.js"><link rel="prefetch" href="/assets/js/23.ff886a7e.js"><link rel="prefetch" href="/assets/js/24.846c97ea.js"><link rel="prefetch" href="/assets/js/25.209a8211.js"><link rel="prefetch" href="/assets/js/26.fff59258.js"><link rel="prefetch" href="/assets/js/27.2b03cdaa.js"><link rel="prefetch" href="/assets/js/28.848f8a6d.js"><link rel="prefetch" href="/assets/js/29.a625405d.js"><link rel="prefetch" href="/assets/js/30.4c4a5825.js"><link rel="prefetch" href="/assets/js/31.e33b332c.js"><link rel="prefetch" href="/assets/js/32.4b957291.js"><link rel="prefetch" href="/assets/js/33.e2075c7b.js"><link rel="prefetch" href="/assets/js/34.eb084cd6.js"><link rel="prefetch" href="/assets/js/35.7dd4a367.js"><link rel="prefetch" href="/assets/js/36.a694956b.js"><link rel="prefetch" href="/assets/js/37.7d609b90.js"><link rel="prefetch" href="/assets/js/38.a8dc914c.js"><link rel="prefetch" href="/assets/js/39.892a6aef.js"><link rel="prefetch" href="/assets/js/4.8deab1cb.js"><link rel="prefetch" href="/assets/js/40.3958bd48.js"><link rel="prefetch" href="/assets/js/41.cbc67523.js"><link rel="prefetch" href="/assets/js/42.2cb243de.js"><link rel="prefetch" href="/assets/js/43.0af3c762.js"><link rel="prefetch" href="/assets/js/44.9585f5a9.js"><link rel="prefetch" href="/assets/js/45.4c55af63.js"><link rel="prefetch" href="/assets/js/46.cb98e606.js"><link rel="prefetch" href="/assets/js/47.c37900d7.js"><link rel="prefetch" href="/assets/js/48.47fedeee.js"><link rel="prefetch" href="/assets/js/49.b6533852.js"><link rel="prefetch" href="/assets/js/5.82526ce9.js"><link rel="prefetch" href="/assets/js/50.9a9cc811.js"><link rel="prefetch" href="/assets/js/51.da6e5019.js"><link rel="prefetch" href="/assets/js/52.aee34b81.js"><link rel="prefetch" href="/assets/js/53.f6e8ace0.js"><link rel="prefetch" href="/assets/js/54.6414ea05.js"><link rel="prefetch" href="/assets/js/55.cd9df247.js"><link rel="prefetch" href="/assets/js/56.e891d9ea.js"><link rel="prefetch" href="/assets/js/57.b3516150.js"><link rel="prefetch" href="/assets/js/58.4d82c3b8.js"><link rel="prefetch" href="/assets/js/59.c53a299e.js"><link rel="prefetch" href="/assets/js/6.2fd7b21f.js"><link rel="prefetch" href="/assets/js/60.fc2bef70.js"><link rel="prefetch" href="/assets/js/61.a305d5fe.js"><link rel="prefetch" href="/assets/js/62.7033d185.js"><link rel="prefetch" href="/assets/js/63.5cc700b8.js"><link rel="prefetch" href="/assets/js/64.e334ee55.js"><link rel="prefetch" href="/assets/js/65.5c6a7d83.js"><link rel="prefetch" href="/assets/js/66.7e70bf9e.js"><link rel="prefetch" href="/assets/js/67.cba7a1dc.js"><link rel="prefetch" href="/assets/js/69.bb31acbc.js"><link rel="prefetch" href="/assets/js/7.0747c19c.js"><link rel="prefetch" href="/assets/js/70.28e39959.js"><link rel="prefetch" href="/assets/js/71.f16704f5.js"><link rel="prefetch" href="/assets/js/72.46180d84.js"><link rel="prefetch" href="/assets/js/73.e33a0dc2.js"><link rel="prefetch" href="/assets/js/74.13b2bc7a.js"><link rel="prefetch" href="/assets/js/75.2f7b5c1a.js"><link rel="prefetch" href="/assets/js/76.31e8ba14.js"><link rel="prefetch" href="/assets/js/77.efbee12b.js"><link rel="prefetch" href="/assets/js/78.d6547809.js"><link rel="prefetch" href="/assets/js/79.b13ad4ea.js"><link rel="prefetch" href="/assets/js/8.3a23fc0c.js"><link rel="prefetch" href="/assets/js/80.469b0b0a.js"><link rel="prefetch" href="/assets/js/81.e4cf2663.js"><link rel="prefetch" href="/assets/js/82.df36c3e5.js"><link rel="prefetch" href="/assets/js/83.8acb8191.js"><link rel="prefetch" href="/assets/js/84.5f4a6414.js"><link rel="prefetch" href="/assets/js/85.9837c8a6.js"><link rel="prefetch" href="/assets/js/86.cba3517d.js"><link rel="prefetch" href="/assets/js/87.f70c2fa6.js"><link rel="prefetch" href="/assets/js/88.3e910bb8.js"><link rel="prefetch" href="/assets/js/89.ad63afe1.js"><link rel="prefetch" href="/assets/js/9.f0fc6f93.js"><link rel="prefetch" href="/assets/js/90.45fd58d3.js"><link rel="prefetch" href="/assets/js/91.9362b6a7.js"><link rel="prefetch" href="/assets/js/92.ab9268fe.js"><link rel="prefetch" href="/assets/js/93.cfe2aecf.js"><link rel="prefetch" href="/assets/js/94.41a96929.js"><link rel="prefetch" href="/assets/js/95.1f334105.js"><link rel="prefetch" href="/assets/js/96.f5fc49d3.js"><link rel="prefetch" href="/assets/js/97.834cfc43.js"><link rel="prefetch" href="/assets/js/98.c95769a1.js"><link rel="prefetch" href="/assets/js/99.01b550db.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.0c7f5120.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-glitzma"><header class="header" style="background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:scroll;background-image:url(/assets/img/header-image-02.jpg);" data-v-e4a0ebe0><div data-v-fa5c5f88 data-v-e4a0ebe0><nav class="navbar" data-v-fa5c5f88><div class="container" data-v-fa5c5f88><a href="/" class="router-link-active" data-v-fa5c5f88><span class="navbar-site-name" data-v-fa5c5f88>
+          Glitz's Blog
+        </span></a> <div class="navbar-toggler" data-v-fa5c5f88><svg class="icon" style="font-size:1.2em;" data-v-fa5c5f88 data-v-fa5c5f88><title data-v-fa5c5f88 data-v-fa5c5f88>menu</title><use xlink:href="#icon-menu" data-v-fa5c5f88 data-v-fa5c5f88></use></svg></div> <div class="navbar-links" data-v-fa5c5f88><a href="/" class="navbar-link" data-v-fa5c5f88>
+            欢迎页
+          </a><a href="/posts/" class="navbar-link router-link-active" data-v-fa5c5f88>
+            帖子
+          </a><a href="/custom-pages/" class="navbar-link" data-v-fa5c5f88>
+            自定义页面
+          </a></div></div></nav> <div class="navbar-holder" style="display:none;" data-v-fa5c5f88></div></div> <div class="banner" data-v-e2d7da12 data-v-e4a0ebe0 data-v-e4a0ebe0><div class="container" data-v-e2d7da12><div class="center" data-v-e2d7da12><h1 class="header-slot-h1" data-v-e2d7da12 data-v-e4a0ebe0>
+          vue开发中遇到的问题
+        </h1></div></div></div></header> <div class="container clearfix show-aside" data-v-91b6f1b2 data-v-91b6f1b2><main class="main" data-v-91b6f1b2><div class="post" data-v-91b6f1b2 data-v-91b6f1b2><section class="post-meta main-div" data-v-7f7ca342><section class="post-date clearfix" data-v-7f7ca342><span class="create-date" data-v-7f7ca342>
+      发布时间 : 2018-03-08
+    </span> <span class="update-date" data-v-7f7ca342>
+      最后修改 : 2019-04-24
+    </span></section> <section class="post-links" data-v-7f7ca342><a href="/posts/2018/02/22/css-animate.html" class="post-link" data-v-7f7ca342>
+      上一篇 : css 动画
+    </a> <a href="/posts/2018/03/20/two-way-principle.html" class="post-link" data-v-7f7ca342>
+      下一篇 : 简单实现双向数据绑定
+    </a></section></section> <article class="main-div"><div class="content default"><h2 id="_1-eslint-常见问题"><a href="#_1-eslint-常见问题" aria-hidden="true" class="header-anchor">#</a> 1. ESLint 常见问题</h2> <div class="language- extra-class"><pre class="language-text"><code>使用配置文件来配置
+// .eslintrc.js
+module.exports = {
+  rules: {
+    eqeqeq: 'off',
+    curly: 'error',
+  },
+};
+使用注释来配置
+/* eslint eqeqeq: &quot;off&quot;, curly: &quot;error&quot; */
+/* eslint eqeqeq: 0, curly: 2 */
+也可以在注释中关闭所有或者某个规则：
+
+/* eslint-disable */
+/* eslint-enable */
+
+/* eslint-disable no-alert, no-console */
+/* eslint-enable no-alert, no-console */
+
+作者：给我一炷香的时间
+链接：https://www.jianshu.com/p/2bcdce1dc8d4
+來源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+</code></pre></div><h2 id="_2-图片打包"><a href="#_2-图片打包" aria-hidden="true" class="header-anchor">#</a> 2. 图片打包</h2> <p>vue-cli中有两个地方可以放静态资源。</p> <div class="language- extra-class"><pre class="language-text"><code>static 文件夹中存放的是不常改变，并且不用做特殊处理的图片，会直接复制到(dist/static)下
+assets 文件们中存放的是可以被webpack处理的文件，当文件较小时会被自动压缩
+
+assets 是相对的资源引用
+</code></pre></div><p>图片的引用方法</p> <div class="language- extra-class"><pre class="language-text"><code>js部分：
+data () {
+    return {
+         imgUrl: '图片地址',//错误写法
+        imgUrl: require('图片地址')//正确的写法
+    }
+}
+template部分：
+img标签形式：
+&lt;img :src=&quot;img&quot; /&gt;
+或者p背景图形式：
+&lt;p :style=&quot;{backgroundImage: 'url(' + img + ')'}&quot;&gt;&lt;/p&gt;
+
+style中引用
+background:url(&quot;..相对路径写到这里就能被解析&quot;)
+</code></pre></div><p>说了图片就正好再提一下vue-cli的一个图片有关的配置，下图这个配置的意思是：在10000b 的图片以下进行base64转换，所以如果项目中有些比较小的icon就不用再进行图片精灵的处理了</p> <h2 id="_3-自定义用户别名"><a href="#_3-自定义用户别名" aria-hidden="true" class="header-anchor">#</a> 3. 自定义用户别名</h2> <p>设置地址：build文件夹下面的webpack.base.conf.js文件</p> <div class="language- extra-class"><pre class="language-text"><code>resolve: {
+    extensions: ['.js', '.vue', '.json'],
+     alias: {
+        'vue$': 'vue/dist/vue.esm.js',
+        '@': resolve('src'),
+        'static':path.resolve(__dirname, '../static'),//增加这一行代码
+        }
+    },
+</code></pre></div><p>使用方式：</p> <blockquote><p>使用的时候要像下方截图的B处一样前面要加上一个’~’，这里的webstorm虽然提示报错，我们可以不用管，代码运行是正常的。</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>background-image:url('~static/')
+//这样就替换掉了 static === ../static 层级再复杂，也是感觉666了
+</code></pre></div><h2 id="_4-save-dev与-save的区别"><a href="#_4-save-dev与-save的区别" aria-hidden="true" class="header-anchor">#</a> 4. -save-dev与-save的区别</h2> <div class="language- extra-class"><pre class="language-text"><code>上面的这些依赖有些只在开发环境里面使用的模块，有的在项目上线之后还是要继续依赖的模块。他们之间的区别就在于我们平时安装模块依赖时的：--save-dev和 --save
+
+当你使用--save-dev安装依赖的时候就会放在package.json的devDependencies对象下面，相反的，当你使用--save安装依赖的时候就会出现在dependencies对象下面。
+
+总结：* –save-dev 是你开发时候依赖的东西，–save 是你发布之后还依赖的东西。*
+</code></pre></div><h2 id="_5-事件-按键修饰符"><a href="#_5-事件-按键修饰符" aria-hidden="true" class="header-anchor">#</a> 5. 事件 &amp; 按键修饰符</h2> <p>对于 .passive、.capture 和 .once事件修饰符, Vue 提供了相应的前缀可以用于 on：
+Modifier(s)	Prefix</p> <div class="language- extra-class"><pre class="language-text"><code>.passive	&amp;
+.capture	!
+.once	~
+.capture.once or
+.once.capture	~!
+</code></pre></div><p>例如:</p> <div class="language- extra-class"><pre class="language-text"><code>on: {
+  '!click': this.doThisInCapturingMode,
+  '~keyup': this.doThisOnce,
+  '~!mouseover': this.doThisOnceInCapturingMode
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>对于其他的修饰符，前缀不是很重要，因为你可以在事件处理函数中使用事件方法：
+Modifier(s)	Equivalent in Handler
+.stop	event.stopPropagation()
+.prevent	event.preventDefault()
+.self	if (event.target !== event.currentTarget) return
+Keys:
+.enter, .13	if (event.keyCode !== 13) return (change 13 to another key code for other key modifiers)
+Modifiers Keys:
+.ctrl, .alt, .shift, .meta	if (!event.ctrlKey) return (change ctrlKey to altKey, shiftKey, or metaKey, respectively)
+</code></pre></div><h2 id="_6-提取组件的css"><a href="#_6-提取组件的css" aria-hidden="true" class="header-anchor">#</a> 6. 提取组件的css</h2> <p>当使用单文件组件时，组件内的 CSS 会以 <code>&lt;style&gt;</code> 标签的方式通过 JavaScript 动态注入。这有一些小小的运行时开销，如果你使用服务端渲染，这会导致一段“无样式内容闪烁 (fouc)”。将所有组件的 CSS 提取到同一个文件可以避免这个问题，也会让 CSS 更好地进行压缩和缓存。</p> <p>提取 CSS 到单个文件</p> <div class="language- extra-class"><pre class="language-text"><code>npm install extract-text-webpack-plugin --save-dev
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//---requires vue-loader@^12.0.0 and webpack@^2.0.0</span>
+
+<span class="token comment">// webpack.config.js</span>
+<span class="token keyword">var</span> ExtractTextPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;extract-text-webpack-plugin&quot;</span><span class="token punctuation">)</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">// other options...</span>
+  module<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    rules<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        test<span class="token punctuation">:</span> <span class="token regex">/\.vue$/</span><span class="token punctuation">,</span>
+        loader<span class="token punctuation">:</span> <span class="token string">'vue-loader'</span><span class="token punctuation">,</span>
+        options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          extractCSS<span class="token punctuation">:</span> <span class="token boolean">true</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">ExtractTextPlugin</span><span class="token punctuation">(</span><span class="token string">&quot;style.css&quot;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="_7-父子组件通信"><a href="#_7-父子组件通信" aria-hidden="true" class="header-anchor">#</a> 7.父子组件通信</h2> <p>on和emit的事件必须是在一个公共的实例上，才能触发。</p> <p>我的解决方案是：</p> <p>新建bus.js</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">export</span> <span class="token keyword">var</span> bus <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p>App.vue里created方法里定义事件</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> bus <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'bus.js'</span>
+<span class="token comment">// ...</span>
+<span class="token function">created</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  bus<span class="token punctuation">.</span><span class="token function">$on</span><span class="token punctuation">(</span><span class="token string">'tip'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">text</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Test.vue组件内调用</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> bus <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'bus.js'</span>
+ <span class="token comment">// ...</span>
+bus<span class="token punctuation">.</span><span class="token function">$emit</span><span class="token punctuation">(</span><span class="token string">'tip'</span><span class="token punctuation">,</span> <span class="token string">'123'</span><span class="token punctuation">)</span>
+</code></pre></div></div></article> <section class="post-meta main-div" data-v-7f7ca342><section class="post-date clearfix" data-v-7f7ca342><span class="create-date" data-v-7f7ca342>
+      发布时间 : 2018-03-08
+    </span> <span class="update-date" data-v-7f7ca342>
+      最后修改 : 2019-04-24
+    </span></section> <section class="post-links" data-v-7f7ca342><a href="/posts/2018/02/22/css-animate.html" class="post-link" data-v-7f7ca342>
+      上一篇 : css 动画
+    </a> <a href="/posts/2018/03/20/two-way-principle.html" class="post-link" data-v-7f7ca342>
+      下一篇 : 简单实现双向数据绑定
+    </a></section></section> <div id="post-comments" class="main-div"><!----></div></div></main> <aside class="aside" data-v-91b6f1b2><div class="info-card main-div" data-v-2bd66a30 data-v-91b6f1b2><div class="info-card-header" data-v-2bd66a30><img src="https://blog.mamingjuan.cn/assets/images/favicon-16.ico" alt="glitzma" class="info-avatar" data-v-2bd66a30></div> <div class="info-card-body" data-v-2bd66a30><section class="info-nickname" data-v-2bd66a30>
+      glitzma
+    </section> <section class="info-desc" data-v-2bd66a30>Happy Coding<br/>Happy Life</section> <section class="info-contact" data-v-2bd66a30><section data-v-2bd66a30><span title="Beijing City, China" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>Beijing City, China</title><use xlink:href="#icon-location" data-v-2bd66a30 data-v-2bd66a30></use></svg><span class="info-text" data-v-2bd66a30 data-v-2bd66a30>
+          Beijing City, China
+        </span></span></section> <section data-v-2bd66a30><span title="Hao Wei Lai" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>Hao Wei Lai</title><use xlink:href="#icon-organization" data-v-2bd66a30 data-v-2bd66a30></use></svg><span class="info-text" data-v-2bd66a30 data-v-2bd66a30>
+          Hao Wei Lai
+        </span></span></section> <section data-v-2bd66a30><a href="mailto:glitteringma@gmail.com" title="glitteringma@gmail.com" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>glitteringma@gmail.com</title><use xlink:href="#icon-email" data-v-2bd66a30 data-v-2bd66a30></use></svg><span class="info-text" data-v-2bd66a30 data-v-2bd66a30>
+          glitteringma@gmail.com
+        </span></a></section></section></div> <div class="info-card-footer" data-v-2bd66a30><section class="info-sns clearfix" data-v-2bd66a30><a href="https://github.com/glitzma" target="_blank" class="sns-link" data-v-2bd66a30><span title="GitHub: glitzma" class="sns-icon" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1.5em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>GitHub: glitzma</title><use xlink:href="#icon-github" data-v-2bd66a30 data-v-2bd66a30></use></svg></span></a></section></div></div> <div class="post-nav-card main-div" style="position:relative;top:0;width:0px;" data-v-91b6f1b2><div class="post-nav-contents"><svg class="icon"><title>book</title><use xlink:href="#icon-book"></use></svg> <span>文章目录</span> <div class="post-nav-toc"> <ul><li><a href="/posts/2018/03/08/vue-sumary.html#_1-eslint-常见问题">1. ESLint 常见问题</a> <!----></li><li><a href="/posts/2018/03/08/vue-sumary.html#_2-图片打包">2. 图片打包</a> <!----></li><li><a href="/posts/2018/03/08/vue-sumary.html#_3-自定义用户别名">3. 自定义用户别名</a> <!----></li><li><a href="/posts/2018/03/08/vue-sumary.html#_4-save-dev与-save的区别">4. -save-dev与-save的区别</a> <!----></li><li><a href="/posts/2018/03/08/vue-sumary.html#_5-事件-按键修饰符">5. 事件 &amp; 按键修饰符</a> <!----></li><li><a href="/posts/2018/03/08/vue-sumary.html#_6-提取组件的css">6. 提取组件的css</a> <!----></li><li><a href="/posts/2018/03/08/vue-sumary.html#_7-父子组件通信">7.父子组件通信</a> <!----></li></ul> </div></div> <div class="post-nav-comments"><svg class="icon"><title>comment</title><use xlink:href="#icon-comment"></use></svg> <a href="/posts/2018/03/08/vue-sumary.html#post-comments">
+      评论
+    </a></div></div></aside></div> <footer class="footer" data-v-e361d3ee><p class="sns-links" data-v-e361d3ee><a href="https://github.com/glitzma" target="_blank" class="sns-link" data-v-e361d3ee><span title="GitHub: glitzma" class="sns-icon" data-v-e361d3ee data-v-e361d3ee><svg class="icon" style="font-size:25px;" data-v-e361d3ee data-v-e361d3ee><title data-v-e361d3ee data-v-e361d3ee>GitHub: glitzma</title><use xlink:href="#icon-github" data-v-e361d3ee data-v-e361d3ee></use></svg></span></a></p> <p data-v-e361d3ee><span data-v-e361d3ee>Powered by </span> <a href="https://vuepress.vuejs.org" target="_blank" data-v-e361d3ee>
+      Vuepress
+    </a></p></footer></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.445d3d5d.js" defer></script><script src="/assets/js/3.cafb9f1c.js" defer></script><script src="/assets/js/68.29592890.js" defer></script>
+  </body>
+</html>

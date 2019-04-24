@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>爬虫，死循环 | Glitz&#39;s Blog</title>
+    <meta name="description" content="This is my blog">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.0c7f5120.css" as="style"><link rel="preload" href="/assets/js/app.445d3d5d.js" as="script"><link rel="preload" href="/assets/js/3.cafb9f1c.js" as="script"><link rel="preload" href="/assets/js/33.e2075c7b.js" as="script"><link rel="prefetch" href="/assets/js/1.c2f6132b.js"><link rel="prefetch" href="/assets/js/10.faf610d2.js"><link rel="prefetch" href="/assets/js/11.2ccbb77a.js"><link rel="prefetch" href="/assets/js/12.d5a900bc.js"><link rel="prefetch" href="/assets/js/13.b8db4772.js"><link rel="prefetch" href="/assets/js/14.29653c83.js"><link rel="prefetch" href="/assets/js/15.b0079f33.js"><link rel="prefetch" href="/assets/js/16.ca55cf92.js"><link rel="prefetch" href="/assets/js/17.b2ae1578.js"><link rel="prefetch" href="/assets/js/18.f7438387.js"><link rel="prefetch" href="/assets/js/19.6c201aeb.js"><link rel="prefetch" href="/assets/js/20.6e1c069a.js"><link rel="prefetch" href="/assets/js/21.cefff5d8.js"><link rel="prefetch" href="/assets/js/22.ea927fe8.js"><link rel="prefetch" href="/assets/js/23.ff886a7e.js"><link rel="prefetch" href="/assets/js/24.846c97ea.js"><link rel="prefetch" href="/assets/js/25.209a8211.js"><link rel="prefetch" href="/assets/js/26.fff59258.js"><link rel="prefetch" href="/assets/js/27.2b03cdaa.js"><link rel="prefetch" href="/assets/js/28.848f8a6d.js"><link rel="prefetch" href="/assets/js/29.a625405d.js"><link rel="prefetch" href="/assets/js/30.4c4a5825.js"><link rel="prefetch" href="/assets/js/31.e33b332c.js"><link rel="prefetch" href="/assets/js/32.4b957291.js"><link rel="prefetch" href="/assets/js/34.eb084cd6.js"><link rel="prefetch" href="/assets/js/35.7dd4a367.js"><link rel="prefetch" href="/assets/js/36.a694956b.js"><link rel="prefetch" href="/assets/js/37.7d609b90.js"><link rel="prefetch" href="/assets/js/38.a8dc914c.js"><link rel="prefetch" href="/assets/js/39.892a6aef.js"><link rel="prefetch" href="/assets/js/4.8deab1cb.js"><link rel="prefetch" href="/assets/js/40.3958bd48.js"><link rel="prefetch" href="/assets/js/41.cbc67523.js"><link rel="prefetch" href="/assets/js/42.2cb243de.js"><link rel="prefetch" href="/assets/js/43.0af3c762.js"><link rel="prefetch" href="/assets/js/44.9585f5a9.js"><link rel="prefetch" href="/assets/js/45.4c55af63.js"><link rel="prefetch" href="/assets/js/46.cb98e606.js"><link rel="prefetch" href="/assets/js/47.c37900d7.js"><link rel="prefetch" href="/assets/js/48.47fedeee.js"><link rel="prefetch" href="/assets/js/49.b6533852.js"><link rel="prefetch" href="/assets/js/5.82526ce9.js"><link rel="prefetch" href="/assets/js/50.9a9cc811.js"><link rel="prefetch" href="/assets/js/51.da6e5019.js"><link rel="prefetch" href="/assets/js/52.aee34b81.js"><link rel="prefetch" href="/assets/js/53.f6e8ace0.js"><link rel="prefetch" href="/assets/js/54.6414ea05.js"><link rel="prefetch" href="/assets/js/55.cd9df247.js"><link rel="prefetch" href="/assets/js/56.e891d9ea.js"><link rel="prefetch" href="/assets/js/57.b3516150.js"><link rel="prefetch" href="/assets/js/58.4d82c3b8.js"><link rel="prefetch" href="/assets/js/59.c53a299e.js"><link rel="prefetch" href="/assets/js/6.2fd7b21f.js"><link rel="prefetch" href="/assets/js/60.fc2bef70.js"><link rel="prefetch" href="/assets/js/61.a305d5fe.js"><link rel="prefetch" href="/assets/js/62.7033d185.js"><link rel="prefetch" href="/assets/js/63.5cc700b8.js"><link rel="prefetch" href="/assets/js/64.e334ee55.js"><link rel="prefetch" href="/assets/js/65.5c6a7d83.js"><link rel="prefetch" href="/assets/js/66.7e70bf9e.js"><link rel="prefetch" href="/assets/js/67.cba7a1dc.js"><link rel="prefetch" href="/assets/js/68.29592890.js"><link rel="prefetch" href="/assets/js/69.bb31acbc.js"><link rel="prefetch" href="/assets/js/7.0747c19c.js"><link rel="prefetch" href="/assets/js/70.28e39959.js"><link rel="prefetch" href="/assets/js/71.f16704f5.js"><link rel="prefetch" href="/assets/js/72.46180d84.js"><link rel="prefetch" href="/assets/js/73.e33a0dc2.js"><link rel="prefetch" href="/assets/js/74.13b2bc7a.js"><link rel="prefetch" href="/assets/js/75.2f7b5c1a.js"><link rel="prefetch" href="/assets/js/76.31e8ba14.js"><link rel="prefetch" href="/assets/js/77.efbee12b.js"><link rel="prefetch" href="/assets/js/78.d6547809.js"><link rel="prefetch" href="/assets/js/79.b13ad4ea.js"><link rel="prefetch" href="/assets/js/8.3a23fc0c.js"><link rel="prefetch" href="/assets/js/80.469b0b0a.js"><link rel="prefetch" href="/assets/js/81.e4cf2663.js"><link rel="prefetch" href="/assets/js/82.df36c3e5.js"><link rel="prefetch" href="/assets/js/83.8acb8191.js"><link rel="prefetch" href="/assets/js/84.5f4a6414.js"><link rel="prefetch" href="/assets/js/85.9837c8a6.js"><link rel="prefetch" href="/assets/js/86.cba3517d.js"><link rel="prefetch" href="/assets/js/87.f70c2fa6.js"><link rel="prefetch" href="/assets/js/88.3e910bb8.js"><link rel="prefetch" href="/assets/js/89.ad63afe1.js"><link rel="prefetch" href="/assets/js/9.f0fc6f93.js"><link rel="prefetch" href="/assets/js/90.45fd58d3.js"><link rel="prefetch" href="/assets/js/91.9362b6a7.js"><link rel="prefetch" href="/assets/js/92.ab9268fe.js"><link rel="prefetch" href="/assets/js/93.cfe2aecf.js"><link rel="prefetch" href="/assets/js/94.41a96929.js"><link rel="prefetch" href="/assets/js/95.1f334105.js"><link rel="prefetch" href="/assets/js/96.f5fc49d3.js"><link rel="prefetch" href="/assets/js/97.834cfc43.js"><link rel="prefetch" href="/assets/js/98.c95769a1.js"><link rel="prefetch" href="/assets/js/99.01b550db.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.0c7f5120.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-glitzma"><header class="header" style="background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:scroll;background-image:url(/assets/img/header-image-05.jpg);" data-v-e4a0ebe0><div data-v-fa5c5f88 data-v-e4a0ebe0><nav class="navbar" data-v-fa5c5f88><div class="container" data-v-fa5c5f88><a href="/" class="router-link-active" data-v-fa5c5f88><span class="navbar-site-name" data-v-fa5c5f88>
+          Glitz's Blog
+        </span></a> <div class="navbar-toggler" data-v-fa5c5f88><svg class="icon" style="font-size:1.2em;" data-v-fa5c5f88 data-v-fa5c5f88><title data-v-fa5c5f88 data-v-fa5c5f88>menu</title><use xlink:href="#icon-menu" data-v-fa5c5f88 data-v-fa5c5f88></use></svg></div> <div class="navbar-links" data-v-fa5c5f88><a href="/" class="navbar-link" data-v-fa5c5f88>
+            欢迎页
+          </a><a href="/posts/" class="navbar-link router-link-active" data-v-fa5c5f88>
+            帖子
+          </a><a href="/custom-pages/" class="navbar-link" data-v-fa5c5f88>
+            自定义页面
+          </a></div></div></nav> <div class="navbar-holder" style="display:none;" data-v-fa5c5f88></div></div> <div class="banner" data-v-e2d7da12 data-v-e4a0ebe0 data-v-e4a0ebe0><div class="container" data-v-e2d7da12><div class="center" data-v-e2d7da12><h1 class="header-slot-h1" data-v-e2d7da12 data-v-e4a0ebe0>
+          爬虫，死循环
+        </h1></div></div></div></header> <div class="container clearfix show-aside" data-v-91b6f1b2 data-v-91b6f1b2><main class="main" data-v-91b6f1b2><div class="post" data-v-91b6f1b2 data-v-91b6f1b2><section class="post-meta main-div" data-v-7f7ca342><section class="post-date clearfix" data-v-7f7ca342><span class="create-date" data-v-7f7ca342>
+      发布时间 : 2017-12-05
+    </span> <span class="update-date" data-v-7f7ca342>
+      最后修改 : 2019-04-24
+    </span></section> <section class="post-links" data-v-7f7ca342><a href="/posts/2017/12/05/colleague-question.html" class="post-link" data-v-7f7ca342>
+      上一篇 : 帮同事解决的问题小记
+    </a> <a href="/posts/2017/12/05/lashou-masterstation.html" class="post-link" data-v-7f7ca342>
+      下一篇 : 曾经做过的东西,可能只是我的回忆...
+    </a></section></section> <article class="main-div"><div class="content default"><h2 id="爬虫难点1-环路"><a href="#爬虫难点1-环路" aria-hidden="true" class="header-anchor">#</a> 爬虫难点1    环路</h2> <p>网络爬虫有时候会陷入循环或者环路中，比如从页面A，A链接到页面B，B链接到页面C，页面C又会链接到页面A。这样就陷入到环路中。</p> <blockquote><p>环路影响：
+消耗网络带宽，无法获取其他页面
+对Web服务器也是负担，可能击垮该站点，可能阻止正常用户访问该站点
+即使没有性能影响，但获取大量重复页面也导致数据冗余</p></blockquote> <ul><li>解决方案：
+简单限定爬虫的最大循环次数，对于某web站点访问超过一定阈值就跳出，避免无限循环
+保存一个已访问url列表，记录页面是否被访问过的技术</li></ul> <blockquote><p>1、二叉树和散列表，快速判定某个url是否访问过
+2、存在位图就是new int[length]，然后把第几个数置为1，表示已经访问过了。可不可以再优化，int是32位，32位可以表示32个数字。HashCode会存在冲突的情况，两个URL映射到同一个存在位上，冲突的后果是某个页面被忽略（这比死循环的恶作用小）
+3、保存检查一定要及时把已访问的URL列表保存到硬盘上，防止爬虫崩溃，内存里的数据会丢失
+4、集群，分而治之多台机器一起爬虫，可以根据URL计算HashCode，然后根据HashCode映射到相应机器的id（第0台、第1台、第2台等等）</p></blockquote> <ul><li>难点2    URL别名
+有些URL名称不一样，但是指向同一个资源。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>URl 1	URL 2	什么时候是别名
+www.foo.com/bar.html	www.foo.com:80/bar.html	默认端口是80
+www.foo.com/~fred	www.foo.com/%7Ffred	%7F与~相同
+www.foo.com/x.html#top	www.foo.com/x.html#middle	%7F与~相同
+https://www.baidu.com/	https://www.BAIDU.com/	服务器是大小写无关
+www.foo.com/index.html	www.foo.com	默认页面为 index.html
+www.foo.com/index.html	209.123.123/index.html	ip和域名相同
+</code></pre></div><ul><li>难点3    动态虚拟空间</li></ul> <p>比如日历程序，它会生成一个指向下一个月的链接，真正的用户是不会不停地请求下个月的链接的。但是不了解这些内容特性的爬虫蜘蛛可能会不断向这些资源发出无穷的请求。</p> <h6 id="抓取策略"><a href="#抓取策略" aria-hidden="true" class="header-anchor">#</a> 抓取策略</h6> <blockquote><p>一般策略是深度优先或者广度优先。有些技术能使得爬虫蜘蛛有更好的表现</p></blockquote> <blockquote><p>广度优先的爬行，避免深度优先陷入某个站点的环路中，无法访问其他站点。
+限制访问次数，限定一段时间内机器人可以从一个web站点获取的页面数量。
+内容指纹，根据页面的内容计算出一个校验和，但是动态的内容（日期，评论数目）会阻碍重复检测
+维护黑名单
+人工监视，特殊情况发出邮件通知
+动态变化，根据当前热点新闻等等
+规范化URL，把一些转义字符、ip与域名之类的统一
+限制URL大小，环路可能会使得URL长度增加，比如/index.html，/folder/index.html，/folder/folder/index.html……</p></blockquote> <p>全文索引
+全文索引就是一个数据库，给它一个单词，它可以立刻提供包含那个单词的所有文字。创建了索引后，就不必对文档自身进行扫描了。
+比如：文章A包含了Java、学习、程序员；文章B包含了Java、Python、面试、招聘。
+如果搜索了Java，可以知道得到文章A和文章B，而不必对文章A、B全文扫描。</p></div></article> <section class="post-meta main-div" data-v-7f7ca342><section class="post-date clearfix" data-v-7f7ca342><span class="create-date" data-v-7f7ca342>
+      发布时间 : 2017-12-05
+    </span> <span class="update-date" data-v-7f7ca342>
+      最后修改 : 2019-04-24
+    </span></section> <section class="post-links" data-v-7f7ca342><a href="/posts/2017/12/05/colleague-question.html" class="post-link" data-v-7f7ca342>
+      上一篇 : 帮同事解决的问题小记
+    </a> <a href="/posts/2017/12/05/lashou-masterstation.html" class="post-link" data-v-7f7ca342>
+      下一篇 : 曾经做过的东西,可能只是我的回忆...
+    </a></section></section> <div id="post-comments" class="main-div"><!----></div></div></main> <aside class="aside" data-v-91b6f1b2><div class="info-card main-div" data-v-2bd66a30 data-v-91b6f1b2><div class="info-card-header" data-v-2bd66a30><img src="https://blog.mamingjuan.cn/assets/images/favicon-16.ico" alt="glitzma" class="info-avatar" data-v-2bd66a30></div> <div class="info-card-body" data-v-2bd66a30><section class="info-nickname" data-v-2bd66a30>
+      glitzma
+    </section> <section class="info-desc" data-v-2bd66a30>Happy Coding<br/>Happy Life</section> <section class="info-contact" data-v-2bd66a30><section data-v-2bd66a30><span title="Beijing City, China" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>Beijing City, China</title><use xlink:href="#icon-location" data-v-2bd66a30 data-v-2bd66a30></use></svg><span class="info-text" data-v-2bd66a30 data-v-2bd66a30>
+          Beijing City, China
+        </span></span></section> <section data-v-2bd66a30><span title="Hao Wei Lai" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>Hao Wei Lai</title><use xlink:href="#icon-organization" data-v-2bd66a30 data-v-2bd66a30></use></svg><span class="info-text" data-v-2bd66a30 data-v-2bd66a30>
+          Hao Wei Lai
+        </span></span></section> <section data-v-2bd66a30><a href="mailto:glitteringma@gmail.com" title="glitteringma@gmail.com" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>glitteringma@gmail.com</title><use xlink:href="#icon-email" data-v-2bd66a30 data-v-2bd66a30></use></svg><span class="info-text" data-v-2bd66a30 data-v-2bd66a30>
+          glitteringma@gmail.com
+        </span></a></section></section></div> <div class="info-card-footer" data-v-2bd66a30><section class="info-sns clearfix" data-v-2bd66a30><a href="https://github.com/glitzma" target="_blank" class="sns-link" data-v-2bd66a30><span title="GitHub: glitzma" class="sns-icon" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1.5em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>GitHub: glitzma</title><use xlink:href="#icon-github" data-v-2bd66a30 data-v-2bd66a30></use></svg></span></a></section></div></div> <div class="post-nav-card main-div" style="position:relative;top:0;width:0px;" data-v-91b6f1b2><div class="post-nav-contents"><svg class="icon"><title>book</title><use xlink:href="#icon-book"></use></svg> <span>文章目录</span> <div class="post-nav-toc"> <ul><li><a href="/posts/2017/12/05/crawler-loop.html#爬虫难点1-环路">爬虫难点1    环路</a> <!----></li></ul> </div></div> <div class="post-nav-comments"><svg class="icon"><title>comment</title><use xlink:href="#icon-comment"></use></svg> <a href="/posts/2017/12/05/crawler-loop.html#post-comments">
+      评论
+    </a></div></div></aside></div> <footer class="footer" data-v-e361d3ee><p class="sns-links" data-v-e361d3ee><a href="https://github.com/glitzma" target="_blank" class="sns-link" data-v-e361d3ee><span title="GitHub: glitzma" class="sns-icon" data-v-e361d3ee data-v-e361d3ee><svg class="icon" style="font-size:25px;" data-v-e361d3ee data-v-e361d3ee><title data-v-e361d3ee data-v-e361d3ee>GitHub: glitzma</title><use xlink:href="#icon-github" data-v-e361d3ee data-v-e361d3ee></use></svg></span></a></p> <p data-v-e361d3ee><span data-v-e361d3ee>Powered by </span> <a href="https://vuepress.vuejs.org" target="_blank" data-v-e361d3ee>
+      Vuepress
+    </a></p></footer></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.445d3d5d.js" defer></script><script src="/assets/js/3.cafb9f1c.js" defer></script><script src="/assets/js/33.e2075c7b.js" defer></script>
+  </body>
+</html>

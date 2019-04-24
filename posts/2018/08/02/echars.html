@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>echarts 应用总结 | Glitz&#39;s Blog</title>
+    <meta name="description" content="This is my blog">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.0c7f5120.css" as="style"><link rel="preload" href="/assets/js/app.445d3d5d.js" as="script"><link rel="preload" href="/assets/js/3.cafb9f1c.js" as="script"><link rel="preload" href="/assets/js/85.9837c8a6.js" as="script"><link rel="prefetch" href="/assets/js/1.c2f6132b.js"><link rel="prefetch" href="/assets/js/10.faf610d2.js"><link rel="prefetch" href="/assets/js/11.2ccbb77a.js"><link rel="prefetch" href="/assets/js/12.d5a900bc.js"><link rel="prefetch" href="/assets/js/13.b8db4772.js"><link rel="prefetch" href="/assets/js/14.29653c83.js"><link rel="prefetch" href="/assets/js/15.b0079f33.js"><link rel="prefetch" href="/assets/js/16.ca55cf92.js"><link rel="prefetch" href="/assets/js/17.b2ae1578.js"><link rel="prefetch" href="/assets/js/18.f7438387.js"><link rel="prefetch" href="/assets/js/19.6c201aeb.js"><link rel="prefetch" href="/assets/js/20.6e1c069a.js"><link rel="prefetch" href="/assets/js/21.cefff5d8.js"><link rel="prefetch" href="/assets/js/22.ea927fe8.js"><link rel="prefetch" href="/assets/js/23.ff886a7e.js"><link rel="prefetch" href="/assets/js/24.846c97ea.js"><link rel="prefetch" href="/assets/js/25.209a8211.js"><link rel="prefetch" href="/assets/js/26.fff59258.js"><link rel="prefetch" href="/assets/js/27.2b03cdaa.js"><link rel="prefetch" href="/assets/js/28.848f8a6d.js"><link rel="prefetch" href="/assets/js/29.a625405d.js"><link rel="prefetch" href="/assets/js/30.4c4a5825.js"><link rel="prefetch" href="/assets/js/31.e33b332c.js"><link rel="prefetch" href="/assets/js/32.4b957291.js"><link rel="prefetch" href="/assets/js/33.e2075c7b.js"><link rel="prefetch" href="/assets/js/34.eb084cd6.js"><link rel="prefetch" href="/assets/js/35.7dd4a367.js"><link rel="prefetch" href="/assets/js/36.a694956b.js"><link rel="prefetch" href="/assets/js/37.7d609b90.js"><link rel="prefetch" href="/assets/js/38.a8dc914c.js"><link rel="prefetch" href="/assets/js/39.892a6aef.js"><link rel="prefetch" href="/assets/js/4.8deab1cb.js"><link rel="prefetch" href="/assets/js/40.3958bd48.js"><link rel="prefetch" href="/assets/js/41.cbc67523.js"><link rel="prefetch" href="/assets/js/42.2cb243de.js"><link rel="prefetch" href="/assets/js/43.0af3c762.js"><link rel="prefetch" href="/assets/js/44.9585f5a9.js"><link rel="prefetch" href="/assets/js/45.4c55af63.js"><link rel="prefetch" href="/assets/js/46.cb98e606.js"><link rel="prefetch" href="/assets/js/47.c37900d7.js"><link rel="prefetch" href="/assets/js/48.47fedeee.js"><link rel="prefetch" href="/assets/js/49.b6533852.js"><link rel="prefetch" href="/assets/js/5.82526ce9.js"><link rel="prefetch" href="/assets/js/50.9a9cc811.js"><link rel="prefetch" href="/assets/js/51.da6e5019.js"><link rel="prefetch" href="/assets/js/52.aee34b81.js"><link rel="prefetch" href="/assets/js/53.f6e8ace0.js"><link rel="prefetch" href="/assets/js/54.6414ea05.js"><link rel="prefetch" href="/assets/js/55.cd9df247.js"><link rel="prefetch" href="/assets/js/56.e891d9ea.js"><link rel="prefetch" href="/assets/js/57.b3516150.js"><link rel="prefetch" href="/assets/js/58.4d82c3b8.js"><link rel="prefetch" href="/assets/js/59.c53a299e.js"><link rel="prefetch" href="/assets/js/6.2fd7b21f.js"><link rel="prefetch" href="/assets/js/60.fc2bef70.js"><link rel="prefetch" href="/assets/js/61.a305d5fe.js"><link rel="prefetch" href="/assets/js/62.7033d185.js"><link rel="prefetch" href="/assets/js/63.5cc700b8.js"><link rel="prefetch" href="/assets/js/64.e334ee55.js"><link rel="prefetch" href="/assets/js/65.5c6a7d83.js"><link rel="prefetch" href="/assets/js/66.7e70bf9e.js"><link rel="prefetch" href="/assets/js/67.cba7a1dc.js"><link rel="prefetch" href="/assets/js/68.29592890.js"><link rel="prefetch" href="/assets/js/69.bb31acbc.js"><link rel="prefetch" href="/assets/js/7.0747c19c.js"><link rel="prefetch" href="/assets/js/70.28e39959.js"><link rel="prefetch" href="/assets/js/71.f16704f5.js"><link rel="prefetch" href="/assets/js/72.46180d84.js"><link rel="prefetch" href="/assets/js/73.e33a0dc2.js"><link rel="prefetch" href="/assets/js/74.13b2bc7a.js"><link rel="prefetch" href="/assets/js/75.2f7b5c1a.js"><link rel="prefetch" href="/assets/js/76.31e8ba14.js"><link rel="prefetch" href="/assets/js/77.efbee12b.js"><link rel="prefetch" href="/assets/js/78.d6547809.js"><link rel="prefetch" href="/assets/js/79.b13ad4ea.js"><link rel="prefetch" href="/assets/js/8.3a23fc0c.js"><link rel="prefetch" href="/assets/js/80.469b0b0a.js"><link rel="prefetch" href="/assets/js/81.e4cf2663.js"><link rel="prefetch" href="/assets/js/82.df36c3e5.js"><link rel="prefetch" href="/assets/js/83.8acb8191.js"><link rel="prefetch" href="/assets/js/84.5f4a6414.js"><link rel="prefetch" href="/assets/js/86.cba3517d.js"><link rel="prefetch" href="/assets/js/87.f70c2fa6.js"><link rel="prefetch" href="/assets/js/88.3e910bb8.js"><link rel="prefetch" href="/assets/js/89.ad63afe1.js"><link rel="prefetch" href="/assets/js/9.f0fc6f93.js"><link rel="prefetch" href="/assets/js/90.45fd58d3.js"><link rel="prefetch" href="/assets/js/91.9362b6a7.js"><link rel="prefetch" href="/assets/js/92.ab9268fe.js"><link rel="prefetch" href="/assets/js/93.cfe2aecf.js"><link rel="prefetch" href="/assets/js/94.41a96929.js"><link rel="prefetch" href="/assets/js/95.1f334105.js"><link rel="prefetch" href="/assets/js/96.f5fc49d3.js"><link rel="prefetch" href="/assets/js/97.834cfc43.js"><link rel="prefetch" href="/assets/js/98.c95769a1.js"><link rel="prefetch" href="/assets/js/99.01b550db.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.0c7f5120.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-glitzma"><header class="header" style="background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:scroll;background-image:url(/assets/img/header-image-05.jpg);" data-v-e4a0ebe0><div data-v-fa5c5f88 data-v-e4a0ebe0><nav class="navbar" data-v-fa5c5f88><div class="container" data-v-fa5c5f88><a href="/" class="router-link-active" data-v-fa5c5f88><span class="navbar-site-name" data-v-fa5c5f88>
+          Glitz's Blog
+        </span></a> <div class="navbar-toggler" data-v-fa5c5f88><svg class="icon" style="font-size:1.2em;" data-v-fa5c5f88 data-v-fa5c5f88><title data-v-fa5c5f88 data-v-fa5c5f88>menu</title><use xlink:href="#icon-menu" data-v-fa5c5f88 data-v-fa5c5f88></use></svg></div> <div class="navbar-links" data-v-fa5c5f88><a href="/" class="navbar-link" data-v-fa5c5f88>
+            欢迎页
+          </a><a href="/posts/" class="navbar-link router-link-active" data-v-fa5c5f88>
+            帖子
+          </a><a href="/custom-pages/" class="navbar-link" data-v-fa5c5f88>
+            自定义页面
+          </a></div></div></nav> <div class="navbar-holder" style="display:none;" data-v-fa5c5f88></div></div> <div class="banner" data-v-e2d7da12 data-v-e4a0ebe0 data-v-e4a0ebe0><div class="container" data-v-e2d7da12><div class="center" data-v-e2d7da12><h1 class="header-slot-h1" data-v-e2d7da12 data-v-e4a0ebe0>
+          echarts 应用总结
+        </h1></div></div></div></header> <div class="container clearfix show-aside" data-v-91b6f1b2 data-v-91b6f1b2><main class="main" data-v-91b6f1b2><div class="post" data-v-91b6f1b2 data-v-91b6f1b2><section class="post-meta main-div" data-v-7f7ca342><section class="post-date clearfix" data-v-7f7ca342><span class="create-date" data-v-7f7ca342>
+      发布时间 : 2018-08-02
+    </span> <span class="update-date" data-v-7f7ca342>
+      最后修改 : 2019-04-24
+    </span></section> <section class="post-links" data-v-7f7ca342><a href="/posts/2018/07/13/front-end-important.html" class="post-link" data-v-7f7ca342>
+      上一篇 : 大神推荐学习
+    </a> <a href="/posts/2018/08/02/cache-control.html" class="post-link" data-v-7f7ca342>
+      下一篇 : 浏览器 HTTP 协议缓存机制详解
+    </a></section></section> <article class="main-div"><div class="content default"><h2 id="_5分钟上手echarts"><a href="#_5分钟上手echarts" aria-hidden="true" class="header-anchor">#</a> 5分钟上手echarts</h2> <h3 id="引入-echarts"><a href="#引入-echarts" aria-hidden="true" class="header-anchor">#</a> 引入 ECharts</h3> <p>ECharts 3 开始不再强制使用 AMD 的方式按需引入，代码里也不再内置 AMD 加载器。因此引入方式简单了很多，只需要像普通的 JavaScript 库一样用 script 标签引入。</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>utf-8<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- 引入 ECharts 文件 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>echarts.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="绘制一个简单的图表"><a href="#绘制一个简单的图表" aria-hidden="true" class="header-anchor">#</a> 绘制一个简单的图表</h3> <p>在绘图前我们需要为 ECharts 准备一个具备高宽的 DOM 容器。</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;body&gt;
+    &lt;!-- 为 ECharts 准备一个具备大小（宽高）的 DOM --&gt;
+    &lt;div id=&quot;main&quot; style=&quot;width: 600px;height:400px;&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+</code></pre></div><p>然后就可以通过 echarts.init 方法初始化一个 echarts 实例并通过 setOption 方法生成一个简单的柱状图，下面是完整代码。</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>utf-8<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>ECharts<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- 引入 echarts.js --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>echarts.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- 为ECharts准备一个具备大小（宽高）的Dom --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>main<span class="token punctuation">&quot;</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">width</span><span class="token punctuation">:</span> 600px<span class="token punctuation">;</span><span class="token property">height</span><span class="token punctuation">:</span>400px<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text/javascript<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+        <span class="token comment">// 基于准备好的dom，初始化echarts实例</span>
+        <span class="token keyword">var</span> myChart <span class="token operator">=</span> echarts<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'main'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// 指定图表的配置项和数据</span>
+        <span class="token keyword">var</span> option <span class="token operator">=</span> <span class="token punctuation">{</span>
+            title<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                text<span class="token punctuation">:</span> <span class="token string">'ECharts 入门示例'</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            tooltip<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+            legend<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                data<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'销量'</span><span class="token punctuation">]</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            xAxis<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                data<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;衬衫&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;羊毛衫&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;雪纺衫&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;裤子&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;高跟鞋&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;袜子&quot;</span><span class="token punctuation">]</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            yAxis<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+            series<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+                name<span class="token punctuation">:</span> <span class="token string">'销量'</span><span class="token punctuation">,</span>
+                type<span class="token punctuation">:</span> <span class="token string">'bar'</span><span class="token punctuation">,</span>
+                data<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">36</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">]</span>
+            <span class="token punctuation">}</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// 使用刚指定的配置项和数据显示图表。</span>
+        myChart<span class="token punctuation">.</span><span class="token function">setOption</span><span class="token punctuation">(</span>option<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="webpack-使用echars"><a href="#webpack-使用echars" aria-hidden="true" class="header-anchor">#</a> webpack 使用echars</h3> <div class="language- extra-class"><pre class="language-text"><code>npm install echarts --save
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>var echarts = require('echarts');
+
+// 基于准备好的dom，初始化echarts实例
+var myChart = echarts.init(document.getElementById('main'));
+// 绘制图表
+myChart.setOption({
+    title: {
+        text: 'ECharts 入门示例'
+    },
+    tooltip: {},
+    xAxis: {
+        data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+    },
+    yAxis: {},
+    series: [{
+        name: '销量',
+        type: 'bar',
+        data: [5, 20, 36, 10, 10, 20]
+    }]
+});
+</code></pre></div><h2 id="echarts-调整图表-位置-的方法"><a href="#echarts-调整图表-位置-的方法" aria-hidden="true" class="header-anchor">#</a> echarts 调整图表 位置 的方法</h2> <p>xy代表左上角
+x2y2代表右下角</p> <div class="language- extra-class"><pre class="language-text"><code> myChart.setOption({
+    title:{
+        text:&quot;价格指数&quot;
+    },
+    grid:{
+        x:25,
+        y:45,
+        x2:5,
+        y2:20,
+        borderWidth:1
+    },
+    ....
+</code></pre></div><h2 id="echarts-各中配置"><a href="#echarts-各中配置" aria-hidden="true" class="header-anchor">#</a> echarts <a href="http://echarts.baidu.com/option.html#title" target="_blank" rel="noopener noreferrer">各中配置<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></h2> <p>我用到的</p> <div class="language- extra-class"><pre class="language-text"><code>// 基于准备好的dom，初始化echarts实例
+let myChart = echarts.init(document.getElementById('myChart'))
+
+// let data = [[0, 20], [600, 30], [36000, 200], [76000, 345]]
+// 绘制图表
+myChart.setOption({
+  grid: {
+    x: 25,
+    y: 10,
+    x2: 15,
+    borderWidth: 1
+  },
+  tooltip: {
+    trigger: 'axis'
+  },
+  xAxis: {
+    maxInterval: 5,
+    minInterval: 5,
+    // type: 'category',  // 类目轴，适用于离散的类目数据，为该类型时必须通过 data 设置类目数据。
+    boundaryGap: false // 坐标轴两边留白策略，类目轴和非类目轴的设置和表现不一样。
+  },
+  yAxis: {
+    // splitLine: {  // 坐标轴在 grid 区域中的分隔线。
+    //   show: false
+    // }
+  },
+  series: {
+    type: 'line',
+    data: [[0, 0], [12, 5], [18, 9], [24, 20], [30, 0], [35, 0], [36, 36], [48, 10], [52, 10]]
+  }
+})
+</code></pre></div><p>按视频显示样式</p> <div class="language- extra-class"><pre class="language-text"><code>app.title = '坐标轴刻度与标签对齐';
+
+option = {
+    color: ['red'],
+    // tooltip : {
+    //     trigger: 'axis',
+    //     axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+    //         type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+    //     }
+    // },
+    grid: {
+        left: -25,
+        right: 0,
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis : [
+        {
+            type : 'category',
+            barCategoryGap: 0,
+            barGap: 0,
+            // data : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            // axisTick: {
+            //     alignWithLabel: true
+            // }
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            name:'直接访问',
+            type:'bar',
+            barGap: '0',
+            barCategoryGap: '0',
+            data:[1,1,1,0,1,1,0,1,0,1,0,1,0,1,0,1,1,1,0,1,0,1,0,1,1,0,1,0,1,0,1,1,0,1,1,1,1,1,0,1,0,1,1,1,1,1,1,1,0,1,1,0,1,0,1,0,1,0,1,0,1,1,1,0,1,0,1,0,1,1,0,1,0,1,0,1,1,0,1,1,1,1,1,0,1,0,1,1,1,1,1,1,1,0,1,1,0,1,0,1,0,1,0,1,0,1,1,1,0,1,0,1,0,1,1,0,1,0,1,0,1,1,0,1,1,1,1,1,0,1,0,1,1,1,1,1,1,1,0,1,1,0,1,0,1,0,1,0,1,0,1,1,1,0,1,0,1,0,1,1,0,1,0,1,0,1,1,0,1,1,1,1,1,0,1,0,1,1,1,1,1,1,1,0,1,1,0,1,0,1,0,1,0,1,0,1,1,1,0,1,0,1,0,1,1,0,1,0,1,0,1,1,0,1,1,1,1,1,0,1,0,1,1,1,1,1,1,1,0,1,1,0,1,0,1,0,1,0,1,0,1,1,1,0,1,0,1,0,1,1,0,1,0,1,0,1,1,0,1,1,1,1,1,0,1,0,1,1,1,1,1,1,1,0,1,1,0,1,0,1,0,1,0,1,0,1,1,1,0,1,0,1,0,1,1,0,1,0,1,0,1,1,0,1,1,1,1,1,0,1,0,1,1,1,1]
+        }
+    ]
+};
+
+</code></pre></div></div></article> <section class="post-meta main-div" data-v-7f7ca342><section class="post-date clearfix" data-v-7f7ca342><span class="create-date" data-v-7f7ca342>
+      发布时间 : 2018-08-02
+    </span> <span class="update-date" data-v-7f7ca342>
+      最后修改 : 2019-04-24
+    </span></section> <section class="post-links" data-v-7f7ca342><a href="/posts/2018/07/13/front-end-important.html" class="post-link" data-v-7f7ca342>
+      上一篇 : 大神推荐学习
+    </a> <a href="/posts/2018/08/02/cache-control.html" class="post-link" data-v-7f7ca342>
+      下一篇 : 浏览器 HTTP 协议缓存机制详解
+    </a></section></section> <div id="post-comments" class="main-div"><!----></div></div></main> <aside class="aside" data-v-91b6f1b2><div class="info-card main-div" data-v-2bd66a30 data-v-91b6f1b2><div class="info-card-header" data-v-2bd66a30><img src="https://blog.mamingjuan.cn/assets/images/favicon-16.ico" alt="glitzma" class="info-avatar" data-v-2bd66a30></div> <div class="info-card-body" data-v-2bd66a30><section class="info-nickname" data-v-2bd66a30>
+      glitzma
+    </section> <section class="info-desc" data-v-2bd66a30>Happy Coding<br/>Happy Life</section> <section class="info-contact" data-v-2bd66a30><section data-v-2bd66a30><span title="Beijing City, China" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>Beijing City, China</title><use xlink:href="#icon-location" data-v-2bd66a30 data-v-2bd66a30></use></svg><span class="info-text" data-v-2bd66a30 data-v-2bd66a30>
+          Beijing City, China
+        </span></span></section> <section data-v-2bd66a30><span title="Hao Wei Lai" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>Hao Wei Lai</title><use xlink:href="#icon-organization" data-v-2bd66a30 data-v-2bd66a30></use></svg><span class="info-text" data-v-2bd66a30 data-v-2bd66a30>
+          Hao Wei Lai
+        </span></span></section> <section data-v-2bd66a30><a href="mailto:glitteringma@gmail.com" title="glitteringma@gmail.com" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>glitteringma@gmail.com</title><use xlink:href="#icon-email" data-v-2bd66a30 data-v-2bd66a30></use></svg><span class="info-text" data-v-2bd66a30 data-v-2bd66a30>
+          glitteringma@gmail.com
+        </span></a></section></section></div> <div class="info-card-footer" data-v-2bd66a30><section class="info-sns clearfix" data-v-2bd66a30><a href="https://github.com/glitzma" target="_blank" class="sns-link" data-v-2bd66a30><span title="GitHub: glitzma" class="sns-icon" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1.5em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>GitHub: glitzma</title><use xlink:href="#icon-github" data-v-2bd66a30 data-v-2bd66a30></use></svg></span></a></section></div></div> <div class="post-nav-card main-div" style="position:relative;top:0;width:0px;" data-v-91b6f1b2><div class="post-nav-contents"><svg class="icon"><title>book</title><use xlink:href="#icon-book"></use></svg> <span>文章目录</span> <div class="post-nav-toc"> <ul><li><a href="/posts/2018/08/02/echars.html#_5分钟上手echarts">5分钟上手echarts</a> <ul><li><a href="/posts/2018/08/02/echars.html#引入-echarts">引入 ECharts</a> <!----></li><li><a href="/posts/2018/08/02/echars.html#绘制一个简单的图表">绘制一个简单的图表</a> <!----></li><li><a href="/posts/2018/08/02/echars.html#webpack-使用echars">webpack 使用echars</a> <!----></li></ul></li><li><a href="/posts/2018/08/02/echars.html#echarts-调整图表-位置-的方法">echarts 调整图表 位置 的方法</a> <!----></li><li><a href="/posts/2018/08/02/echars.html#echarts-各中配置">echarts 各中配置</a> <!----></li></ul> </div></div> <div class="post-nav-comments"><svg class="icon"><title>comment</title><use xlink:href="#icon-comment"></use></svg> <a href="/posts/2018/08/02/echars.html#post-comments">
+      评论
+    </a></div></div></aside></div> <footer class="footer" data-v-e361d3ee><p class="sns-links" data-v-e361d3ee><a href="https://github.com/glitzma" target="_blank" class="sns-link" data-v-e361d3ee><span title="GitHub: glitzma" class="sns-icon" data-v-e361d3ee data-v-e361d3ee><svg class="icon" style="font-size:25px;" data-v-e361d3ee data-v-e361d3ee><title data-v-e361d3ee data-v-e361d3ee>GitHub: glitzma</title><use xlink:href="#icon-github" data-v-e361d3ee data-v-e361d3ee></use></svg></span></a></p> <p data-v-e361d3ee><span data-v-e361d3ee>Powered by </span> <a href="https://vuepress.vuejs.org" target="_blank" data-v-e361d3ee>
+      Vuepress
+    </a></p></footer></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.445d3d5d.js" defer></script><script src="/assets/js/3.cafb9f1c.js" defer></script><script src="/assets/js/85.9837c8a6.js" defer></script>
+  </body>
+</html>
