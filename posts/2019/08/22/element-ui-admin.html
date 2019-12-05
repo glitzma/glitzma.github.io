@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>2019-08-22 新框架使用 VUE element admin | Glitz&#39;s Blog</title>
+    <meta name="description" content="This is my blog">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.eec48ba9.css" as="style"><link rel="preload" href="/assets/js/app.2a79f49f.js" as="script"><link rel="preload" href="/assets/js/7.7c96a31c.js" as="script"><link rel="preload" href="/assets/js/108.2f1fff72.js" as="script"><link rel="prefetch" href="/assets/js/1.4c199ffc.js"><link rel="prefetch" href="/assets/js/10.9707a974.js"><link rel="prefetch" href="/assets/js/100.379c0f63.js"><link rel="prefetch" href="/assets/js/101.6f8c35de.js"><link rel="prefetch" href="/assets/js/102.50e1ed92.js"><link rel="prefetch" href="/assets/js/103.9c3503be.js"><link rel="prefetch" href="/assets/js/104.e9722c72.js"><link rel="prefetch" href="/assets/js/105.e3e9db04.js"><link rel="prefetch" href="/assets/js/106.b202c44e.js"><link rel="prefetch" href="/assets/js/107.eae59a71.js"><link rel="prefetch" href="/assets/js/109.93051219.js"><link rel="prefetch" href="/assets/js/11.40a16018.js"><link rel="prefetch" href="/assets/js/110.7471bf1b.js"><link rel="prefetch" href="/assets/js/111.25dd5149.js"><link rel="prefetch" href="/assets/js/112.d4ced155.js"><link rel="prefetch" href="/assets/js/12.361b0f8d.js"><link rel="prefetch" href="/assets/js/13.ffcf13e6.js"><link rel="prefetch" href="/assets/js/14.01328598.js"><link rel="prefetch" href="/assets/js/15.3183c33d.js"><link rel="prefetch" href="/assets/js/16.419776e3.js"><link rel="prefetch" href="/assets/js/17.27645313.js"><link rel="prefetch" href="/assets/js/18.8fd29af2.js"><link rel="prefetch" href="/assets/js/19.c4263ee4.js"><link rel="prefetch" href="/assets/js/20.d2b988b7.js"><link rel="prefetch" href="/assets/js/21.94123c20.js"><link rel="prefetch" href="/assets/js/22.1e17ce28.js"><link rel="prefetch" href="/assets/js/23.087e0c9c.js"><link rel="prefetch" href="/assets/js/24.b343f878.js"><link rel="prefetch" href="/assets/js/25.4ab48d69.js"><link rel="prefetch" href="/assets/js/26.b9cb092f.js"><link rel="prefetch" href="/assets/js/27.ea7d9837.js"><link rel="prefetch" href="/assets/js/28.83e051d5.js"><link rel="prefetch" href="/assets/js/29.22011757.js"><link rel="prefetch" href="/assets/js/3.51846038.js"><link rel="prefetch" href="/assets/js/30.ffa2c8ce.js"><link rel="prefetch" href="/assets/js/31.cd432212.js"><link rel="prefetch" href="/assets/js/32.adfe7d0d.js"><link rel="prefetch" href="/assets/js/33.a2859bf3.js"><link rel="prefetch" href="/assets/js/34.a2df696d.js"><link rel="prefetch" href="/assets/js/35.85074999.js"><link rel="prefetch" href="/assets/js/36.8a751355.js"><link rel="prefetch" href="/assets/js/37.12979a1d.js"><link rel="prefetch" href="/assets/js/38.271f8f1c.js"><link rel="prefetch" href="/assets/js/39.f00fa24e.js"><link rel="prefetch" href="/assets/js/4.4aba9303.js"><link rel="prefetch" href="/assets/js/40.e136175e.js"><link rel="prefetch" href="/assets/js/41.f58fea00.js"><link rel="prefetch" href="/assets/js/42.0b8d7eed.js"><link rel="prefetch" href="/assets/js/43.1e0e2325.js"><link rel="prefetch" href="/assets/js/44.ae9cab9f.js"><link rel="prefetch" href="/assets/js/45.777dd4b2.js"><link rel="prefetch" href="/assets/js/46.fd78a674.js"><link rel="prefetch" href="/assets/js/47.dee516e3.js"><link rel="prefetch" href="/assets/js/48.23b812a9.js"><link rel="prefetch" href="/assets/js/49.5ab6711a.js"><link rel="prefetch" href="/assets/js/5.5e6a7504.js"><link rel="prefetch" href="/assets/js/50.7a6d3111.js"><link rel="prefetch" href="/assets/js/51.9acb626e.js"><link rel="prefetch" href="/assets/js/52.29773169.js"><link rel="prefetch" href="/assets/js/53.533812d6.js"><link rel="prefetch" href="/assets/js/54.89bbb597.js"><link rel="prefetch" href="/assets/js/55.9d04cda8.js"><link rel="prefetch" href="/assets/js/56.e59fb9fc.js"><link rel="prefetch" href="/assets/js/57.8f392df8.js"><link rel="prefetch" href="/assets/js/58.fbcef6e1.js"><link rel="prefetch" href="/assets/js/59.078a1076.js"><link rel="prefetch" href="/assets/js/6.f1252c9e.js"><link rel="prefetch" href="/assets/js/60.05c5130c.js"><link rel="prefetch" href="/assets/js/61.882d7de6.js"><link rel="prefetch" href="/assets/js/62.f1d52c09.js"><link rel="prefetch" href="/assets/js/63.424ee340.js"><link rel="prefetch" href="/assets/js/64.d60a8ed5.js"><link rel="prefetch" href="/assets/js/65.439e575c.js"><link rel="prefetch" href="/assets/js/66.ca04c0b7.js"><link rel="prefetch" href="/assets/js/67.54b8af3e.js"><link rel="prefetch" href="/assets/js/68.9e8d156d.js"><link rel="prefetch" href="/assets/js/69.c502a4b8.js"><link rel="prefetch" href="/assets/js/70.00b5ec76.js"><link rel="prefetch" href="/assets/js/71.75ef167b.js"><link rel="prefetch" href="/assets/js/72.82ca4a35.js"><link rel="prefetch" href="/assets/js/73.f6bb207a.js"><link rel="prefetch" href="/assets/js/74.f75706e8.js"><link rel="prefetch" href="/assets/js/75.2bba5a2e.js"><link rel="prefetch" href="/assets/js/76.c2115c4e.js"><link rel="prefetch" href="/assets/js/77.cf4fb555.js"><link rel="prefetch" href="/assets/js/78.7ca07a5f.js"><link rel="prefetch" href="/assets/js/79.91d03491.js"><link rel="prefetch" href="/assets/js/8.eb92546e.js"><link rel="prefetch" href="/assets/js/80.1ca5ae98.js"><link rel="prefetch" href="/assets/js/81.7d06be52.js"><link rel="prefetch" href="/assets/js/82.ba687722.js"><link rel="prefetch" href="/assets/js/83.b5cf7df6.js"><link rel="prefetch" href="/assets/js/84.f02d1acd.js"><link rel="prefetch" href="/assets/js/85.a01887c6.js"><link rel="prefetch" href="/assets/js/86.73313c34.js"><link rel="prefetch" href="/assets/js/87.2da696b1.js"><link rel="prefetch" href="/assets/js/88.2b5d5456.js"><link rel="prefetch" href="/assets/js/89.de2596b7.js"><link rel="prefetch" href="/assets/js/9.9d44182b.js"><link rel="prefetch" href="/assets/js/90.b60d92dc.js"><link rel="prefetch" href="/assets/js/91.73c57d5c.js"><link rel="prefetch" href="/assets/js/92.63aaf09c.js"><link rel="prefetch" href="/assets/js/93.a9959ee6.js"><link rel="prefetch" href="/assets/js/94.84b13633.js"><link rel="prefetch" href="/assets/js/95.08b47015.js"><link rel="prefetch" href="/assets/js/96.c19b4baa.js"><link rel="prefetch" href="/assets/js/97.04fec979.js"><link rel="prefetch" href="/assets/js/98.4f5fa282.js"><link rel="prefetch" href="/assets/js/99.1cb2987d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.eec48ba9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-glitzma"><header class="header" data-v-e4a0ebe0><div data-v-6654f004 data-v-e4a0ebe0><nav class="navbar" data-v-6654f004><div class="container" data-v-6654f004><a href="/" class="router-link-active" data-v-6654f004><span class="navbar-site-name" data-v-6654f004>
+          Glitz's Blog
+        </span></a> <div class="navbar-toggler" data-v-6654f004><svg class="icon" style="font-size:1.2em;" data-v-6654f004 data-v-6654f004><title data-v-6654f004 data-v-6654f004>menu</title><use xlink:href="#icon-menu" data-v-6654f004 data-v-6654f004></use></svg></div> <div class="navbar-links" data-v-6654f004><a href="/" class="navbar-link" data-v-6654f004>
+            欢迎页
+          </a><a href="/posts/" class="navbar-link router-link-active" data-v-6654f004>
+            帖子
+          </a><a href="/custom-pages/" class="navbar-link" data-v-6654f004>
+            关于我
+          </a></div></div></nav> <div class="navbar-holder" style="display:none;" data-v-6654f004></div></div> <div class="banner" data-v-e2d7da12 data-v-e4a0ebe0 data-v-e4a0ebe0><div class="container" data-v-e2d7da12><div class="center" data-v-e2d7da12></div></div></div></header> <div class="container clearfix show-aside" data-v-0874e876 data-v-0874e876><main class="main" data-v-0874e876><div class="post" data-v-0874e876 data-v-0874e876><section class="post-meta main-div" data-v-7f7ca342><section class="post-date clearfix" data-v-7f7ca342><span class="create-date" data-v-7f7ca342>
+      发布时间 : 2019-08-22
+    </span> <span class="update-date" data-v-7f7ca342>
+      最后修改 : 2019-08-28
+    </span></section> <section class="post-links" data-v-7f7ca342><a href="/posts/2019/08/20/wechat-version-controll.html" class="post-link" data-v-7f7ca342>
+      上一篇 : 2019-08-20 小程序版本更新问题
+    </a> <a href="/posts/2019/08/26/regexp-learn.html" class="post-link" data-v-7f7ca342>
+      下一篇 : 2019-08-26 学习正则的使用
+    </a></section></section> <article class="main-div"><div class="post-content content__default"><div><ul><li><a href="/posts/2019/08/22/element-ui-admin.html#官方文档位置">官方文档位置</a></li><li><a href="/posts/2019/08/22/element-ui-admin.html#mock-数据">mock 数据</a></li><li><a href="/posts/2019/08/22/element-ui-admin.html#换皮肤一波三折">换皮肤一波三折</a></li></ul></div> <h2 id="官方文档位置"><a href="#官方文档位置" aria-hidden="true" class="header-anchor">#</a> 官方文档位置</h2> <p>https://panjiachen.gitee.io/vue-element-admin-site/zh/feature/component/tree-table.html#props-%E8%AF%B4%E6%98%8E</p> <h2 id="mock-数据"><a href="#mock-数据" aria-hidden="true" class="header-anchor">#</a> mock 数据</h2> <div class="language-metadata json extra-class"><pre class="language-text"><code>
+语法规则	| 说明
+'name|min-max': string	通过重复 string 生成一个字符串，重复次数大于等于 min，小于等于 max
+'name|count': string	通过重复 string 生成一个字符串，重复次数等于 count
+'name|min-max': number	生成一个大于等于 min、小于等于 max 的整数，属性值 number 用来确定类型
+'name|+1': number	初始值为 number，以后每次请求在前面的基础上+1
+'name|min-max.dmin-dmax': number	生成一个浮点数，整数部分大于等于 min、小于等于 max，小数部分保留 dmin 到 dmax 位
+'name|1': boolean	随机生成一个布尔值，值为 true 的概率是 1/2，值为 false 的概率同样是 1/2
+'name|count': object	从属性值 object 中随机选取 count 个属性
+'name|min-max': object	从属性值 object 中随机选取 min 到 max 个属性
+'name|1': array	从属性值 array 中随机选取 1 个元素，作为最终值
+'name|+1': array	从属性值 array 中按照顺序选取 1 个元素，作为最终值
+'name|count': array	通过重复属性值 array 生成一个新数组，重复次数为 count
+'name|min-max': array	通过重复属性值 array 生成一个新数组，重复次数大于等于 min，小于等于 max
+
+</code></pre></div><p>示例</p> <div class="language-metadata json extra-class"><pre class="language-text"><code>//数据占位符使用
+{
+  &quot;string|1-2&quot;: &quot;@string&quot;,     //随机生成字符串
+  &quot;integer&quot;: &quot;@integer(10, 30)&quot;,  //随机生成一个10～30之间的正整数
+  &quot;float&quot;: &quot;@float(60, 100, 2, 2)&quot;,  //随机生成浮点数，参数分别为整数部分最小值和最大值、小数部分保留最小位数和最大位数
+  &quot;boolean&quot;: &quot;@boolean&quot;,       //随机生成boolean
+  &quot;date&quot;: &quot;@date(yyyy-MM-dd)&quot;, //按照格式随机生成时间
+  &quot;datetime&quot;: &quot;@datetime&quot;,     //随机生成时间
+  &quot;now&quot;: &quot;@now&quot;,               //当前时间
+  &quot;url&quot;: &quot;@url&quot;,               //随机生成url字符串
+  &quot;email&quot;: &quot;@email&quot;,           //随机生成邮箱
+  &quot;region&quot;: &quot;@region&quot;,         //随机生成地区
+  &quot;city&quot;: &quot;@city&quot;,             //随机生成城市
+  &quot;province&quot;: &quot;@province&quot;,     //随机生成省会
+  &quot;county&quot;: &quot;@county&quot;,         //随机生成一个（中国）县
+  &quot;upper&quot;: &quot;@upper(@title)&quot;,   //把生随机成的标题全部转为大写
+  &quot;guid&quot;: &quot;@guid&quot;,             //随机生成一个 GUID
+  &quot;id&quot;: &quot;@id&quot;,                 //随机生成一个 18 位身份证
+  &quot;image&quot;: &quot;@image(200x200)&quot;,  //随机生成一个大小为200x200的图片链接
+  &quot;title&quot;: &quot;@title&quot;,           //随机生成一句标题，其中每个单词的首字母大写
+  &quot;cparagraph&quot;: &quot;@cparagraph&quot;, //随机生成一段中文文本
+  &quot;csentence&quot;: &quot;@csentence&quot;,   //随机生成一段中文文本
+  &quot;range&quot;: &quot;@range(2, 10)&quot;     //返回一个内容从2开始到9的整型数组
+}
+</code></pre></div><h2 id="换皮肤一波三折"><a href="#换皮肤一波三折" aria-hidden="true" class="header-anchor">#</a> 换皮肤一波三折</h2> <ol><li>安装主题工具</li></ol> <p>首先安装「主题生成工具」，可以全局安装或者安装在当前项目下，推荐安装在项目里，方便别人 clone 项目时能直接安装依赖并启动。
+<code>metadata json yarn add element-theme --dev</code>
+2. 安装chalk主题</p> <p>安装白垩主题，可以从 npm 安装或者从 GitHub 拉取最新代码，这里从 npm 安装。</p> <div class="language-metadata json extra-class"><pre class="language-text"><code>    yarn add element-theme-chalk -D
+</code></pre></div><p>3.初始化变量文件</p> <p>主题生成工具安装成功后，如果全局安装可以在命令行里通过 et 调用工具，如果安装在当前目录下，需要通过 node_modules/.bin/et 访问到命令。执行 -i 初始化变量文件。默认输出到 element-variables.scss，当然你可以传参数指定文件输出目录。</p> <div class="language-metadata json extra-class"><pre class="language-text"><code>    node_modules/.bin/et -i
+</code></pre></div><p>命令执行成功之后，会在根目录生成 scss文件 element-variables.scss 。</p> <p>4、修改主题色</p> <p>在 element-variables.scss 文件里修改 $–color-primary:#4b5f6e，即你想要的主题颜色</p> <p>5、编译主题
+执行主题编译命令生成主题，根目录会生成一个theme的文件夹 。</p> <p>node_modules/.bin/et</p> <p>6、引入自定义主题
+把生成的主题按颜色改名放置 src/theme 目录下。</p> <p>在 main.js 中 import ‘所在路径/index.css’。</p> <p>7、效果展示
+重新加载后，我们看到按钮颜色已经不是默认的蓝色了。</p></div></article> <section class="post-meta main-div" data-v-7f7ca342><section class="post-date clearfix" data-v-7f7ca342><span class="create-date" data-v-7f7ca342>
+      发布时间 : 2019-08-22
+    </span> <span class="update-date" data-v-7f7ca342>
+      最后修改 : 2019-08-28
+    </span></section> <section class="post-links" data-v-7f7ca342><a href="/posts/2019/08/20/wechat-version-controll.html" class="post-link" data-v-7f7ca342>
+      上一篇 : 2019-08-20 小程序版本更新问题
+    </a> <a href="/posts/2019/08/26/regexp-learn.html" class="post-link" data-v-7f7ca342>
+      下一篇 : 2019-08-26 学习正则的使用
+    </a></section></section> <div id="post-comments" class="main-div"><!----></div></div></main> <aside class="aside" data-v-0874e876><div class="info-card main-div" data-v-2bd66a30 data-v-0874e876><div class="info-card-header" data-v-2bd66a30><img src="https://blog.mamingjuan.cn/assets/images/favicon-16.ico" alt="glitzma" class="info-avatar" data-v-2bd66a30></div> <div class="info-card-body" data-v-2bd66a30><section class="info-nickname" data-v-2bd66a30>
+      glitzma
+    </section> <section class="info-desc" data-v-2bd66a30>Happy Coding<br/>Happy Life</section> <section class="info-contact" data-v-2bd66a30><section data-v-2bd66a30><span title="Beijing City, China" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>Beijing City, China</title><use xlink:href="#icon-location" data-v-2bd66a30 data-v-2bd66a30></use></svg><span class="info-text" data-v-2bd66a30 data-v-2bd66a30>
+          Beijing City, China
+        </span></span></section> <section data-v-2bd66a30><span title="Secrecy" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>Secrecy</title><use xlink:href="#icon-organization" data-v-2bd66a30 data-v-2bd66a30></use></svg><span class="info-text" data-v-2bd66a30 data-v-2bd66a30>
+          Secrecy
+        </span></span></section> <section data-v-2bd66a30><a href="mailto:glitteringma@gmail.com" title="glitteringma@gmail.com" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>glitteringma@gmail.com</title><use xlink:href="#icon-email" data-v-2bd66a30 data-v-2bd66a30></use></svg><span class="info-text" data-v-2bd66a30 data-v-2bd66a30>
+          glitteringma@gmail.com
+        </span></a></section></section></div> <div class="info-card-footer" data-v-2bd66a30><section class="info-sns clearfix" data-v-2bd66a30><a href="https://github.com/glitzma" target="_blank" class="sns-link" data-v-2bd66a30><span title="GitHub: glitzma" class="sns-icon" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1.5em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>GitHub: glitzma</title><use xlink:href="#icon-github" data-v-2bd66a30 data-v-2bd66a30></use></svg></span></a><a href="https://twitter.com/x0BKGuGTNoqZ0F7" target="_blank" class="sns-link" data-v-2bd66a30><span title="Twitter: x0BKGuGTNoqZ0F7" class="sns-icon" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1.5em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>Twitter: x0BKGuGTNoqZ0F7</title><use xlink:href="#icon-twitter" data-v-2bd66a30 data-v-2bd66a30></use></svg></span></a><a href="https://www.instagram.com/glitz9558/?hl=en" target="_blank" class="sns-link" data-v-2bd66a30><span title="Instagram: glitz9558" class="sns-icon" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1.5em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>Instagram: glitz9558</title><use xlink:href="#icon-instagram" data-v-2bd66a30 data-v-2bd66a30></use></svg></span></a></section></div></div> <div class="post-nav-card main-div" style="position:relative;top:0;width:0px;" data-v-0874e876><div class="post-nav-contents"><svg class="icon"><title>book</title><use xlink:href="#icon-book"></use></svg> <span>文章目录</span> <div class="post-nav-toc"><ul><li><a href="/posts/2019/08/22/element-ui-admin.html#官方文档位置">官方文档位置</a></li><li><a href="/posts/2019/08/22/element-ui-admin.html#mock-数据">mock 数据</a></li><li><a href="/posts/2019/08/22/element-ui-admin.html#换皮肤一波三折">换皮肤一波三折</a></li></ul></div></div> <div class="post-nav-comments"><svg class="icon"><title>comment</title><use xlink:href="#icon-comment"></use></svg> <a href="/posts/2019/08/22/element-ui-admin.html#post-comments">
+      评论
+    </a></div></div></aside></div> <footer class="footer" data-v-e361d3ee><p class="sns-links" data-v-e361d3ee><a href="https://github.com/glitzma" target="_blank" class="sns-link" data-v-e361d3ee><span title="GitHub: glitzma" class="sns-icon" data-v-e361d3ee data-v-e361d3ee><svg class="icon" style="font-size:25px;" data-v-e361d3ee data-v-e361d3ee><title data-v-e361d3ee data-v-e361d3ee>GitHub: glitzma</title><use xlink:href="#icon-github" data-v-e361d3ee data-v-e361d3ee></use></svg></span></a><a href="https://twitter.com/x0BKGuGTNoqZ0F7" target="_blank" class="sns-link" data-v-e361d3ee><span title="Twitter: x0BKGuGTNoqZ0F7" class="sns-icon" data-v-e361d3ee data-v-e361d3ee><svg class="icon" style="font-size:25px;" data-v-e361d3ee data-v-e361d3ee><title data-v-e361d3ee data-v-e361d3ee>Twitter: x0BKGuGTNoqZ0F7</title><use xlink:href="#icon-twitter" data-v-e361d3ee data-v-e361d3ee></use></svg></span></a><a href="https://www.instagram.com/glitz9558/?hl=en" target="_blank" class="sns-link" data-v-e361d3ee><span title="Instagram: glitz9558" class="sns-icon" data-v-e361d3ee data-v-e361d3ee><svg class="icon" style="font-size:25px;" data-v-e361d3ee data-v-e361d3ee><title data-v-e361d3ee data-v-e361d3ee>Instagram: glitz9558</title><use xlink:href="#icon-instagram" data-v-e361d3ee data-v-e361d3ee></use></svg></span></a></p> <p data-v-e361d3ee><span data-v-e361d3ee>Powered by </span> <a href="https://vuepress.vuejs.org" target="_blank" data-v-e361d3ee>
+      Vuepress
+    </a></p></footer></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.2a79f49f.js" defer></script><script src="/assets/js/7.7c96a31c.js" defer></script><script src="/assets/js/108.2f1fff72.js" defer></script>
+  </body>
+</html>
