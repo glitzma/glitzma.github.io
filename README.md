@@ -1,1 +1,0 @@
-# glitzma.github.io
