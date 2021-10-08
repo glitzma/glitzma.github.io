@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vue学习 | 马明娟</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="This is my blog">
+    
+    <link rel="preload" href="/assets/css/0.styles.d0a279ba.css" as="style"><link rel="preload" href="/assets/js/app~d0ae3f07.d0a279ba.js" as="script"><link rel="preload" href="/assets/css/styles.ea0156f7.css" as="style"><link rel="preload" href="/assets/js/app~db300d2f.ea0156f7.js" as="script"><link rel="preload" href="/assets/css/9.styles.b58e7c8c.css" as="style"><link rel="preload" href="/assets/js/9.b58e7c8c.js" as="script"><link rel="preload" href="/assets/js/29.17e49287.js" as="script"><link rel="prefetch" href="/assets/css/10.styles.ec9d1688.css"><link rel="prefetch" href="/assets/css/2.styles.898232b5.css"><link rel="prefetch" href="/assets/css/3.styles.8acdd097.css"><link rel="prefetch" href="/assets/css/4.styles.35401f2b.css"><link rel="prefetch" href="/assets/css/5.styles.c499630f.css"><link rel="prefetch" href="/assets/css/6.styles.c4a89d24.css"><link rel="prefetch" href="/assets/css/7.styles.63d3ab20.css"><link rel="prefetch" href="/assets/css/8.styles.8108d241.css"><link rel="prefetch" href="/assets/js/10.ec9d1688.js"><link rel="prefetch" href="/assets/js/100.48a68d10.js"><link rel="prefetch" href="/assets/js/101.dcf494a8.js"><link rel="prefetch" href="/assets/js/102.7d940be6.js"><link rel="prefetch" href="/assets/js/103.0d27ecff.js"><link rel="prefetch" href="/assets/js/104.4f515b75.js"><link rel="prefetch" href="/assets/js/105.30b6fe36.js"><link rel="prefetch" href="/assets/js/106.cf5449c5.js"><link rel="prefetch" href="/assets/js/107.a3424fec.js"><link rel="prefetch" href="/assets/js/108.a4ff5db2.js"><link rel="prefetch" href="/assets/js/109.9d76da2c.js"><link rel="prefetch" href="/assets/js/11.2ba2614b.js"><link rel="prefetch" href="/assets/js/110.6847af32.js"><link rel="prefetch" href="/assets/js/111.231f6332.js"><link rel="prefetch" href="/assets/js/112.aece1679.js"><link rel="prefetch" href="/assets/js/113.510a3d02.js"><link rel="prefetch" href="/assets/js/114.a20df0dd.js"><link rel="prefetch" href="/assets/js/115.7b416835.js"><link rel="prefetch" href="/assets/js/116.d13357de.js"><link rel="prefetch" href="/assets/js/117.ea667d24.js"><link rel="prefetch" href="/assets/js/118.fcd4fdd6.js"><link rel="prefetch" href="/assets/js/119.26e2d5f8.js"><link rel="prefetch" href="/assets/js/12.a732afe7.js"><link rel="prefetch" href="/assets/js/120.bbe2d53f.js"><link rel="prefetch" href="/assets/js/121.bc9e129f.js"><link rel="prefetch" href="/assets/js/122.9c9843f1.js"><link rel="prefetch" href="/assets/js/123.4f05160c.js"><link rel="prefetch" href="/assets/js/124.7d6ae81d.js"><link rel="prefetch" href="/assets/js/125.0e3b8404.js"><link rel="prefetch" href="/assets/js/126.ae265fa0.js"><link rel="prefetch" href="/assets/js/127.4005b2ef.js"><link rel="prefetch" href="/assets/js/128.1011a635.js"><link rel="prefetch" href="/assets/js/129.3871ccce.js"><link rel="prefetch" href="/assets/js/13.61da442e.js"><link rel="prefetch" href="/assets/js/130.4498934b.js"><link rel="prefetch" href="/assets/js/131.6a2798a4.js"><link rel="prefetch" href="/assets/js/132.ebbc3d45.js"><link rel="prefetch" href="/assets/js/133.58eb30c4.js"><link rel="prefetch" href="/assets/js/134.6b09c600.js"><link rel="prefetch" href="/assets/js/135.5eb8111f.js"><link rel="prefetch" href="/assets/js/136.f0973492.js"><link rel="prefetch" href="/assets/js/137.ad36e708.js"><link rel="prefetch" href="/assets/js/14.6d70c6ca.js"><link rel="prefetch" href="/assets/js/15.8c368c65.js"><link rel="prefetch" href="/assets/js/16.83e8aed7.js"><link rel="prefetch" href="/assets/js/17.ba3f649a.js"><link rel="prefetch" href="/assets/js/18.eeba734f.js"><link rel="prefetch" href="/assets/js/19.62b05862.js"><link rel="prefetch" href="/assets/js/2.898232b5.js"><link rel="prefetch" href="/assets/js/20.6480bcf0.js"><link rel="prefetch" href="/assets/js/21.90c4627a.js"><link rel="prefetch" href="/assets/js/22.8d42d727.js"><link rel="prefetch" href="/assets/js/23.605f2dc6.js"><link rel="prefetch" href="/assets/js/24.d05c6f72.js"><link rel="prefetch" href="/assets/js/25.57e789b9.js"><link rel="prefetch" href="/assets/js/26.907b05b0.js"><link rel="prefetch" href="/assets/js/27.f3251cb5.js"><link rel="prefetch" href="/assets/js/28.0d7be8d1.js"><link rel="prefetch" href="/assets/js/3.8acdd097.js"><link rel="prefetch" href="/assets/js/30.2be20386.js"><link rel="prefetch" href="/assets/js/31.1dbb70b4.js"><link rel="prefetch" href="/assets/js/32.05843de7.js"><link rel="prefetch" href="/assets/js/33.fd3375d5.js"><link rel="prefetch" href="/assets/js/34.ccee4f1f.js"><link rel="prefetch" href="/assets/js/35.c7e2f3c5.js"><link rel="prefetch" href="/assets/js/36.b063c22b.js"><link rel="prefetch" href="/assets/js/37.f68ba6af.js"><link rel="prefetch" href="/assets/js/38.c1e81f64.js"><link rel="prefetch" href="/assets/js/39.d2d31fe3.js"><link rel="prefetch" href="/assets/js/4.35401f2b.js"><link rel="prefetch" href="/assets/js/40.9ba2f3a5.js"><link rel="prefetch" href="/assets/js/41.02ee5cf1.js"><link rel="prefetch" href="/assets/js/42.ef0f94c6.js"><link rel="prefetch" href="/assets/js/43.7137c0e2.js"><link rel="prefetch" href="/assets/js/44.bd100adb.js"><link rel="prefetch" href="/assets/js/45.b87bb250.js"><link rel="prefetch" href="/assets/js/46.6e1a1455.js"><link rel="prefetch" href="/assets/js/47.e20c162f.js"><link rel="prefetch" href="/assets/js/48.e0696ed4.js"><link rel="prefetch" href="/assets/js/49.2b298c9a.js"><link rel="prefetch" href="/assets/js/5.c499630f.js"><link rel="prefetch" href="/assets/js/50.649d1636.js"><link rel="prefetch" href="/assets/js/51.8fbbbff9.js"><link rel="prefetch" href="/assets/js/52.8671bc2f.js"><link rel="prefetch" href="/assets/js/53.cd9e2dfe.js"><link rel="prefetch" href="/assets/js/54.f90b870f.js"><link rel="prefetch" href="/assets/js/55.b6bb1f31.js"><link rel="prefetch" href="/assets/js/56.591ec0d2.js"><link rel="prefetch" href="/assets/js/57.890f4cfb.js"><link rel="prefetch" href="/assets/js/58.1fae338a.js"><link rel="prefetch" href="/assets/js/59.43859e29.js"><link rel="prefetch" href="/assets/js/6.c4a89d24.js"><link rel="prefetch" href="/assets/js/60.8982d556.js"><link rel="prefetch" href="/assets/js/61.f4abe060.js"><link rel="prefetch" href="/assets/js/62.c19d45e3.js"><link rel="prefetch" href="/assets/js/63.de1404b9.js"><link rel="prefetch" href="/assets/js/64.ddea114e.js"><link rel="prefetch" href="/assets/js/65.39781bf6.js"><link rel="prefetch" href="/assets/js/66.6975c275.js"><link rel="prefetch" href="/assets/js/67.a7b4f299.js"><link rel="prefetch" href="/assets/js/68.93632038.js"><link rel="prefetch" href="/assets/js/69.2571ce6f.js"><link rel="prefetch" href="/assets/js/7.63d3ab20.js"><link rel="prefetch" href="/assets/js/70.1873a839.js"><link rel="prefetch" href="/assets/js/71.8da0df3d.js"><link rel="prefetch" href="/assets/js/72.459d24ba.js"><link rel="prefetch" href="/assets/js/73.499c945d.js"><link rel="prefetch" href="/assets/js/74.099a847f.js"><link rel="prefetch" href="/assets/js/75.ae542950.js"><link rel="prefetch" href="/assets/js/76.48094319.js"><link rel="prefetch" href="/assets/js/77.ca94aa26.js"><link rel="prefetch" href="/assets/js/78.a97d5e8c.js"><link rel="prefetch" href="/assets/js/79.53b58abc.js"><link rel="prefetch" href="/assets/js/8.8108d241.js"><link rel="prefetch" href="/assets/js/80.ce84028b.js"><link rel="prefetch" href="/assets/js/81.c0028e23.js"><link rel="prefetch" href="/assets/js/82.ccca7a22.js"><link rel="prefetch" href="/assets/js/83.643ca670.js"><link rel="prefetch" href="/assets/js/84.885245ab.js"><link rel="prefetch" href="/assets/js/85.dfe6f35d.js"><link rel="prefetch" href="/assets/js/86.f6fe01db.js"><link rel="prefetch" href="/assets/js/87.03a9b222.js"><link rel="prefetch" href="/assets/js/88.c475b20c.js"><link rel="prefetch" href="/assets/js/89.c243945d.js"><link rel="prefetch" href="/assets/js/90.9673669a.js"><link rel="prefetch" href="/assets/js/91.255d7185.js"><link rel="prefetch" href="/assets/js/92.9d719dbc.js"><link rel="prefetch" href="/assets/js/93.50e6be04.js"><link rel="prefetch" href="/assets/js/94.92065d43.js"><link rel="prefetch" href="/assets/js/95.e377ba5a.js"><link rel="prefetch" href="/assets/js/96.b8d7306f.js"><link rel="prefetch" href="/assets/js/97.6130964d.js"><link rel="prefetch" href="/assets/js/98.5498ace6.js"><link rel="prefetch" href="/assets/js/99.2d6717ea.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d0a279ba.css"><link rel="stylesheet" href="/assets/css/styles.ea0156f7.css"><link rel="stylesheet" href="/assets/css/9.styles.b58e7c8c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-glitzma"><header class="header" style="background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:scroll;background-image:url(/assets/img/header-image-05.jpg);" data-v-e4a0ebe0><div data-v-6654f004 data-v-e4a0ebe0><nav class="navbar" data-v-6654f004><div class="container" data-v-6654f004><a href="/" class="router-link-active" data-v-6654f004><span class="navbar-site-name" data-v-6654f004>
+          马明娟
+        </span></a> <div class="navbar-toggler" data-v-6654f004><svg class="icon" style="font-size:1.2em;" data-v-6654f004 data-v-6654f004><title data-v-6654f004 data-v-6654f004>menu</title><use xlink:href="#icon-menu" data-v-6654f004 data-v-6654f004></use></svg></div> <div class="navbar-links" data-v-6654f004><a href="/" class="navbar-link" data-v-6654f004>
+            欢迎页
+          </a><a href="/posts/" class="navbar-link router-link-active" data-v-6654f004>
+            帖子
+          </a><a href="/custom-pages/" class="navbar-link" data-v-6654f004>
+            关于
+          </a></div></div></nav> <div class="navbar-holder" style="display:none;" data-v-6654f004></div></div> <div class="banner" data-v-e2d7da12 data-v-e4a0ebe0 data-v-e4a0ebe0><div class="container" data-v-e2d7da12><div class="center" data-v-e2d7da12></div></div></div></header> <div class="container clearfix show-aside" data-v-0874e876 data-v-0874e876><main class="main" data-v-0874e876><div class="post" data-v-0874e876 data-v-0874e876><section class="post-meta main-div" data-v-7f7ca342><section class="post-date clearfix" data-v-7f7ca342><span class="create-date" data-v-7f7ca342>
+      发布时间 : 2016-12-12
+    </span> <span class="update-date" data-v-7f7ca342>
+      最后修改 : 2021-07-19
+    </span></section> <section class="post-links" data-v-7f7ca342><a href="/posts/2016/12/12/promise.html" class="post-link" data-v-7f7ca342>
+      上一篇 : promise函数
+    </a> <a href="/posts/2017/05/11/node-interview.html" class="post-link" data-v-7f7ca342>
+      下一篇 : node.js面试题大全－侧重后端应用与对Node核心的理解
+    </a></section></section> <article class="main-div"><div class="post-content content__default"><h2 id="vue学习">vue学习</h2> <h3 id="框架和库">框架和库</h3> <ul><li>框架 vue 拥有完整的解决方案</li> <li>库 jquery underscore zepto animate.css</li></ul> <h3 id="渐进式-渐进增强">渐进式 （渐进增强）</h3> <ul><li>vue全家桶 <code>vuejs + vue-router + vuex + axios</code>(获取数据)</li> <li>通过组合 完成一个完整的框架</li> <li>构建工具 （vue-cli）</li> <li>大规模状态里(vuex)</li> <li>声明式渲染</li></ul> <h2 id="mvc-backbone">mvc （backbone）</h2> <ul><li>model 数据</li> <li>view 视图</li> <li>controller 控制器</li></ul> <h2 id="mvvm-angular-vue-双向数据绑定">MVVM (angular,vue) 双向数据绑定</h2> <ul><li>model 数据</li> <li>view 视图</li> <li>view Model 视图模型</li></ul> <h2 id="安装vue">安装vue</h2> <ul><li>cdn 的方式</li> <li>npm 安装node package manager</li></ul> <div class="language- extra-class"><pre class="language-text"><code>npm init
+//初始化，会产生一个package.json ,此文件是描述项目的依赖
+
+# 最新稳定版
+$ npm install vue
+
+npm init -y #文件夹名字来命名package.json中的内容
+</code></pre></div><h2 id="内容">内容</h2> <ul><li><p>vm =&gt; viewModel 数据最终会被vm所代理。</p></li> <li><p><code>{{</code>a<code>}}</code>取值表达式，通过<code></code>来进行取值，默认可以不写this,表达式，赋值运算 计算 三元表达式 尽量少写逻辑计算</p></li> <li><p>指令必须 v-开头，后面的值均为变更</p></li> <li><p>(表单元素) 忽略掉value,checked,selected,将数据绑定到视图上，视图修改后会影响数据变化</p></li> <li><p>v-text 取代 <code></code> v-cloak 解决闪烁（块）问题 (了解)</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>这个指令保持在元素上直到关联实例结束编译。和 CSS 规则如 <code>[v-cloak]</code> { display: none } 一起用时，这个指令可以隐藏未编译的 Mustache 标签</p></div></li> <li><p>v-once</p> <ul><li>不需要表达式</li> <li>只渲染元素和组件一次。随后的重新渲染，元素/组件及其所有的子节点将被视为静态内容并跳过。这可以用于优化更新性能。</li></ul></li> <li><p>v-html 将html字符串转化成html</p></li> <li><p>v-for 虚幻（数组，对象，字符串，数字）</p> <div class="language-html extra-class"><pre class="language-html"><code>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">v-for</span> <span class="token attr-value"><span class="token punctuation attr-equals">=</span> <span class="token punctuation">&quot;</span>value in/of 数组<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">v-for</span> <span class="token attr-value"><span class="token punctuation attr-equals">=</span> <span class="token punctuation">&quot;</span>(value,index) in/of 数组<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></li></ul> <h2 id="vue中checkbox用法">vue中checkbox用法</h2> <div class="language- extra-class"><pre class="language-text"><code> &lt;input type = &quot;checkbox&quot; v-model = &quot;b&quot; value =&quot;语文&quot;&gt;语文
+ &lt;input type = &quot;checkbox&quot; v-model = &quot;b&quot; value =&quot;数学&quot;&gt;数学
+ &lt;input type = &quot;checkbox&quot; v-model = &quot;b&quot; value =&quot;英语&quot;&gt;英语
+
+ script:
+
+ let vm = new Vue({
+    el:&quot;#app&quot;,
+    data:{
+        a:false,
+        b:[]
+    }
+ })
+</code></pre></div><h2 id="vue-中-select-用法">vue 中 select 用法</h2> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">id</span> <span class="token attr-value"><span class="token punctuation attr-equals">=</span> <span class="token punctuation">&quot;</span>select<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span> <span class="token attr-value"><span class="token punctuation attr-equals">=</span> <span class="token punctuation">&quot;</span>1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>你好<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span> <span class="token attr-value"><span class="token punctuation attr-equals">=</span> <span class="token punctuation">&quot;</span>2<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>哈<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span> <span class="token attr-value"><span class="token punctuation attr-equals">=</span> <span class="token punctuation">&quot;</span>3<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>嘿<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">&gt;</span></span>
+
+javascript:
+let oSElect = document.getElementById('select');
+oSelect.onChange = function(){
+alert(this.value)
+}
+
+vue:
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>a<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span> <span class="token attr-value"><span class="token punctuation attr-equals">=</span> <span class="token punctuation">&quot;</span>1<span class="token punctuation">&quot;</span></span> <span class="token attr-name">disabled</span> <span class="token punctuation">&gt;</span></span>请选择<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span> <span class="token attr-value"><span class="token punctuation attr-equals">=</span> <span class="token punctuation">&quot;</span>1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>你好<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span> <span class="token attr-value"><span class="token punctuation attr-equals">=</span> <span class="token punctuation">&quot;</span>2<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>哈<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span> <span class="token attr-value"><span class="token punctuation attr-equals">=</span> <span class="token punctuation">&quot;</span>3<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>嘿<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">&gt;</span></span>
+//禁用请选择选项
+//如果没写value就是option中间内容
+//multiple 多选 数据变成数组类型 绑定数据时注意变成数组
+
+ let vm = new Vue({
+    el:&quot;#app&quot;,
+    data:{
+        a:'1'
+    }
+ })
+
+</code></pre></div><h2 id="radio-用法">radio 用法</h2> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span> <span class="token attr-value"><span class="token punctuation attr-equals">=</span> <span class="token punctuation">&quot;</span>radio<span class="token punctuation">&quot;</span></span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>a<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>女
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span> <span class="token attr-value"><span class="token punctuation attr-equals">=</span> <span class="token punctuation">&quot;</span>radio<span class="token punctuation">&quot;</span></span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>a<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>2<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>男
+
+ let vm = new Vue({
+    el:&quot;#app&quot;,
+    data:{
+        a:'1'
+    }
+ })
+</code></pre></div><h2 id="事件-v-on">事件 v-on (@)</h2> <ul><li>绑定给dom元素,函数需要定义在methods中，不能和data里的内容重名，this指向的是实例，不能使用箭头函数，事件源对象如果不写括号，可以自动传入，否则只能手动传入$event</li></ul> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">@事件名</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>fn<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="vue-defineproperty">vue DefineProperty</h2> <div class="language- extra-class"><pre class="language-text"><code>let obj = {};
+Object.defineProperty(obj,'name',{
+    configurable: true,//是否可配置、可删除否
+    writable: true,//是否可写
+    enumerable:false,//是否可枚举
+    value : 1 ,
+})
+
+Object.defineProperty(obj,'name',{
+    get(){//取obj值时触发
+
+    },
+    set(){//给obj赋值会触发get方法
+
+    }
+})
+
+</code></pre></div><h2 id="双向绑定的原理">双向绑定的原理</h2> <div class="language- extra-class"><pre class="language-text"><code>&lt;input type = &quot;text&quot; id = &quot;input&quot;&gt;
+&lt;script&gt;
+let obj = {};
+let temp = {};
+Object.defineProperty(obj,'name',{
+    get(){
+        return temp[&quot;name&quot;];
+    },set(val){
+        temp[&quot;name&quot;] = val;
+        input.value = obj.name;
+    }
+});
+input.value = obj.name;
+input.addEventListener('input',function(){  //oninput事件，输入框正在输入时触发
+    obj.name = this.value
+})
+&lt;/script&gt;
+</code></pre></div><h2 id="vm中data赋值">vm中data赋值</h2> <div class="language- extra-class"><pre class="language-text"><code>1、 let vm = new Vue({
+    el:&quot;#app&quot;,
+    data:{
+        a:{
+          school: ''
+        }
+    }
+})
+2、 vm.$set(vm.a,'school',1)
+3、 vm.a = {school:'lalaa',age:8,address:'xx'}
+</code></pre></div><h2 id="vm赋值注意事项">vm赋值注意事项</h2> <div class="language- extra-class"><pre class="language-text"><code>let vm = new Vue({
+    el:&quot;#app&quot;,
+    data:{
+        arr:[1,2,3,4,5,6]
+    }
+})
+
+//因为改变数组中的某一项，get 与 set监控不到，改变数组的长度，也无法被监控到
+//错误例子：vm.arr[0] = 100; vm.arr.length -= 2;
+//管用的方法：pop push shift unshift sort reserve splice
+// methods 和data 中的数据都会放到vm上，而且名字不能冲突，冲突会报错。methods中的this指向的都是实例
+//带事件源的： 不带参数 不要写小括号，此时事件源自动传入，如果写括号需要手动传入$event属性
+//回车添加时： if(e.keyCodes === 13) this.arr.unshift(this.val);
+// @keyup.ctrl.enter 为ctrl + enter同时按
+
+&lt;input type = 'number' v-model.number.lazy = ''&gt; //其中.number让输入框的值变成数字类型 .lazy当输入框失去焦点时更新数据
+</code></pre></div><h2 id="购物车-计算机总价的写法">购物车 计算机总价的写法</h2> <div class="language- extra-class"><pre class="language-text"><code>computed:{
+    sum:{
+        get(){
+            return this.products.reduce((prev,next) =&gt;{
+                if(!next.isSelected) return prev;
+                return prev + next.productPrice * next.productCount
+            })
+        }
+    }
+}
+
+//如果把属性写成函数 默认调用的就是get方法
+computed:{
+    sum:{
+        return this.products.reduce((prev,next) =&gt;{
+            if(!next.isSelected) return prev;
+            return prev + next.productPrice * next.productCount
+        })
+    }
+}
+
+
+</code></pre></div><h2 id="动画">动画</h2> <ul><li>动画根据name设置,用name 替换v的位置</li></ul> <div class="language- extra-class"><pre class="language-text"><code>过渡的类名
+
+在进入/离开的过渡中，会有 6 个 class 切换。
+v-enter：定义进入过渡的开始状态。在元素被插入时生效，在下一个帧移除。
+v-enter-active：定义过渡的状态。在元素整个过渡过程中作用，在元素被插入时生效，在 transition/animation 完成之后移除。这个类可以被用来定义过渡的过程时间，延迟和曲线函数。
+v-enter-to: 2.1.8版及以上 定义进入过渡的结束状态。在元素被插入一帧后生效 (于此同时 v-enter 被删除)，在 transition/animation 完成之后移除。
+v-leave: 定义离开过渡的开始状态。在离开过渡被触发时生效，在下一个帧移除。
+v-leave-active：定义过渡的状态。在元素整个过渡过程中作用，在离开过渡被触发后立即生效，在 transition/animation 完成之后移除。这个类可以被用来定义过渡的过程时间，延迟和曲线函数。
+v-leave-to: 2.1.8版及以上 定义离开过渡的结束状态。在离开过渡被触发一帧后生效 (于此同时 v-leave 被删除)，在 transition/animation 完成之后移除。
+</code></pre></div><h2 id="总结">总结</h2> <ul><li>v-model(checkbox,select 多选是数组，提供一个value属性) (radio checkbox 分组靠的是v-model),checked selected 不存在</li> <li>修饰符 .number .lazy</li> <li>按键修饰符 .enter.ctrl.keyCode</li> <li>事件<div class="language- extra-class"><pre class="language-text"><code>- 事件.stop
+  stopPropagation, cancelBabel = true ;
+- 事件.capture  (捕获)
+  xx.addEventListener('click',fn)
+- 事件.prevent
+  preventDefault, returnValue = false
+- 事件.self
+  if (event.target !== event.currentTarget) return
+</code></pre></div></li> <li>jquery once 每个元素只能运行一次事件处理器函数。</li> <li>e.srcElement &amp;&amp; e.target 判断事件源绑定事件</li> <li>npm init -y 自动创建package.json</li> <li>全局过滤器(挂多个实例可以用的filter）需要放到实例上面才会生效<div class="language- extra-class"><pre class="language-text"><code>Vue.filter('my',(data)=&gt;{
+ return 'lalala' + data;
+})
+</code></pre></div></li> <li>computed 是属性不是方法<div class="language- extra-class"><pre class="language-text"><code>- 方法不会有缓存，computed会根据依赖（归vue管理的数据，可以响应式变化）的属性进行缓存
+- 两部分组成，有get和set 一般情况下通过js赋值影响其它表单元素。 通过 set方法
+</code></pre></div></li></ul> <h2 id="样式">样式</h2> <div class="language- extra-class"><pre class="language-text"><code>&lt;div class=&quot;static&quot; v-bind:class=&quot;{ active: isActive, 'text-danger': hasError }&quot;&gt;&lt;/div&gt;
+data: {
+  isActive: true,
+  hasError: false
+}
+
+&lt;div v-bind:class=&quot;[activeClass, errorClass]&quot;&gt;&lt;/div&gt;
+data: {
+  activeClass: 'active',
+  errorClass: 'text-danger'
+}
+
+&lt;div v-bind:class=&quot;[isActive ? activeClass : '', errorClass]&quot;&gt;&lt;/div&gt;
+
+</code></pre></div><h2 id="指令-用来操作dom">指令 （用来操作dom）</h2> <p>！！ 下面代码只用来参考，不要复制粘贴！！！</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">v-color.13</span> <span class="token attr-value"><span class="token punctuation attr-equals">=</span> <span class="token punctuation">&quot;</span>flag<span class="token punctuation">&quot;</span></span> <span class="token attr-name">v-focus</span> <span class="token attr-value"><span class="token punctuation attr-equals">=</span> <span class="token punctuation">&quot;</span>cur == todo<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>变色<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">let</span> vm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    directives<span class="token operator">:</span><span class="token punctuation">{</span>
+        <span class="token function">color</span><span class="token punctuation">(</span><span class="token parameter">el<span class="token punctuation">,</span>bindings</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment">//el 指代的是button按钮</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arguments<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            el<span class="token punctuation">.</span>style<span class="token punctuation">.</span>background <span class="token operator">=</span> bidings<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function">drag</span><span class="token punctuation">(</span><span class="token parameter">el</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            el<span class="token punctuation">.</span><span class="token function-variable function">onmousedown</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">var</span> disx <span class="token operator">=</span> e<span class="token punctuation">.</span>pageX <span class="token operator">-</span> el<span class="token punctuation">.</span>offsetLeft<span class="token punctuation">;</span>
+                <span class="token keyword">var</span> disy <span class="token operator">=</span> e<span class="token punctuation">.</span>pageY <span class="token operator">-</span> el<span class="token punctuation">.</span>offsetTop<span class="token punctuation">;</span>
+                document<span class="token punctuation">.</span><span class="token function-variable function">onmouseMove</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    el<span class="token punctuation">.</span>style<span class="token punctuation">.</span>left <span class="token operator">=</span> e<span class="token punctuation">.</span>pageX <span class="token operator">-</span> disx<span class="token punctuation">;</span>
+                    el<span class="token punctuation">.</span>style<span class="token punctuation">.</span>top <span class="token operator">=</span> e<span class="token punctuation">.</span>pageY <span class="token operator">-</span> disy<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                document<span class="token punctuation">.</span><span class="token function-variable function">onmouseup</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    document<span class="token punctuation">.</span>onmousemove <span class="token operator">=</span> document<span class="token punctuation">.</span>onmouseup <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                e<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function">focus</span><span class="token punctuation">(</span><span class="token parameter">el<span class="token punctuation">,</span>bindings</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>bindings<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                el<span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//获取焦点</span>
+            <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    el<span class="token operator">:</span><span class="token string">'#app'</span>，
+    data<span class="token operator">:</span><span class="token punctuation">{</span>
+        flag<span class="token operator">:</span><span class="token string">'yellow'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="localstorage">localStorage</h2> <div class="language- extra-class"><pre class="language-text"><code>let vm = new Vue({
+    el:&quot;#app&quot;,
+    data:{
+        todos:[1,2,3,4,5,6]
+    },
+    created(){
+        this.todos = JSON.parse(localStorage.getItem('data') || this.todos );
+    },
+    watch:{
+        //todos(){ //watch默认只监控一层的数据，数组增加减少会监控到。 更改内容不会发生变化。此时需要深度监控
+        //    alert('aaaaa');
+        //}
+        todos:{ //实现深度监控
+            handler(){//写成函数就默认写了个handler
+                 localStorage.setItem('data',JSON.stringfy(this.todos));
+            },ddep:true
+
+        }
+    }
+})
+//localStorage.getItem
+
+</code></pre></div><h2 id="history-相关">history 相关</h2> <div class="language- extra-class"><pre class="language-text"><code>let vm = new Vue({
+    el:&quot;#app&quot;,
+    data:{
+        todos:[1,2,3,4,5,6]
+    },
+    created(){
+        //监控hash值的变化
+        window.addEventListener('hashchange',()=&gt;{
+            console.log(1
+            )
+        },false);
+    },
+    watch:{
+        //todos(){ //watch默认只监控一层的数据，数组增加减少会监控到。 更改内容不会发生变化。此时需要深度监控
+        //    alert('aaaaa');
+        //}
+        todos:{ //实现深度监控
+            handler(){//写成函数就默认写了个handler
+                 localStorage.setItem('data',JSON.stringfy(this.todos));
+            },ddep:true
+
+        }
+    }
+})
+</code></pre></div><h2 id="vue生命周期">vue生命周期</h2> <ul><li>共八个</li> <li>beforeCreate、created、beforeMount、mounted、beforeUpdate、updated、beforeDestroy、destroyed</li></ul> <div class="language- extra-class"><pre class="language-text"><code>let vm = new Vue({
+    el:&quot;#app&quot;,
+    data:{
+        todos:[1,2,3,4,5,6]
+    },
+    created(){//放ajax初始化数据
+        //监控hash值的变化
+        window.addEventListener('hashchange',()=&gt;{
+            console.log(1
+            )
+        },false);
+    },
+    template:'&lt;div&gt;{{todos}}&lt;/div&gt;' //如果有template属性会用模板替换掉外部html,只要有template 则app中的见容没有意义
+})
+</code></pre></div><h2 id="this-nexttick-保证dom渲染完成后再执行">this.$nextTick() 保证dom渲染完成后再执行</h2> <ul><li>可以用在mounted中获取vm</li> <li>数据变化后想获取真实dom内容，需要等待页面渲染完毕后去获取所有dom操作  此时用nextTick</li></ul> <h2 id="this-refs-xxx">this.$refs.xxx</h2> <p>在mounted同样也可以通过this.$rfs.hahaha 获取</p> <div class="language- extra-class"><pre class="language-text"><code>如果dom元素不是通过v-for循环出来的，只能获取一个，通过v-for循环可以获得多个
+
+this.$refs.wrap.children.length
+</code></pre></div><h2 id="全局组件">全局组件</h2> <div class="language- extra-class"><pre class="language-text"><code>//1.组件名不要带大写。多个单词用 - 分割 （首字母是可以大写的）
+//2.组件名和定义名字相同
+//3.html采用- 命名法， `js`中用驼峰命名法
+&lt;mycomponent&gt;&lt;/mycomponent&gt;
+
+Vue.component('mycomponent',{
+    template:'&lt;div&gt;msg&lt;/div&gt;',
+    data(){//组建中的数据必须是函数类型，返回一个实例作为组建的数据
+        return {msg:'啦啦'}
+    }
+})
+//全局组件
+</code></pre></div><h2 id="局部组件">局部组件</h2> <div class="language- extra-class"><pre class="language-text"><code>// 1.创建组件
+// 2.注册组建
+// 3.引用组件
+
+&lt;hhh&gt;&lt;/hhh&gt;
+或者&lt;hhh/&gt;  不能两个挨着，
+
+let hhh = {template:'&lt;div&gt;哈哈哈&lt;/div&gt;'}
+let haha = {template:'&lt;div&gt;呵呵呵&lt;/div&gt;'}
+let vm = new Vue({
+    el:'#app',
+    components:{
+       hhh,
+       haha
+    },
+    data:{
+    }
+})
+
+Vue.component('mycomponent',{
+    template:'&lt;div&gt;msg&lt;/div&gt;',
+    data(){//组建中的数据必须是函数类型，返回一个实例作为组建的数据
+        return {msg:'啦啦'}
+    }
+})
+</code></pre></div><ul><li>组件中拥有生命周期函数</li></ul> <h2 id="sync-修饰符">.sync 修饰符</h2> <div class="language- extra-class"><pre class="language-text"><code>2.3.0+
+在一些情况下，我们可能会需要对一个 prop 进行“双向绑定”。事实上，这正是 Vue 1.x 中的 .sync 修饰符所提供的功能。当一个子组件改变了一个带 .sync 的 prop 的值时，这个变化也会同步到父组件中所绑定的值。这很方便，但也会导致问题，因为它破坏了单向数据流。由于子组件改变 prop 的代码和普通的状态改动代码毫无区别，当光看子组件的代码时，你完全不知道它何时悄悄地改变了父组件的状态。这在 debug 复杂结构的应用时会带来很高的维护成本。
+上面所说的正是我们在 2.0 中移除 .sync 的理由。但是在 2.0 发布之后的实际应用中，我们发现 .sync 还是有其适用之处，比如在开发可复用的组件库时。我们需要做的只是让子组件改变父组件状态的代码更容易被区分。
+从 2.3.0 起我们重新引入了 .sync 修饰符， 但是这次它只是作为一个编译时的语法糖存在。它会被扩展为一个自动更新父组件属性的 v-on 监听器。
+如下代码
+&lt;comp :foo.sync=&quot;bar&quot;&gt;&lt;/comp&gt;
+会被扩展为：
+&lt;comp :foo=&quot;bar&quot; @update:foo=&quot;val =&gt; bar = val&quot;&gt;&lt;/comp&gt;
+当子组件需要更新 foo 的值时，它需要显式地触发一个更新事件：
+this.$emit('update:foo', newValue)
+</code></pre></div></div></article> <section class="post-meta main-div" data-v-7f7ca342><section class="post-date clearfix" data-v-7f7ca342><span class="create-date" data-v-7f7ca342>
+      发布时间 : 2016-12-12
+    </span> <span class="update-date" data-v-7f7ca342>
+      最后修改 : 2021-07-19
+    </span></section> <section class="post-links" data-v-7f7ca342><a href="/posts/2016/12/12/promise.html" class="post-link" data-v-7f7ca342>
+      上一篇 : promise函数
+    </a> <a href="/posts/2017/05/11/node-interview.html" class="post-link" data-v-7f7ca342>
+      下一篇 : node.js面试题大全－侧重后端应用与对Node核心的理解
+    </a></section></section> <div id="post-comments" class="main-div"><!----></div></div></main> <aside class="aside" data-v-0874e876><div class="info-card main-div" data-v-2bd66a30 data-v-0874e876><div class="info-card-header" data-v-2bd66a30><img src="https://www.mamingjuan.cn/assets/img/avatar.jpeg" alt="Glitr" class="info-avatar" data-v-2bd66a30></div> <div class="info-card-body" data-v-2bd66a30><section class="info-nickname" data-v-2bd66a30>
+      Glitr
+    </section> <section class="info-desc" data-v-2bd66a30>Enjoy coding,<br/>Enjoy life:)</section> <section class="info-contact" data-v-2bd66a30><section data-v-2bd66a30><span title="Beijing City, China" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>Beijing City, China</title><use xlink:href="#icon-location" data-v-2bd66a30 data-v-2bd66a30></use></svg><span class="info-text" data-v-2bd66a30 data-v-2bd66a30>
+          Beijing City, China
+        </span></span></section> <section data-v-2bd66a30><span title="Secrecy" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>Secrecy</title><use xlink:href="#icon-organization" data-v-2bd66a30 data-v-2bd66a30></use></svg><span class="info-text" data-v-2bd66a30 data-v-2bd66a30>
+          Secrecy
+        </span></span></section> <section data-v-2bd66a30><a href="mailto:glitteringma@gmail.com" title="glitteringma@gmail.com" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>glitteringma@gmail.com</title><use xlink:href="#icon-email" data-v-2bd66a30 data-v-2bd66a30></use></svg><span class="info-text" data-v-2bd66a30 data-v-2bd66a30>
+          glitteringma@gmail.com
+        </span></a></section></section></div> <div class="info-card-footer" data-v-2bd66a30><section class="info-sns clearfix" data-v-2bd66a30><a href="https://github.com/happy760690" target="_blank" class="sns-link" data-v-2bd66a30><span title="GitHub: glitzma" class="sns-icon" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1.5em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>GitHub: glitzma</title><use xlink:href="#icon-github" data-v-2bd66a30 data-v-2bd66a30></use></svg></span></a><a href="https://twitter.com/x0BKGuGTNoqZ0F7" target="_blank" class="sns-link" data-v-2bd66a30><span title="Twitter: x0BKGuGTNoqZ0F7" class="sns-icon" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1.5em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>Twitter: x0BKGuGTNoqZ0F7</title><use xlink:href="#icon-twitter" data-v-2bd66a30 data-v-2bd66a30></use></svg></span></a><a href="https://www.instagram.com/glitz9558/?hl=en" target="_blank" class="sns-link" data-v-2bd66a30><span title="Instagram: glitz9558" class="sns-icon" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1.5em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>Instagram: glitz9558</title><use xlink:href="#icon-instagram" data-v-2bd66a30 data-v-2bd66a30></use></svg></span></a></section></div></div> <div class="post-nav-card main-div" style="position:relative;top:0;width:0px;" data-v-0874e876><div class="post-nav-contents"><svg class="icon"><title>book</title><use xlink:href="#icon-book"></use></svg> <span>文章目录</span> <div class="post-nav-toc"><ul><li><a href="/posts/2016/12/12/vue-learn.html#vue学习">vue学习</a><ul><li><a href="/posts/2016/12/12/vue-learn.html#框架和库">框架和库</a></li><li><a href="/posts/2016/12/12/vue-learn.html#渐进式-渐进增强">渐进式 （渐进增强）</a></li></ul></li><li><a href="/posts/2016/12/12/vue-learn.html#mvc-backbone">mvc （backbone）</a></li><li><a href="/posts/2016/12/12/vue-learn.html#mvvm-angular-vue-双向数据绑定">MVVM (angular,vue) 双向数据绑定</a></li><li><a href="/posts/2016/12/12/vue-learn.html#安装vue">安装vue</a></li><li><a href="/posts/2016/12/12/vue-learn.html#内容">内容</a></li><li><a href="/posts/2016/12/12/vue-learn.html#vue中checkbox用法">vue中checkbox用法</a></li><li><a href="/posts/2016/12/12/vue-learn.html#vue-中-select-用法">vue 中 select 用法</a></li><li><a href="/posts/2016/12/12/vue-learn.html#radio-用法">radio 用法</a></li><li><a href="/posts/2016/12/12/vue-learn.html#事件-v-on">事件 v-on (@)</a></li><li><a href="/posts/2016/12/12/vue-learn.html#vue-defineproperty">vue DefineProperty</a></li><li><a href="/posts/2016/12/12/vue-learn.html#双向绑定的原理">双向绑定的原理</a></li><li><a href="/posts/2016/12/12/vue-learn.html#vm中data赋值">vm中data赋值</a></li><li><a href="/posts/2016/12/12/vue-learn.html#vm赋值注意事项">vm赋值注意事项</a></li><li><a href="/posts/2016/12/12/vue-learn.html#购物车-计算机总价的写法">购物车 计算机总价的写法</a></li><li><a href="/posts/2016/12/12/vue-learn.html#动画">动画</a></li><li><a href="/posts/2016/12/12/vue-learn.html#总结">总结</a></li><li><a href="/posts/2016/12/12/vue-learn.html#样式">样式</a></li><li><a href="/posts/2016/12/12/vue-learn.html#指令-用来操作dom">指令 （用来操作dom）</a></li><li><a href="/posts/2016/12/12/vue-learn.html#localstorage">localStorage</a></li><li><a href="/posts/2016/12/12/vue-learn.html#history-相关">history 相关</a></li><li><a href="/posts/2016/12/12/vue-learn.html#vue生命周期">vue生命周期</a></li><li><a href="/posts/2016/12/12/vue-learn.html#this-nexttick-保证dom渲染完成后再执行">this.$nextTick() 保证dom渲染完成后再执行</a></li><li><a href="/posts/2016/12/12/vue-learn.html#this-refs-xxx">this.$refs.xxx</a></li><li><a href="/posts/2016/12/12/vue-learn.html#全局组件">全局组件</a></li><li><a href="/posts/2016/12/12/vue-learn.html#局部组件">局部组件</a></li><li><a href="/posts/2016/12/12/vue-learn.html#sync-修饰符">.sync 修饰符</a></li></ul></div></div> <div class="post-nav-comments"><svg class="icon"><title>comment</title><use xlink:href="#icon-comment"></use></svg> <a href="/posts/2016/12/12/vue-learn.html#post-comments">
+      评论
+    </a></div></div></aside></div> <footer class="footer" data-v-e361d3ee><p class="sns-links" data-v-e361d3ee><a href="https://github.com/happy760690" target="_blank" class="sns-link" data-v-e361d3ee><span title="GitHub: glitzma" class="sns-icon" data-v-e361d3ee data-v-e361d3ee><svg class="icon" style="font-size:25px;" data-v-e361d3ee data-v-e361d3ee><title data-v-e361d3ee data-v-e361d3ee>GitHub: glitzma</title><use xlink:href="#icon-github" data-v-e361d3ee data-v-e361d3ee></use></svg></span></a><a href="https://twitter.com/x0BKGuGTNoqZ0F7" target="_blank" class="sns-link" data-v-e361d3ee><span title="Twitter: x0BKGuGTNoqZ0F7" class="sns-icon" data-v-e361d3ee data-v-e361d3ee><svg class="icon" style="font-size:25px;" data-v-e361d3ee data-v-e361d3ee><title data-v-e361d3ee data-v-e361d3ee>Twitter: x0BKGuGTNoqZ0F7</title><use xlink:href="#icon-twitter" data-v-e361d3ee data-v-e361d3ee></use></svg></span></a><a href="https://www.instagram.com/glitz9558/?hl=en" target="_blank" class="sns-link" data-v-e361d3ee><span title="Instagram: glitz9558" class="sns-icon" data-v-e361d3ee data-v-e361d3ee><svg class="icon" style="font-size:25px;" data-v-e361d3ee data-v-e361d3ee><title data-v-e361d3ee data-v-e361d3ee>Instagram: glitz9558</title><use xlink:href="#icon-instagram" data-v-e361d3ee data-v-e361d3ee></use></svg></span></a></p> <p data-v-e361d3ee><span data-v-e361d3ee>Powered by </span> <a href="https://vuepress.vuejs.org" target="_blank" data-v-e361d3ee>
+      Vuepress
+    </a></p></footer></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app~d0ae3f07.d0a279ba.js" defer></script><script src="/assets/js/9.b58e7c8c.js" defer></script><script src="/assets/js/29.17e49287.js" defer></script><script src="/assets/js/app~db300d2f.ea0156f7.js" defer></script>
+  </body>
+</html>

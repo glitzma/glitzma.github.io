@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>深入研究vuex | 马明娟</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="This is my blog">
+    
+    <link rel="preload" href="/assets/css/0.styles.d0a279ba.css" as="style"><link rel="preload" href="/assets/js/app~d0ae3f07.d0a279ba.js" as="script"><link rel="preload" href="/assets/css/styles.ea0156f7.css" as="style"><link rel="preload" href="/assets/js/app~db300d2f.ea0156f7.js" as="script"><link rel="preload" href="/assets/css/9.styles.b58e7c8c.css" as="style"><link rel="preload" href="/assets/js/9.b58e7c8c.js" as="script"><link rel="preload" href="/assets/js/102.7d940be6.js" as="script"><link rel="prefetch" href="/assets/css/10.styles.ec9d1688.css"><link rel="prefetch" href="/assets/css/2.styles.898232b5.css"><link rel="prefetch" href="/assets/css/3.styles.8acdd097.css"><link rel="prefetch" href="/assets/css/4.styles.35401f2b.css"><link rel="prefetch" href="/assets/css/5.styles.c499630f.css"><link rel="prefetch" href="/assets/css/6.styles.c4a89d24.css"><link rel="prefetch" href="/assets/css/7.styles.63d3ab20.css"><link rel="prefetch" href="/assets/css/8.styles.8108d241.css"><link rel="prefetch" href="/assets/js/10.ec9d1688.js"><link rel="prefetch" href="/assets/js/100.48a68d10.js"><link rel="prefetch" href="/assets/js/101.dcf494a8.js"><link rel="prefetch" href="/assets/js/103.0d27ecff.js"><link rel="prefetch" href="/assets/js/104.4f515b75.js"><link rel="prefetch" href="/assets/js/105.30b6fe36.js"><link rel="prefetch" href="/assets/js/106.cf5449c5.js"><link rel="prefetch" href="/assets/js/107.a3424fec.js"><link rel="prefetch" href="/assets/js/108.a4ff5db2.js"><link rel="prefetch" href="/assets/js/109.9d76da2c.js"><link rel="prefetch" href="/assets/js/11.2ba2614b.js"><link rel="prefetch" href="/assets/js/110.6847af32.js"><link rel="prefetch" href="/assets/js/111.231f6332.js"><link rel="prefetch" href="/assets/js/112.aece1679.js"><link rel="prefetch" href="/assets/js/113.510a3d02.js"><link rel="prefetch" href="/assets/js/114.a20df0dd.js"><link rel="prefetch" href="/assets/js/115.7b416835.js"><link rel="prefetch" href="/assets/js/116.d13357de.js"><link rel="prefetch" href="/assets/js/117.ea667d24.js"><link rel="prefetch" href="/assets/js/118.fcd4fdd6.js"><link rel="prefetch" href="/assets/js/119.26e2d5f8.js"><link rel="prefetch" href="/assets/js/12.a732afe7.js"><link rel="prefetch" href="/assets/js/120.bbe2d53f.js"><link rel="prefetch" href="/assets/js/121.bc9e129f.js"><link rel="prefetch" href="/assets/js/122.9c9843f1.js"><link rel="prefetch" href="/assets/js/123.4f05160c.js"><link rel="prefetch" href="/assets/js/124.7d6ae81d.js"><link rel="prefetch" href="/assets/js/125.0e3b8404.js"><link rel="prefetch" href="/assets/js/126.ae265fa0.js"><link rel="prefetch" href="/assets/js/127.4005b2ef.js"><link rel="prefetch" href="/assets/js/128.1011a635.js"><link rel="prefetch" href="/assets/js/129.3871ccce.js"><link rel="prefetch" href="/assets/js/13.61da442e.js"><link rel="prefetch" href="/assets/js/130.4498934b.js"><link rel="prefetch" href="/assets/js/131.6a2798a4.js"><link rel="prefetch" href="/assets/js/132.ebbc3d45.js"><link rel="prefetch" href="/assets/js/133.58eb30c4.js"><link rel="prefetch" href="/assets/js/134.6b09c600.js"><link rel="prefetch" href="/assets/js/135.5eb8111f.js"><link rel="prefetch" href="/assets/js/136.f0973492.js"><link rel="prefetch" href="/assets/js/137.ad36e708.js"><link rel="prefetch" href="/assets/js/14.6d70c6ca.js"><link rel="prefetch" href="/assets/js/15.8c368c65.js"><link rel="prefetch" href="/assets/js/16.83e8aed7.js"><link rel="prefetch" href="/assets/js/17.ba3f649a.js"><link rel="prefetch" href="/assets/js/18.eeba734f.js"><link rel="prefetch" href="/assets/js/19.62b05862.js"><link rel="prefetch" href="/assets/js/2.898232b5.js"><link rel="prefetch" href="/assets/js/20.6480bcf0.js"><link rel="prefetch" href="/assets/js/21.90c4627a.js"><link rel="prefetch" href="/assets/js/22.8d42d727.js"><link rel="prefetch" href="/assets/js/23.605f2dc6.js"><link rel="prefetch" href="/assets/js/24.d05c6f72.js"><link rel="prefetch" href="/assets/js/25.57e789b9.js"><link rel="prefetch" href="/assets/js/26.907b05b0.js"><link rel="prefetch" href="/assets/js/27.f3251cb5.js"><link rel="prefetch" href="/assets/js/28.0d7be8d1.js"><link rel="prefetch" href="/assets/js/29.17e49287.js"><link rel="prefetch" href="/assets/js/3.8acdd097.js"><link rel="prefetch" href="/assets/js/30.2be20386.js"><link rel="prefetch" href="/assets/js/31.1dbb70b4.js"><link rel="prefetch" href="/assets/js/32.05843de7.js"><link rel="prefetch" href="/assets/js/33.fd3375d5.js"><link rel="prefetch" href="/assets/js/34.ccee4f1f.js"><link rel="prefetch" href="/assets/js/35.c7e2f3c5.js"><link rel="prefetch" href="/assets/js/36.b063c22b.js"><link rel="prefetch" href="/assets/js/37.f68ba6af.js"><link rel="prefetch" href="/assets/js/38.c1e81f64.js"><link rel="prefetch" href="/assets/js/39.d2d31fe3.js"><link rel="prefetch" href="/assets/js/4.35401f2b.js"><link rel="prefetch" href="/assets/js/40.9ba2f3a5.js"><link rel="prefetch" href="/assets/js/41.02ee5cf1.js"><link rel="prefetch" href="/assets/js/42.ef0f94c6.js"><link rel="prefetch" href="/assets/js/43.7137c0e2.js"><link rel="prefetch" href="/assets/js/44.bd100adb.js"><link rel="prefetch" href="/assets/js/45.b87bb250.js"><link rel="prefetch" href="/assets/js/46.6e1a1455.js"><link rel="prefetch" href="/assets/js/47.e20c162f.js"><link rel="prefetch" href="/assets/js/48.e0696ed4.js"><link rel="prefetch" href="/assets/js/49.2b298c9a.js"><link rel="prefetch" href="/assets/js/5.c499630f.js"><link rel="prefetch" href="/assets/js/50.649d1636.js"><link rel="prefetch" href="/assets/js/51.8fbbbff9.js"><link rel="prefetch" href="/assets/js/52.8671bc2f.js"><link rel="prefetch" href="/assets/js/53.cd9e2dfe.js"><link rel="prefetch" href="/assets/js/54.f90b870f.js"><link rel="prefetch" href="/assets/js/55.b6bb1f31.js"><link rel="prefetch" href="/assets/js/56.591ec0d2.js"><link rel="prefetch" href="/assets/js/57.890f4cfb.js"><link rel="prefetch" href="/assets/js/58.1fae338a.js"><link rel="prefetch" href="/assets/js/59.43859e29.js"><link rel="prefetch" href="/assets/js/6.c4a89d24.js"><link rel="prefetch" href="/assets/js/60.8982d556.js"><link rel="prefetch" href="/assets/js/61.f4abe060.js"><link rel="prefetch" href="/assets/js/62.c19d45e3.js"><link rel="prefetch" href="/assets/js/63.de1404b9.js"><link rel="prefetch" href="/assets/js/64.ddea114e.js"><link rel="prefetch" href="/assets/js/65.39781bf6.js"><link rel="prefetch" href="/assets/js/66.6975c275.js"><link rel="prefetch" href="/assets/js/67.a7b4f299.js"><link rel="prefetch" href="/assets/js/68.93632038.js"><link rel="prefetch" href="/assets/js/69.2571ce6f.js"><link rel="prefetch" href="/assets/js/7.63d3ab20.js"><link rel="prefetch" href="/assets/js/70.1873a839.js"><link rel="prefetch" href="/assets/js/71.8da0df3d.js"><link rel="prefetch" href="/assets/js/72.459d24ba.js"><link rel="prefetch" href="/assets/js/73.499c945d.js"><link rel="prefetch" href="/assets/js/74.099a847f.js"><link rel="prefetch" href="/assets/js/75.ae542950.js"><link rel="prefetch" href="/assets/js/76.48094319.js"><link rel="prefetch" href="/assets/js/77.ca94aa26.js"><link rel="prefetch" href="/assets/js/78.a97d5e8c.js"><link rel="prefetch" href="/assets/js/79.53b58abc.js"><link rel="prefetch" href="/assets/js/8.8108d241.js"><link rel="prefetch" href="/assets/js/80.ce84028b.js"><link rel="prefetch" href="/assets/js/81.c0028e23.js"><link rel="prefetch" href="/assets/js/82.ccca7a22.js"><link rel="prefetch" href="/assets/js/83.643ca670.js"><link rel="prefetch" href="/assets/js/84.885245ab.js"><link rel="prefetch" href="/assets/js/85.dfe6f35d.js"><link rel="prefetch" href="/assets/js/86.f6fe01db.js"><link rel="prefetch" href="/assets/js/87.03a9b222.js"><link rel="prefetch" href="/assets/js/88.c475b20c.js"><link rel="prefetch" href="/assets/js/89.c243945d.js"><link rel="prefetch" href="/assets/js/90.9673669a.js"><link rel="prefetch" href="/assets/js/91.255d7185.js"><link rel="prefetch" href="/assets/js/92.9d719dbc.js"><link rel="prefetch" href="/assets/js/93.50e6be04.js"><link rel="prefetch" href="/assets/js/94.92065d43.js"><link rel="prefetch" href="/assets/js/95.e377ba5a.js"><link rel="prefetch" href="/assets/js/96.b8d7306f.js"><link rel="prefetch" href="/assets/js/97.6130964d.js"><link rel="prefetch" href="/assets/js/98.5498ace6.js"><link rel="prefetch" href="/assets/js/99.2d6717ea.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d0a279ba.css"><link rel="stylesheet" href="/assets/css/styles.ea0156f7.css"><link rel="stylesheet" href="/assets/css/9.styles.b58e7c8c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-glitzma"><header class="header" style="background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:scroll;background-image:url(/assets/img/header-image-03.jpg);" data-v-e4a0ebe0><div data-v-6654f004 data-v-e4a0ebe0><nav class="navbar" data-v-6654f004><div class="container" data-v-6654f004><a href="/" class="router-link-active" data-v-6654f004><span class="navbar-site-name" data-v-6654f004>
+          马明娟
+        </span></a> <div class="navbar-toggler" data-v-6654f004><svg class="icon" style="font-size:1.2em;" data-v-6654f004 data-v-6654f004><title data-v-6654f004 data-v-6654f004>menu</title><use xlink:href="#icon-menu" data-v-6654f004 data-v-6654f004></use></svg></div> <div class="navbar-links" data-v-6654f004><a href="/" class="navbar-link" data-v-6654f004>
+            欢迎页
+          </a><a href="/posts/" class="navbar-link router-link-active" data-v-6654f004>
+            帖子
+          </a><a href="/custom-pages/" class="navbar-link" data-v-6654f004>
+            关于
+          </a></div></div></nav> <div class="navbar-holder" style="display:none;" data-v-6654f004></div></div> <div class="banner" data-v-e2d7da12 data-v-e4a0ebe0 data-v-e4a0ebe0><div class="container" data-v-e2d7da12><div class="center" data-v-e2d7da12></div></div></div></header> <div class="container clearfix show-aside" data-v-0874e876 data-v-0874e876><main class="main" data-v-0874e876><div class="post" data-v-0874e876 data-v-0874e876><section class="post-meta main-div" data-v-7f7ca342><section class="post-date clearfix" data-v-7f7ca342><span class="create-date" data-v-7f7ca342>
+      发布时间 : 2019-06-26
+    </span> <span class="update-date" data-v-7f7ca342>
+      最后修改 : 2021-04-13
+    </span></section> <section class="post-links" data-v-7f7ca342><a href="/posts/2019/06/13/webpack-review.html" class="post-link" data-v-7f7ca342>
+      上一篇 : webpack相关知识
+    </a> <a href="/posts/2019/07/05/virtualbox-for-mac.html" class="post-link" data-v-7f7ca342>
+      下一篇 : VirtualBox for Mac
+    </a></section></section> <article class="main-div"><div class="post-content content__default"><div><ul><li><a href="/posts/2019/06/26/deep-learn-vuex.html#什么是vuex">什么是vuex</a></li><li><a href="/posts/2019/06/26/deep-learn-vuex.html#什么情况下我应该使用vuex">什么情况下我应该使用Vuex</a></li><li><a href="/posts/2019/06/26/deep-learn-vuex.html#vuex用法、vue和vuex关系">vuex用法、vue和vuex关系</a></li><li><a href="/posts/2019/06/26/deep-learn-vuex.html#组件中实践">组件中实践</a></li><li><a href="/posts/2019/06/26/deep-learn-vuex.html#用法总结">用法总结</a></li><li><a href="/posts/2019/06/26/deep-learn-vuex.html#源码分析">源码分析</a><ul><li><a href="/posts/2019/06/26/deep-learn-vuex.html#vuex的store是如何注入到组件中的">vuex的store是如何注入到组件中的</a></li><li><a href="/posts/2019/06/26/deep-learn-vuex.html#state和getters">state和getters</a></li><li><a href="/posts/2019/06/26/deep-learn-vuex.html#mutations实现">mutations实现</a></li><li><a href="/posts/2019/06/26/deep-learn-vuex.html#commit-dispatch的实现">commit dispatch的实现</a></li></ul></li><li><a href="/posts/2019/06/26/deep-learn-vuex.html#原理总结">原理总结</a></li></ul></div> <h2 id="什么是vuex">什么是vuex</h2> <p>Vuex是实现组件全局状态管理的一种机制，可以方便的实现组件之间数据的共享。使用Vuex可以集中的管理共享数据，高效实现数据共享，另外Vuex的数据是响应式的，可以实时保持数据与页面的同步。</p> <p>Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。Vuex 也集成到 Vue 的官方调试工具 devtools extension，提供了诸如零配置的 time-travel 调试、状态快照导入导出等高级调试功能</p> <p>我们从一段简单的vue计数应用开始</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token comment">// state</span>
+  <span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      count<span class="token operator">:</span> <span class="token number">0</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">// view</span>
+  template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+    &lt;div&gt;{{ count }}&lt;/div&gt;
+  </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+  <span class="token comment">// actions</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">increment</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>count<span class="token operator">++</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>这个状态自管理应用包含以下几个部分：</p> <ul><li>state，驱动应用的数据源；</li> <li>view，以声明方式将 state 映射到视图；</li> <li>actions，响应在 view 上的用户输入导致的状态变化。</li></ul> <h2 id="什么情况下我应该使用vuex">什么情况下我应该使用Vuex</h2> <p>Vuex 可以帮助我们管理共享状态，并附带了更多的概念和框架。这需要对短期和长期效益进行权衡。</p> <p>如果您不打算开发大型单页应用，使用 Vuex 可能是繁琐冗余的。确实是如此——如果您的应用够简单，您最好不要使用 Vuex。一个简单的 store 模式就足够您所需了。但是，如果您需要构建一个中大型单页应用，您很可能会考虑如何更好地在组件外部管理状态，Vuex 将会成为自然而然的选择。</p> <h2 id="vuex用法、vue和vuex关系">vuex用法、vue和vuex关系</h2> <p>其实他们原理时一样的，vue中的data 、methods、computed，可以实现响应式。vuex中也有四个属性值：state、getters、mutations、actions。</p> <p>例： vue</p> <div class="language-vue extra-class"><pre class="language-vue"><code>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>app<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>increment<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+        {{getcount}}
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sciprt</span><span class="token punctuation">&gt;</span></span>
+        new Vue({
+            el: &quot;#app&quot;,
+            // state
+            data () {
+                return {
+                    count: 0
+                }
+            },
+             // view
+            computed: {
+                getCount(){
+                    return this.count
+                }
+            },
+            // actions
+            methods: {
+             increment () {
+                this.count++
+             }
+            },
+        })
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sciprt</span><span class="token punctuation">&gt;</span></span>
+    
+</code></pre></div><p>例： vuex</p> <p>在没有actions的情况下：</p> <ul><li>数据：state --&gt; data</li> <li>获取数据：getters --&gt; computed</li> <li>更改数据：mutations --&gt; methods</li></ul> <p>视图通过点击事件，触发mutations中方法，可以更改state中的数据，一旦state数据发生更改，getters把数据反映到视图。</p> <p>在vue例子中，通过click事件，触发methods中的方法。methods更改data中的数据，data中数据的修改触发computed变更视图。<br>
+同理在vuex中，通过click事件，如果是同步情况直接在组件中commit触发vuex中的Mutations中的方法更改state中的状态。state中的数据触发页面视图的更改。当存在异步时，click事件需要dispatch来触发actions中的方法，actions中的commit可以触发mutations中的方法更改state，state数据反映到视图。</p> <div class="language-vue extra-class"><pre class="language-vue"><code>   <span class="token comment">&lt;!--app.vue--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>app<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>increment<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>增加<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+                <span class="token comment">&lt;!-- 有时候不能直接 强制使用store里面的状态 this.$store.state.count --&gt;</span>
+                {{this.$store.getters.getCount}}
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+    
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+        <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+            methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    <span class="token comment">//this.$store.dispatch(&quot;increment&quot;)触发actions函数&quot;increment&quot;</span>
+                    <span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token string">&quot;increment&quot;</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// vuex.js</span>
+<span class="token keyword">const</span> store <span class="token operator">=</span>  <span class="token keyword">new</span> <span class="token class-name">Vuex<span class="token punctuation">.</span>Store</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    
+    state<span class="token operator">:</span> <span class="token punctuation">{</span>
+        count<span class="token operator">:</span> <span class="token number">0</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    
+    <span class="token comment">//state的值只能通过mutations来修改</span>
+    mutations<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token function">increment</span><span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            state<span class="token punctuation">.</span>count<span class="token operator">++</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    
+   <span class="token comment">//this.$store.commit(&quot;increment&quot;)触发mutations中函数&quot;increment&quot;</span>
+    actions<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token function">increment</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>commit<span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+             <span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">&quot;increment&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//this.$store.commit(&quot;increment&quot;)</span>
+        <span class="token punctuation">}</span>
+     
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    
+   <span class="token comment">//通过getter中的方法来获取state值</span>
+    getters<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token function">getCount</span><span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> state<span class="token punctuation">.</span>count
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+     
+<span class="token keyword">export</span> <span class="token keyword">default</span> store
+</code></pre></div><h2 id="组件中实践">组件中实践</h2> <p>state<br>
+mapState 辅助函数帮助我们生成计算属性</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 在单独构建的版本中辅助函数为 Vuex.mapState</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> mapState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vuex'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  computed<span class="token operator">:</span> <span class="token function">mapState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token comment">// 箭头函数可使代码更简练</span>
+    <span class="token function-variable function">count</span><span class="token operator">:</span> <span class="token parameter">state</span> <span class="token operator">=&gt;</span> state<span class="token punctuation">.</span>count<span class="token punctuation">,</span>
+
+    <span class="token comment">// 传字符串参数 'count' 等同于 `state =&gt; state.count`</span>
+    countAlias<span class="token operator">:</span> <span class="token string">'count'</span><span class="token punctuation">,</span>
+
+    <span class="token comment">// 为了能够使用 `this` 获取局部状态，必须使用常规函数</span>
+    <span class="token function">countPlusLocalState</span> <span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> state<span class="token punctuation">.</span>count <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>localCount
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>getter<br>
+mapGetters 辅助函数仅仅是将 store 中的 getter 映射到局部计算属性：</p> <div class="language- extra-class"><pre class="language-text"><code>import { mapGetters } from 'vuex'
+
+export default {
+  // ...
+  computed: {
+  // 使用对象展开运算符将 getter 混入 computed 对象中
+    ...mapGetters([
+      'doneTodosCount',
+      'anotherGetter',
+      // ...
+    ])
+  }
+}
+
+// 如果想取其它名字
+...mapGetters({
+  // 把 `this.doneCount` 映射为 `this.$store.getters.doneTodosCount`
+  doneCount: 'doneTodosCount'
+})
+</code></pre></div><p>mutation<br>
+更改 Vuex 的 store 中的状态的唯一方法是提交 mutation。Vuex 中的 mutation 非常类似于事件：每个 mutation 都有一个字符串的 事件类型 (type) 和 一个 回调函数 (handler)。这个回调函数就是我们实际进行状态更改的地方，并且它会接受 state 作为第一个参数.</p> <p>你可以在组件中使用 this.$store.commit('xxx') 提交 mutation，或者使用 mapMutations 辅助函数将组件中的 methods 映射为 store.commit 调用（需要在根节点注入 store）</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> mapMutations <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vuex'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span><span class="token function">mapMutations</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+      <span class="token string">'increment'</span><span class="token punctuation">,</span> <span class="token comment">// 将 `this.increment()` 映射为 `this.$store.commit('increment')`</span>
+
+      <span class="token comment">// `mapMutations` 也支持载荷：</span>
+      <span class="token string">'incrementBy'</span> <span class="token comment">// 将 `this.incrementBy(amount)` 映射为 `this.$store.commit('incrementBy', amount)`</span>
+    <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span><span class="token function">mapMutations</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      add<span class="token operator">:</span> <span class="token string">'increment'</span> <span class="token comment">// 将 `this.add()` 映射为 `this.$store.commit('increment')`</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p>action</p> <p>你在组件中使用 this.$store.dispatch('xxx') 分发 action，或者使用 mapActions 辅助函数将组件的 methods 映射为 store.dispatch 调用（需要先在根节点注入 store）：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> mapActions <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vuex'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span><span class="token function">mapActions</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+      <span class="token string">'increment'</span><span class="token punctuation">,</span> <span class="token comment">// 将 `this.increment()` 映射为 `this.$store.dispatch('increment')`</span>
+
+      <span class="token comment">// `mapActions` 也支持载荷：</span>
+      <span class="token string">'incrementBy'</span> <span class="token comment">// 将 `this.incrementBy(amount)` 映射为 `this.$store.dispatch('incrementBy', amount)`</span>
+    <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span><span class="token function">mapActions</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      add<span class="token operator">:</span> <span class="token string">'increment'</span> <span class="token comment">// 将 `this.add()` 映射为 `this.$store.dispatch('increment')`</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><a href="https://vuex.vuejs.org/zh/guide/modules.html" target="_blank" rel="noopener noreferrer">module<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>由于使用单一状态树，应用的所有状态会集中到一个比较大的对象。当应用变得非常复杂时，store 对象就有可能变得相当臃肿。</p> <p>为了解决以上问题，Vuex 允许我们将 store 分割成模块（module）。每个模块拥有自己的 state、mutation、action、getter、甚至是嵌套子模块——从上至下进行同样方式的分割：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> moduleA <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">state</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  mutations<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  actions<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  getters<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> moduleB <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">state</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  mutations<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  actions<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vuex<span class="token punctuation">.</span>Store</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  modules<span class="token operator">:</span> <span class="token punctuation">{</span>
+    a<span class="token operator">:</span> moduleA<span class="token punctuation">,</span>
+    b<span class="token operator">:</span> moduleB
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>a <span class="token comment">// -&gt; moduleA 的状态</span>
+store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>b <span class="token comment">// -&gt; moduleB 的状态</span>
+</code></pre></div><p>当使用 mapState, mapGetters, mapActions 和 mapMutations 这些函数来绑定带命名空间的模块时，写起来比较繁琐,使用 createNamespacedHelpers 创建基于某个命名空间辅助函数。它返回一个对象，对象里有新的绑定在给定命名空间值上的组件绑定辅助函数：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> createNamespacedHelpers <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vuex'</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> mapState<span class="token punctuation">,</span> mapActions <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">createNamespacedHelpers</span><span class="token punctuation">(</span><span class="token string">'some/nested/module'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  computed<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 在 `some/nested/module` 中查找</span>
+    <span class="token operator">...</span><span class="token function">mapState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token function-variable function">a</span><span class="token operator">:</span> <span class="token parameter">state</span> <span class="token operator">=&gt;</span> state<span class="token punctuation">.</span>a<span class="token punctuation">,</span>
+      <span class="token function-variable function">b</span><span class="token operator">:</span> <span class="token parameter">state</span> <span class="token operator">=&gt;</span> state<span class="token punctuation">.</span>b
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 在 `some/nested/module` 中查找</span>
+    <span class="token operator">...</span><span class="token function">mapActions</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+      <span class="token string">'foo'</span><span class="token punctuation">,</span>
+      <span class="token string">'bar'</span>
+    <span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>如果你开发的插件（Plugin）提供了模块并允许用户将其添加到 Vuex store，可能需要考虑模块的空间名称问题。对于这种情况，你可以通过插件的参数对象来允许用户指定空间名称：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 通过插件的参数对象得到空间名称</span>
+<span class="token comment">// 然后返回 Vuex 插件函数</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">createPlugin</span> <span class="token punctuation">(</span><span class="token parameter">options <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">store</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 把空间名字添加到插件模块的类型（type）中去</span>
+    <span class="token keyword">const</span> namespace <span class="token operator">=</span> options<span class="token punctuation">.</span>namespace <span class="token operator">||</span> <span class="token string">''</span>
+    store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span>namespace <span class="token operator">+</span> <span class="token string">'pluginAction'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>在 store 创建之后，你可以使用 store.registerModule 方法注册模块</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> Vuex <span class="token keyword">from</span> <span class="token string">'vuex'</span>
+
+<span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vuex<span class="token punctuation">.</span>Store</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token comment">/* 选项 */</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 注册模块 `myModule`</span>
+store<span class="token punctuation">.</span><span class="token function">registerModule</span><span class="token punctuation">(</span><span class="token string">'myModule'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// 注册嵌套模块 `nested/myModule`</span>
+store<span class="token punctuation">.</span><span class="token function">registerModule</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'nested'</span><span class="token punctuation">,</span> <span class="token string">'myModule'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>你也可以使用 store.unregisterModule(moduleName) 来动态卸载模块。注意，你不能使用此方法卸载静态模块（即创建 store 时声明的模块）。</p> <p>注意，你可以通过 store.hasModule(moduleName) 方法检查该模块是否已经被注册到 store。</p> <h2 id="用法总结">用法总结</h2> <p>只要用dispatch触发更改就需要action。只是要commit就需要触发mutation。<br>
+同步情况直接在组件中commit触发vuex中的Mutations中的方法更改state中的状态。<br>
+当存在异步时，click事件需要dispatch来触发actions中的方法。</p> <h2 id="源码分析">源码分析</h2> <p>现在我们已经了解vuex能实现和vue双向数据绑定–更新试图的功能，下面我们重点说说vuex源码的实现：</p> <h3 id="vuex的store是如何注入到组件中的">vuex的store是如何注入到组件中的</h3> <p>首先使用vuex,需要安装插件：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>  Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Vuex<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// vue的插件机制,安装vuex插件</span>
+</code></pre></div><p>当ues(Vuex)时候，会调用vuex中的install方法，装载vuex</p> <p>下面时install的核心源码：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>Vue<span class="token punctuation">.</span><span class="token function">mixin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token function">beforeCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$options <span class="token operator">&amp;&amp;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$options<span class="token punctuation">.</span>store<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">//找到根组件 main 上面挂一个$store</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>$store <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$options<span class="token punctuation">.</span>store
+            <span class="token comment">// console.log(this.$store);</span>
+
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token comment">//非根组件指向其父组件的$store</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>$store <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$parent <span class="token operator">&amp;&amp;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$parent<span class="token punctuation">.</span>$store
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>可见，store注入 vue的实例组件的方式，是通过vue的 mixin机制，借助vue组件的生命周期 钩子 beforeCreate 完成的。即 每个vue组件实例化过程中，会在 beforeCreate 钩子前调用 vuexInit 方法。</p> <h3 id="state和getters">state和getters</h3> <p>如何映射到各个组件实例中响应式更新状态</p> <p>state实现</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">this</span><span class="token punctuation">.</span>_s <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span> 
+    data<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 只有data中的数据才是响应式</span>
+        state<span class="token operator">:</span> options<span class="token punctuation">.</span>state
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>getter实现</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//实现getters原理</span>
+<span class="token keyword">let</span> getters <span class="token operator">=</span> options<span class="token punctuation">.</span>getters <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token comment">// console.log(getters);</span>
+<span class="token comment">// this.getters = getters; //不是直接挂载到 getters上 这样只会拿到整个 函数体</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>getters <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">// console.log(Object.keys(getters))  // [&quot;myAge&quot;,&quot;myName&quot;]</span>
+Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>getters<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">getterName</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// console.log(getterName)  // myAge</span>
+    <span class="token comment">// 将getterName 放到this.getters = {}中</span>
+    <span class="token comment">// console.log(this.state);</span>
+    Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>getters<span class="token punctuation">,</span> getterName<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 当你要获取getterName（myAge）会自动调用get方法</span>
+        <span class="token comment">// 箭头函数中没有this               </span>
+        <span class="token function-variable function">get</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> getters<span class="token punctuation">[</span>getterName<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div><p>从上面源码，我们可以看出Vuex的state状态是响应式，是借助vue的data是响应式，将state存入vue实例组件的data中；Vuex的getters则是借助vue的计算属性computed实现数据实时监听。</p> <h3 id="mutations实现">mutations实现</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> mutations <span class="token operator">=</span> options<span class="token punctuation">.</span>mutations <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token comment">// console.log(mutations);</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>mutations <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>mutations<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">mutationName</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token comment">// console.log(mutationName);</span>
+    
+    <span class="token keyword">this</span><span class="token punctuation">.</span>mutations<span class="token punctuation">[</span>mutationName<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">payload</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>mutations<span class="token punctuation">[</span>mutationName<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">,</span>payload<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="commit-dispatch的实现">commit dispatch的实现</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>    <span class="token comment">// COMMIT</span>
+    <span class="token function">commit</span><span class="token punctuation">(</span><span class="token parameter">type<span class="token punctuation">,</span>payload</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>mutations<span class="token punctuation">[</span>type<span class="token punctuation">]</span><span class="token punctuation">(</span>payload<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// type是actions的类型  </span>
+    <span class="token function-variable function">dispatch</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token parameter">type<span class="token punctuation">,</span>payload</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>actions<span class="token punctuation">[</span>type<span class="token punctuation">]</span><span class="token punctuation">(</span>payload<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><h2 id="原理总结">原理总结</h2> <p>Vuex是通过全局注入store对象，来实现组件间的状态共享。在大型复杂的项目中（多级组件嵌套），需要实现一个组件更改某个数据，多个组件自动获取更改后的数据进行业务逻辑处理，这时候使用vuex比较合适。假如只是多个组件间传递数据，使用vuex未免有点大材小用，其实只用使用组件间常用的通信方法即可。</p></div></article> <section class="post-meta main-div" data-v-7f7ca342><section class="post-date clearfix" data-v-7f7ca342><span class="create-date" data-v-7f7ca342>
+      发布时间 : 2019-06-26
+    </span> <span class="update-date" data-v-7f7ca342>
+      最后修改 : 2021-04-13
+    </span></section> <section class="post-links" data-v-7f7ca342><a href="/posts/2019/06/13/webpack-review.html" class="post-link" data-v-7f7ca342>
+      上一篇 : webpack相关知识
+    </a> <a href="/posts/2019/07/05/virtualbox-for-mac.html" class="post-link" data-v-7f7ca342>
+      下一篇 : VirtualBox for Mac
+    </a></section></section> <div id="post-comments" class="main-div"><!----></div></div></main> <aside class="aside" data-v-0874e876><div class="info-card main-div" data-v-2bd66a30 data-v-0874e876><div class="info-card-header" data-v-2bd66a30><img src="https://www.mamingjuan.cn/assets/img/avatar.jpeg" alt="Glitr" class="info-avatar" data-v-2bd66a30></div> <div class="info-card-body" data-v-2bd66a30><section class="info-nickname" data-v-2bd66a30>
+      Glitr
+    </section> <section class="info-desc" data-v-2bd66a30>Enjoy coding,<br/>Enjoy life:)</section> <section class="info-contact" data-v-2bd66a30><section data-v-2bd66a30><span title="Beijing City, China" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>Beijing City, China</title><use xlink:href="#icon-location" data-v-2bd66a30 data-v-2bd66a30></use></svg><span class="info-text" data-v-2bd66a30 data-v-2bd66a30>
+          Beijing City, China
+        </span></span></section> <section data-v-2bd66a30><span title="Secrecy" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>Secrecy</title><use xlink:href="#icon-organization" data-v-2bd66a30 data-v-2bd66a30></use></svg><span class="info-text" data-v-2bd66a30 data-v-2bd66a30>
+          Secrecy
+        </span></span></section> <section data-v-2bd66a30><a href="mailto:glitteringma@gmail.com" title="glitteringma@gmail.com" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>glitteringma@gmail.com</title><use xlink:href="#icon-email" data-v-2bd66a30 data-v-2bd66a30></use></svg><span class="info-text" data-v-2bd66a30 data-v-2bd66a30>
+          glitteringma@gmail.com
+        </span></a></section></section></div> <div class="info-card-footer" data-v-2bd66a30><section class="info-sns clearfix" data-v-2bd66a30><a href="https://github.com/happy760690" target="_blank" class="sns-link" data-v-2bd66a30><span title="GitHub: glitzma" class="sns-icon" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1.5em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>GitHub: glitzma</title><use xlink:href="#icon-github" data-v-2bd66a30 data-v-2bd66a30></use></svg></span></a><a href="https://twitter.com/x0BKGuGTNoqZ0F7" target="_blank" class="sns-link" data-v-2bd66a30><span title="Twitter: x0BKGuGTNoqZ0F7" class="sns-icon" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1.5em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>Twitter: x0BKGuGTNoqZ0F7</title><use xlink:href="#icon-twitter" data-v-2bd66a30 data-v-2bd66a30></use></svg></span></a><a href="https://www.instagram.com/glitz9558/?hl=en" target="_blank" class="sns-link" data-v-2bd66a30><span title="Instagram: glitz9558" class="sns-icon" data-v-2bd66a30 data-v-2bd66a30><svg class="icon" style="font-size:1.5em;" data-v-2bd66a30 data-v-2bd66a30><title data-v-2bd66a30 data-v-2bd66a30>Instagram: glitz9558</title><use xlink:href="#icon-instagram" data-v-2bd66a30 data-v-2bd66a30></use></svg></span></a></section></div></div> <div class="post-nav-card main-div" style="position:relative;top:0;width:0px;" data-v-0874e876><div class="post-nav-contents"><svg class="icon"><title>book</title><use xlink:href="#icon-book"></use></svg> <span>文章目录</span> <div class="post-nav-toc"><ul><li><a href="/posts/2019/06/26/deep-learn-vuex.html#什么是vuex">什么是vuex</a></li><li><a href="/posts/2019/06/26/deep-learn-vuex.html#什么情况下我应该使用vuex">什么情况下我应该使用Vuex</a></li><li><a href="/posts/2019/06/26/deep-learn-vuex.html#vuex用法、vue和vuex关系">vuex用法、vue和vuex关系</a></li><li><a href="/posts/2019/06/26/deep-learn-vuex.html#组件中实践">组件中实践</a></li><li><a href="/posts/2019/06/26/deep-learn-vuex.html#用法总结">用法总结</a></li><li><a href="/posts/2019/06/26/deep-learn-vuex.html#源码分析">源码分析</a><ul><li><a href="/posts/2019/06/26/deep-learn-vuex.html#vuex的store是如何注入到组件中的">vuex的store是如何注入到组件中的</a></li><li><a href="/posts/2019/06/26/deep-learn-vuex.html#state和getters">state和getters</a></li><li><a href="/posts/2019/06/26/deep-learn-vuex.html#mutations实现">mutations实现</a></li><li><a href="/posts/2019/06/26/deep-learn-vuex.html#commit-dispatch的实现">commit dispatch的实现</a></li></ul></li><li><a href="/posts/2019/06/26/deep-learn-vuex.html#原理总结">原理总结</a></li></ul></div></div> <div class="post-nav-comments"><svg class="icon"><title>comment</title><use xlink:href="#icon-comment"></use></svg> <a href="/posts/2019/06/26/deep-learn-vuex.html#post-comments">
+      评论
+    </a></div></div></aside></div> <footer class="footer" data-v-e361d3ee><p class="sns-links" data-v-e361d3ee><a href="https://github.com/happy760690" target="_blank" class="sns-link" data-v-e361d3ee><span title="GitHub: glitzma" class="sns-icon" data-v-e361d3ee data-v-e361d3ee><svg class="icon" style="font-size:25px;" data-v-e361d3ee data-v-e361d3ee><title data-v-e361d3ee data-v-e361d3ee>GitHub: glitzma</title><use xlink:href="#icon-github" data-v-e361d3ee data-v-e361d3ee></use></svg></span></a><a href="https://twitter.com/x0BKGuGTNoqZ0F7" target="_blank" class="sns-link" data-v-e361d3ee><span title="Twitter: x0BKGuGTNoqZ0F7" class="sns-icon" data-v-e361d3ee data-v-e361d3ee><svg class="icon" style="font-size:25px;" data-v-e361d3ee data-v-e361d3ee><title data-v-e361d3ee data-v-e361d3ee>Twitter: x0BKGuGTNoqZ0F7</title><use xlink:href="#icon-twitter" data-v-e361d3ee data-v-e361d3ee></use></svg></span></a><a href="https://www.instagram.com/glitz9558/?hl=en" target="_blank" class="sns-link" data-v-e361d3ee><span title="Instagram: glitz9558" class="sns-icon" data-v-e361d3ee data-v-e361d3ee><svg class="icon" style="font-size:25px;" data-v-e361d3ee data-v-e361d3ee><title data-v-e361d3ee data-v-e361d3ee>Instagram: glitz9558</title><use xlink:href="#icon-instagram" data-v-e361d3ee data-v-e361d3ee></use></svg></span></a></p> <p data-v-e361d3ee><span data-v-e361d3ee>Powered by </span> <a href="https://vuepress.vuejs.org" target="_blank" data-v-e361d3ee>
+      Vuepress
+    </a></p></footer></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app~d0ae3f07.d0a279ba.js" defer></script><script src="/assets/js/9.b58e7c8c.js" defer></script><script src="/assets/js/102.7d940be6.js" defer></script><script src="/assets/js/app~db300d2f.ea0156f7.js" defer></script>
+  </body>
+</html>
