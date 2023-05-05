@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[13],{390:function(t,a,n){"use strict";n.r(a);var s={name:"Page"},e=n(3),i=Object(e.a)(s,(function(){var t=this._self._c;return t("div",{staticClass:"page"},[t("div",{staticClass:"main-div"},[t("Content",{key:this.$page.path,staticClass:"page-content"})],1)])}),[],!1,null,null,null);a.default=i.exports}}]);
